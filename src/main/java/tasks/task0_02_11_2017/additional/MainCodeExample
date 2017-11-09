@@ -1,0 +1,24 @@
+package tasks;
+
+import tasks.task0_02_11_2017.entities.ConsolePrinter;
+
+public class Main {
+    public static void main(String[] args) {
+        short rows = 5;
+        short cols = 10;
+        ConsolePrinter.printRectangle(rows, cols);
+        System.out.println();
+
+        short n = 7;
+        ConsolePrinter.printRightTriangle(n);
+        System.out.println();
+
+        rows = 6;
+        cols = 11;
+        ConsolePrinter.printEquilateralTriangle(rows, cols);
+        System.out.println();
+
+        n = 11;
+        ConsolePrinter.printRhombus(n);
+    }
+}

@@ -1,0 +1,61 @@
+package tasks;
+
+import tasks.helpers.ArrayHelper;
+import tasks.helpers.MatrixHelper;
+import tasks.task1_03_11_2017.entities.MatrixBypasser;
+import tasks.task1_03_11_2017.entities.Sorter;
+
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[10];
+
+        ArrayHelper.fillArrayByRandomizedInt(arr, -50, 50);
+        System.out.println("Initial array:\n" + Arrays.toString(arr));
+
+        //Task1
+        Sorter.sortNegativesAscendingPositiveDescending(arr);
+        System.out.println("Result of task 1 sorting:\n" + Arrays.toString(arr));
+
+        ArrayHelper.fillArrayByRandomizedInt(arr, -50, 50);
+        System.out.println("\nInitial array:\n" + Arrays.toString(arr));
+
+        //Task2
+        Sorter.sortPositiveThenNegative(arr);
+        System.out.println("Result of task 2 sorting:\n" + Arrays.toString(arr));
+
+
+        int[][] matrix = new int[5][8];
+
+        MatrixHelper.fillMatrixByRandomizedInt(matrix, -50, 50);
+        System.out.println("\nInitial matrix:\n" + Arrays.deepToString(matrix));
+
+        //Task3
+        Sorter.sortColumnsByAverageValueDescending(matrix);
+        System.out.println("Result of task 3 sorting:\n" + Arrays.deepToString(matrix));
+
+        MatrixHelper.fillMatrixByRandomizedInt(matrix, -50, 50);
+        System.out.println("\nInitial matrix:\n" + Arrays.deepToString(matrix));
+
+        //Task4
+        Sorter.sortRowsByLongestSeries(matrix);
+        System.out.println("Result of task 4 sorting:\n" + Arrays.deepToString(matrix));
+
+        int m = 3;
+        int[][] matrix2 = new int[m][m];
+        MatrixHelper.fillMatrixByRandomizedInt(matrix2, -50, 50);
+
+        //Task5
+        System.out.println("\nInitial matrix:\n" + Arrays.deepToString(matrix2));
+        try {
+            MatrixBypasser mb = new MatrixBypasser(matrix2);
+            System.out.println("result of bypassMatrixClockwise bypassing:\n"
+                    + Arrays.toString(mb.bypassMatrixClockwise()));
+            System.out.println("result of bypassMatrixClockwise bypassing:\n"
+                    + Arrays.toString(mb.bypassMatrixClockwise()));
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}

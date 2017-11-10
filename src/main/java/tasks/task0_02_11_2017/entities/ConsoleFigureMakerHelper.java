@@ -4,9 +4,9 @@ package tasks.task0_02_11_2017.entities;
  * Класс содержит вспомогательные методы для класса отрисовки фигур в консоль:
  *
  * @author Daniel V.
- * @see ConsolePrinter
+ * @see ConsoleFigureMaker
  */
-class ConsolePrinterHelper {
+class ConsoleFigureMakerHelper {
 
     /**
      * Проверяет, принадлежит ли текущая позиция элемента любой из граней матрицы
@@ -15,7 +15,7 @@ class ConsolePrinterHelper {
      * @param j            - текущий индекс столбца
      * @param rowsMaxIndex - максимальный индекс рядка матрицы
      */
-    static boolean cellIsRectangleBound(short i, short j, short rowsMaxIndex, short colsMaxIndex) {
+    static boolean cellIsRectangleBound(int i, int j, int rowsMaxIndex, int colsMaxIndex) {
         return i == 0 || j == 0 || i == rowsMaxIndex || j == colsMaxIndex;
     }
 
@@ -23,7 +23,7 @@ class ConsolePrinterHelper {
      * Проверяет, принадлежит ли текущая позиция элемента побочной грани матрицы,
      * которая одновременно является стороной прямоугольного треугольника
      */
-    static boolean cellIsRightSidelineTriangleBound(short i, short j, short rowsMaxIndex) {
+    static boolean cellIsRightSidelineTriangleBound(int i, int j, int rowsMaxIndex) {
         return i == rowsMaxIndex || j == 0 || i == j;
     }
 
@@ -36,7 +36,7 @@ class ConsolePrinterHelper {
         return i == rowsMaxIndex || cellIsShifted(j, colsMaxIndex, shift);
     }
 
-    static boolean cellIsBottomBound(short i, short rowsMaxIndex) {
+    static boolean cellIsBottomBound(int i, int rowsMaxIndex) {
         return i == rowsMaxIndex;
     }
 
@@ -45,7 +45,7 @@ class ConsolePrinterHelper {
      *
      * @param shift - значение текущего сдвига относительно краев матрицы
      */
-    static boolean cellIsShifted(short j, int colsMaxIndex, int shift) {
+    static boolean cellIsShifted(int j, int colsMaxIndex, int shift) {
         return j == shift || j == colsMaxIndex - shift;
     }
 
@@ -54,9 +54,9 @@ class ConsolePrinterHelper {
      * Используется в метода отрисовки ромба
      *
      * @param shift - значение текущего сдвига относительно краев матрицы
-     * @see ConsolePrinter#printRhombus(short)
+     * @see ConsoleFigureMaker#printRhombus(short)
      */
-    static short getChangedRhombusShift(short counter, short initShift, short shift) {
+    static int getChangedRhombusShift(int counter, int initShift, int shift) {
         return counter <= initShift ? --shift : ++shift;
     }
 }

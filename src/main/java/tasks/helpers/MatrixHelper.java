@@ -1,6 +1,7 @@
 package tasks.helpers;
 
 import tasks.task1_03_11_2017.arraysAndMatrices.entities.Sorter;
+
 /**
  * Класс хранит вспомогательные методы для работы с матрицами для класса Sorter
  *
@@ -9,13 +10,26 @@ import tasks.task1_03_11_2017.arraysAndMatrices.entities.Sorter;
  */
 public class MatrixHelper {
 
-    public static void printMatrix(Object [][] matrix){
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j]);
+    public static void printMatrix(Object[][] matrix) {
+        if(matrix != null){
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix[i].length; j++) {
+                    System.out.print(matrix[i][j]);
+                }
+                System.out.println();
             }
-            System.out.println();
         }
+    }
+
+    public static String[][] getInvertMatrix(String[][] matrix) {
+        for (int i1 = 0, i2 = matrix.length - 1; i1 < i2; i1++, i2--) {
+            for (int j = 0; j < matrix[i1].length; j++) {
+                String buffer = matrix[i1][j];
+                matrix[i1][j] = matrix[i2][j];
+                matrix[i2][j] = buffer;
+            }
+        }
+        return matrix;
     }
 
     public static void fillMatrixByRandomizedInt(int[][] matrix, int min, int max) {

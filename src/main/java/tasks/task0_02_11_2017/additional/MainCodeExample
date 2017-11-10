@@ -1,24 +1,33 @@
 package tasks;
 
-import tasks.task0_02_11_2017.entities.ConsolePrinter;
+import tasks.helpers.MatrixHelper;
+import tasks.task0_02_11_2017.entities.ConsoleFigureMaker;
 
 public class Main {
     public static void main(String[] args) {
-        short rows = 5;
-        short cols = 10;
-        ConsolePrinter.printRectangle(rows, cols);
-        System.out.println();
+        try {
+            int rows = 5;
+            int cols = 10;
+            ConsoleFigureMaker.printRectangle(rows, cols);
+            System.out.println();
 
-        short n = 7;
-        ConsolePrinter.printRightTriangle(n);
-        System.out.println();
+            int n = 7;
+            ConsoleFigureMaker.printRightTriangle(n);
+            System.out.println();
 
-        rows = 6;
-        cols = 11;
-        ConsolePrinter.printEquilateralTriangle(rows, cols);
-        System.out.println();
+            cols = 9;
+            String[][] eqTriangle = ConsoleFigureMaker.getEquilateralTriangle(cols);
+            MatrixHelper.printMatrix(eqTriangle);
+            System.out.println();
 
-        n = 11;
-        ConsolePrinter.printRhombus(n);
+            ConsoleFigureMaker.printRhombus(n);
+            System.out.println();
+
+            String[][] rhombus2 = ConsoleFigureMaker.getRhombusBy2Triangles(cols);
+            MatrixHelper.printMatrix(rhombus2);
+
+        } catch (IllegalArgumentException e) {
+            System.err.println(e.getMessage());
+        }
     }
 }

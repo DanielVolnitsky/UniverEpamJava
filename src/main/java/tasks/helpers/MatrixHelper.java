@@ -1,12 +1,22 @@
 package tasks.helpers;
 
+import tasks.task1_03_11_2017.arraysAndMatrices.entities.Sorter;
 /**
  * Класс хранит вспомогательные методы для работы с матрицами для класса Sorter
  *
  * @author Daniel V.
- * @see Sorter
+ * @see Sorter;
  */
 public class MatrixHelper {
+
+    public static void printMatrix(Object [][] matrix){
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j]);
+            }
+            System.out.println();
+        }
+    }
 
     public static void fillMatrixByRandomizedInt(int[][] matrix, int min, int max) {
         max -= min;
@@ -20,7 +30,7 @@ public class MatrixHelper {
      * Меняет местами рядки матрицы в зависимости от чисел, заданных массивом,
      * используя модифицированный алгорим сортировки пузырьком
      *
-     * @see Sorter#sortRowsByLongestSeries(int[][])
+     * @see Sorter;#sortRowsByLongestSeries(int[][])
      */
     public static void changeMatrixRowsByArrayValues(int[][] matrix, int[] arr) {
         int buffer;

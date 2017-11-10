@@ -1,0 +1,16 @@
+package tasks;
+
+import tasks.task1_03_11_2017.maze.EllersMazeBuilder;
+import tasks.task1_03_11_2017.maze.MazePasser;
+
+public class Main {
+    public static void main(String[] args) {
+        EllersMazeBuilder builder = new EllersMazeBuilder(5, 5);
+        builder.buildMaze();
+        builder.printMaze();
+
+        MazePasser ellerMazeSolver = new MazePasser(builder.getMaze());
+        ellerMazeSolver.solveMaze();
+        ellerMazeSolver.printSolution();
+    }
+}

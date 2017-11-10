@@ -3,7 +3,7 @@ package tasks.task2_07_11_2017.entities;
 import java.time.Year;
 import java.util.Random;
 
-import static tasks.helpers.Helper.*;
+import static tasks.helpers.ArithmeticHelper.*;
 
 enum VehicleType {
     CAR, PLANE, SHIP, BATMOBILE, AMPHIBIOUSCAR

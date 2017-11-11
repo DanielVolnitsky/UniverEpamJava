@@ -1,303 +1,312 @@
 package tasks.task1_03_11_2017.maze;
 
-import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Stack;
 
-/**Поиск выхода из лабиринта*/
+/**
+ * Перечисление возможных направлений из некоторой точки лабиринта
+ */
+enum PossibleDirection {
+    DEADLOCK, UP, RIGHT, DOWN, LEFT
+}
+
+/**
+ * Класс предназначен для нахождения пути в лабиринте
+ *
+ * @see EllersMazeBuilder
+ */
 public class MazePasser {
+    static final char FREE_PATH = ' ';
+    static final char VISITED = '-';
+    static final char FINAL_PATH_PART = '+';
 
-    /*массив прохождения лабиринта*/
-    String[][] maze;
-    //Integer [][] finalPath;
-    ArrayDeque<Integer[]> path;
+    /*стек для отслеживания местоположения*/
+    private Stack<Integer[]> path;
 
-    int rows, cols;
+    /*Список точек найденного пути*/
+    private ArrayList<Integer[]> finalPath;
 
-    /**@param feild - поле лабиринта*/
-    public  MazePasser(String[][] feild) {
-        //инициализирует массив прохождение лабиринта и длины введенного массива
-        maze = new String[feild.length][feild[1].length];
+    private char[][] maze;
+    private int rows, cols;
 
-        //копирует содержимое входного массива в массив прохождения лабиринта
-        for (int i = 0; i < feild.length; i++) {
-            for (int j = 0; j < feild[i].length; j++) {
-                maze[i][j] = feild[i][j];
-            }
-        }
-
-        rows = feild.length;
-        cols = feild[0].length;
-
-        path = new ArrayDeque<Integer[]>(rows * cols);
+    public MazePasser(char[][] incomingMaze) {
+        initializeMaze(incomingMaze);
+        path = new Stack<Integer[]>();
+        finalPath = new ArrayList<Integer[]>();
     }
 
-    public String[][] getMaze() {
-        return maze;
-    }
-    public String[][] getSolution() {
-        return maze;
+    /**
+     * Инициализирует лабиринт
+     *
+     * @param incomingMaze - входящее значение лабиринта, по которому будет проход
+     */
+    private void initializeMaze(char[][] incomingMaze) {
+        this.maze = new char[incomingMaze.length][incomingMaze[1].length];
+
+        /*заполнение содержимое входного массива в массив прохождения лабиринта*/
+        for (int i = 0; i < incomingMaze.length; i++)
+            for (int j = 0; j < incomingMaze[i].length; j++)
+                this.maze[i][j] = incomingMaze[i][j];
+
+        rows = incomingMaze.length;
+        cols = incomingMaze[0].length;
     }
 
     public void solveMaze() {
-        int[] possibleWays; //хранит возможные ходы для каждого положения
+        PossibleDirection[] possibleWays;
 
-        setInitialLocation(); //поиск начала лабиринта
-        while (!nearExit()) {
-            possibleWays = getPossibleWays(); /*получение возможных направлений*/
+        findEntrance();
 
-            if (possibleWays[0] == 0) {  //если тупик
-                stepBack();
-            }
-            else {
-                if (possibleWays[0] == 1) {
+        /*Пока справа от текущего местоположения не окажется выход*/
+        while (!isNearExit()) {
+
+            /*получаем возможные направления из точки*/
+            possibleWays = getPossibleWays();
+
+            switch (possibleWays[0]) {
+                case DEADLOCK:
+                    backTrack();
+                    break;
+                case UP:
                     solveUp();
-                } else if (possibleWays[0] == 2) {
+                    break;
+                case RIGHT:
                     solveRight();
-                } else if (possibleWays[0] == 3) {
+                    break;
+                case DOWN:
                     solveDown();
-                } else if (possibleWays[0] == 4) {
+                    break;
+                case LEFT:
                     solveLeft();
-                }
+                    break;
             }
         }
 
         goToExit();
-        solvePath();
+        printPath();
     }
 
-    public void setInitialLocation() {
+    /**
+     * Находит входную точку лабиринта на левой стене
+     */
+    private void findEntrance() {
+        Integer[] entrance = new Integer[2];
 
-        Integer[] temp = new Integer[2]; //доступ
-
-        //перебор и поиск входа
         for (int i = 0; i < maze.length; i++) {
-            //если он находит пустое место, это вход
-            if (maze[i][0] == "  ") {
+            if (maze[i][0] == FREE_PATH) {
+                entrance[0] = i;
+                entrance[1] = 0;
 
-                //набор текущего положения
-                temp[0] = i;
-                temp[1] = 0;
-
-                //устанавливаем указатель -
-                maze[temp[0]][temp[1]] = "- ";
-                path.addFirst(temp);
+                /*Раз мы начинаем с этой точки, устанавливаем ее посещенной*/
+                maze[entrance[0]][entrance[1]] = VISITED;
+                path.push(entrance);
             }
         }
     }
 
-    /**Возвращает возможные направления из данной точки*/
-    public int[] getPossibleWays() {
-        int[] ways = new int[4];
+
+    private PossibleDirection[] getPossibleWays() {
+        PossibleDirection[] ways = new PossibleDirection[4];
         int place = 0;
 
-        if (canSolveUp() != 0) {
-            ways[place++] = canSolveUp();
-        }
-        if (canSolveRight() != 0) {
-            ways[place++] = canSolveRight();
-        }
-        if (canSolveDown() != 0) {
-            ways[place++] = canSolveDown();
-        }
-        if (canSolveLeft() != 0) {
-            ways[place++] = canSolveLeft();
-        }
+        PossibleDirection canGoUp = isPossibleToGoUp();
+        PossibleDirection canGoRight = isPossibleToGoRight();
+        PossibleDirection canGoDown = isPossibleToGoDown();
+        PossibleDirection canGoLeft = isPossibleToGoLeft();
 
-        //возвращаем ноль, если нет направления
+        if (canGoUp != PossibleDirection.DEADLOCK)
+            ways[place++] = canGoUp;
+
+        if (canGoRight != PossibleDirection.DEADLOCK)
+            ways[place++] = canGoRight;
+
+        if (canGoDown != PossibleDirection.DEADLOCK)
+            ways[place++] = canGoDown;
+
+        if (canGoLeft != PossibleDirection.DEADLOCK)
+            ways[place++] = canGoLeft;
+
+        /*Если ни одного направления не найдено, возвращаем массив тупиков*/
         if (place == 0) {
-            for (int i = 0; i < 4; i++)
-                ways[i] = 0;
+            for (int i = 0; i < ways.length; i++)
+                ways[i] = PossibleDirection.DEADLOCK;
 
             return ways;
         }
-        else { //иначе уменьшить массив и вернуть его
-            int[] possibleWays = new int[place];
-            for (int i = 0; i < place; i++) {
-                possibleWays[i] = ways[i];
-            }
+        /*иначе убрать из массива null и вернуть его*/
+        else {
+            PossibleDirection[] possibleWays = new PossibleDirection[place];
+            System.arraycopy(ways, 0, possibleWays, 0, place);
+
             return possibleWays;
         }
     }
 
-    public void solveUp() {
-        Integer[] current = path.peek(); //текущее положение
-        Integer[] next = new Integer[2]; //получение следующего положения
+    private PossibleDirection isPossibleToGoUp() {
+        Integer[] currentCell = path.peek();
 
-        int nRow = current[0] - 1;  //переход вверх
-        int nCol = current[1];
+        int nRow = currentCell[0] - 1;
+        int nCol = currentCell[1];
 
-        maze[nRow][nCol] = "  ";
+        if (nRow > 0)
+            if (maze[nRow][nCol] == FREE_PATH)
+                return PossibleDirection.UP;
 
-        next[0] = nRow;
-        next[1] = nCol;
-
-        path.addFirst(next);
+        return PossibleDirection.DEADLOCK;
     }
 
-    public void solveRight() {
-        Integer[] current = path.peek(); //получаем положение
-        Integer[] temp = new Integer[2]; //добавляем следующее
+    private PossibleDirection isPossibleToGoRight() {
+        Integer[] currentCell = path.peek();
 
-        int nRow = current[0];   //переход дальше
+        int nRow = currentCell[0];
+        int nCol = currentCell[1] + 1;
+
+        if (nCol < cols)
+            if (maze[nRow][nCol] == FREE_PATH)
+                return PossibleDirection.RIGHT;
+
+        return PossibleDirection.DEADLOCK;
+    }
+
+    private PossibleDirection isPossibleToGoDown() {
+        Integer[] currentCell = path.peek();
+
+        int nRow = currentCell[0] + 1;
+        int nCol = currentCell[1];
+
+        if (nRow < rows)
+            if (maze[nRow][nCol] == FREE_PATH)
+                return PossibleDirection.DOWN;
+
+        return PossibleDirection.DEADLOCK;
+    }
+
+    private PossibleDirection isPossibleToGoLeft() {
+        Integer[] currentCell = path.peek();
+
+        int nRow = currentCell[0];
+        int nCol = currentCell[1] - 1;
+
+        if (nCol > 0)
+            if (maze[nRow][nCol] == FREE_PATH)
+                return PossibleDirection.LEFT;
+
+        return PossibleDirection.DEADLOCK;
+    }
+
+    private void solveUp() {
+        Integer[] current = path.peek();
+        Integer[] temp = new Integer[2];
+
+        int nRow = current[0] - 1;
+        int nCol = current[1];
+
+
+        maze[nRow][nCol] = VISITED;
+
+        temp[0] = nRow;
+        temp[1] = nCol;
+
+        path.push(temp);
+    }
+
+    private void solveRight() {
+        Integer[] current = path.peek();
+        Integer[] temp = new Integer[2];
+
+        int nRow = current[0];
         int nCol = current[1] + 1;
-        maze[nRow][nCol] = "- ";  //устанавливаем указатель
+        maze[nRow][nCol] = VISITED;
 
         temp[0] = nRow;
         temp[1] = nCol;
 
-        path.addFirst(temp);
+        path.push(temp);
 
     }
 
-    public void solveDown() {
-        Integer[] temp = new Integer[2]; //текущее положение
-        Integer[] current = path.peek(); //добавление следующего положения
+    private void solveDown() {
+        Integer[] temp = new Integer[2];
+        Integer[] current = path.peek();
 
-        int nRow = current[0] + 1;   //переход
+        int nRow = current[0] + 1;
         int nCol = current[1];
-        maze[nRow][nCol] = "- ";  //помещаем в стек, устанавливаем указатель -
+        maze[nRow][nCol] = VISITED;
 
         temp[0] = nRow;
         temp[1] = nCol;
 
-        path.addFirst(temp); //pushes the nextRow location to the stack
-
+        path.push(temp);
     }
 
-    public void solveLeft() {
-        Integer[] temp = new Integer[2]; //текущее положение
-        Integer[] current = path.peek(); //добаление следующего положения
+    private void solveLeft() {
+        Integer[] temp = new Integer[2];
+        Integer[] current = path.peek();
 
-        int nRow = current[0];   //переход
+        int nRow = current[0];
         int nCol = current[1] - 1;
-        maze[nRow][nCol] = "- ";  //помещаем в стек, устанавливаем указатель -
+        maze[nRow][nCol] = VISITED;
 
         temp[0] = nRow;
         temp[1] = nCol;
 
-        path.addFirst(temp); //Добавляем в стек
-
+        path.push(temp);
     }
 
-    public int canSolveUp() {
-        Integer[] temp = path.peekFirst(); //Массив для получения доступа
+    /* Проверяет, есть ли справа от текущего местоположения выход*/
+    private boolean isNearExit() {
+        Integer[] current = path.peek();
 
-        int nRow = temp[0] - 1; //устанавливаем следующее местоположение
-        int nCol = temp[1];
-
-        //если рядом есть правильный путь, вернуть 1
-        if (nRow > 0) {
-            if (maze[nRow][nCol] == "  ") {
-                return 1;
-            }
-        }
-        return 0;
-    }
-
-    public int canSolveRight() {
-        Integer[] temp = new Integer[2]; //получаем доступ
-        temp = path.peek();
-
-        int nRow = temp[0];   //переходим дальшн
-        int nCol = temp[1] + 1;
-
-        //если рядом есть правильный путь, вернуть 2
-        if (nCol < cols) {
-            if (maze[nRow][nCol] == "  ") {
-                return 2;
-            }
-        }
-
-        return 0; //иначе 0
-
-    }
-
-    public int canSolveDown() {
-        Integer[] temp = new Integer[2]; //проверям доступ
-        temp = path.peek();
-
-        int nRow = temp[0] + 1;  //переход дальше
-        int nCol = temp[1];
-
-        //если рядом есть правильный путь, вернуть 3
-        if (nRow < rows) {
-            if (maze[nRow][nCol] == "  ") {
-                return 3;
-            }
-        }
-
-        return 0;  //иначе 0
-
-    }
-
-    public int canSolveLeft() {
-        Integer[] temp = new Integer[2]; //проверяем доступ
-        temp = path.peek();
-
-        int nRow = temp[0];   //переходим дальше
-        int nCol = temp[1] - 1;
-
-
-        //если рядом есть правильный путь, вернуть 4
-        if (nCol > 0) {
-            if (maze[nRow][nCol] == "  ") {
-                return 4;
-            }
-        }
-
-        return 0; //иначе 0
-
-    }
-
-    public boolean nearExit() {
-        Integer[] temp = path.peek();
-        if (temp[1] == maze[0].length - 2) {
-            if (maze[temp[0]][temp[1] + 1] == "  ") {
+        if (current[1] == maze[0].length - 2)
+            if (maze[current[0]][current[1] + 1] == VISITED)
                 return true;
-            }
-        }
 
         return false;
     }
 
-    public void goToExit() {
-        Integer[] temp = new Integer[2]; //доступ к стеку
-        Integer[] current = path.peek(); //текущее положение
+    /**
+     * Осуществляет переход на клетку выхода
+     */
+    private void goToExit() {
+        Integer[] temp = new Integer[2];
+        Integer[] current = path.peek();
 
-        temp[0] = current[0];   //Выход справа
+        temp[0] = current[0];
         temp[1] = current[1] + 1;
 
-        maze[temp[0]][temp[1]] = "- "; //устанавливаем указатель  -
+        maze[temp[0]][temp[1]] = VISITED;
 
-        path.push(temp); //добавляем в стек
-
+        path.push(temp);
     }
 
-    public void stepBack() {
-        path.removeFirst();
+    /**
+     * Возвращаемся на точку назад
+     */
+    private void backTrack() {
+        path.pop();
     }
 
+    void printPath() {
+        Integer[] placement;
 
-    /**Помечает путь*/
-    public void solvePath() {
-        Integer[] temp; //доступ к стеку
+        while (!path.empty()) {
+            placement = path.pop();
+            maze[placement[0]][placement[1]] = FINAL_PATH_PART;
 
-        //finalPath = new Integer[][];
-        int k = 0;
-
-        while (path.peek() != null) {
-            temp = path.pop(); //текущее положение
-            //finalPath[k++] = temp;
-            maze[temp[0]][temp[1]] = "+ "; //устанавливаем указатель +
+            finalPath.add(placement);
         }
+        cleanMazeFromVisitedCells();
+    }
 
-
-        /*Очистка от знаков тупика*/
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                if (maze[i][j] == "- ")
-                    maze[i][j] = "  ";
-            }
-        }
+    /**
+     * Стирает обозначения пройденных точек
+     */
+    private void cleanMazeFromVisitedCells() {
+        for (int i = 0; i < rows; i++)
+            for (int j = 0; j < cols; j++)
+                if (maze[i][j] == VISITED)
+                    maze[i][j] = FREE_PATH;
     }
 
     public void printSolution() {
@@ -307,5 +316,13 @@ public class MazePasser {
             }
             System.out.println();
         }
+    }
+
+    public void printFinalPass() {
+        Collections.reverse(finalPath);
+        for (Integer[] point : finalPath)
+            System.out.print("[" + point[0] + "," + point[1] + "]");
+
+        Collections.reverse(finalPath);
     }
 }

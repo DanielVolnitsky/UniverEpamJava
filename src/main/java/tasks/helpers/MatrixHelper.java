@@ -3,18 +3,29 @@ package tasks.helpers;
 import tasks.task1_03_11_2017.arraysAndMatrices.entities.Sorter;
 
 /**
- * Класс хранит вспомогательные методы для работы с матрицами для класса Sorter
+ * Класс хранит вспомогательные методы для работы с матрицами
  *
  * @author Daniel V.
  * @see Sorter;
  */
 public class MatrixHelper {
 
-    public static void printMatrix(Object[][] matrix) {
+/*    public static void printMatrix(Object[][] matrix) {
         if(matrix != null){
             for (int i = 0; i < matrix.length; i++) {
                 for (int j = 0; j < matrix[i].length; j++) {
                     System.out.print(matrix[i][j]);
+                }
+                System.out.println();
+            }
+        }
+    }*/
+
+    public static void printMatrix(int[][] matrix) {
+        if (matrix != null) {
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix[i].length; j++) {
+                    System.out.print(matrix[i][j] + "\t");
                 }
                 System.out.println();
             }
@@ -40,43 +51,7 @@ public class MatrixHelper {
         }
     }
 
-    /**
-     * Меняет местами рядки матрицы в зависимости от чисел, заданных массивом,
-     * используя модифицированный алгорим сортировки пузырьком
-     *
-     * @see Sorter;#sortRowsByLongestSeries(int[][])
-     */
-    public static void changeMatrixRowsByArrayValues(int[][] matrix, int[] arr) {
-        int buffer;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    ArrayHelper.swapTwoElements(arr, j, j + 1);
-                    changePlacesTwoRows(matrix, j, j + 1);
-                }
-            }
-        }
-    }
-
-    /**
-     * Меняет местами столбцы матрицы в зависимости от чисел, заданных массивом,
-     * используя модифицированный алгорим сортировки пузырьком
-     *
-     * @see Sorter#sortColumnsByAverageValueDescending(int[][])
-     */
-    public static void changeMatrixColumnsByArrayValuesDescendingly(int[][] matrix, double[] arr) {
-        double buffer;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length - 1; j++) {
-                if (arr[j] < arr[j + 1]) {
-                    ArrayHelper.swapTwoElements(arr, j, j + 1);
-                    changePlacesTwoColumns(matrix, j, j + 1);
-                }
-            }
-        }
-    }
-
-    private static void changePlacesTwoRows(int[][] matr, int row1Index, int row2Index) {
+    public static void swapTwoRows(int[][] matr, int row1Index, int row2Index) {
         for (int i = 0; i < matr.length; i++) {
             if (i == row1Index) {
                 for (int j = 0; j < matr[i].length; j++) {
@@ -88,7 +63,7 @@ public class MatrixHelper {
         }
     }
 
-    private static void changePlacesTwoColumns(int[][] matr, int col1Index, int col2Index) {
+    public static void swapTwoColumns(int[][] matr, int col1Index, int col2Index) {
         for (int i = 0; i < matr.length; i++) {
             for (int j = 0; j < matr[0].length; j++) {
                 if (j == col1Index) {

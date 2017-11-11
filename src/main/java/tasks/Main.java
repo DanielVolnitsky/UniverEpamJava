@@ -5,7 +5,7 @@ import tasks.task1_03_11_2017.maze.MazePasser;
 
 public class Main {
     public static void main(String[] args) {
-        EllersMazeBuilder builder = new EllersMazeBuilder(5,12);
+        EllersMazeBuilder builder = new EllersMazeBuilder(5,10);
         builder.buildMaze();
         builder.printMaze();
 

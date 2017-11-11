@@ -3,23 +3,23 @@ package tasks.task1_03_11_2017.maze;
 import java.util.Random;
 
 public class EllersMazeBuilder {
-    static final char WALL = '@';
-    static final char FREE_PATH = ' ';
-    static final int UNDETERMINED = -2;
-    static final int WALL_BETWEEN_SETS = -1;
+    private static final String WALL = "@ ";
+    private static final String FREE_PATH = "  ";
+    private static final int UNDETERMINED = -2;
+    private static final int WALL_BETWEEN_SETS = -1;
 
-    char[][] field;
+    private String[][] field;
 
-    int rows, cols;
+    private int rows, cols;
 
     /*Кол-во рядков и строк*/
-    int currRow, currCol;
+    private int currRow, currCol;
 
     //текущая и следующая за ней строки (за исключением боковых стен)
-    int[] currentRow, nextRow;
+    private int[] currentRow, nextRow;
 
     /*Кол-во множеств в строке*/
-    int setsCount;
+    private int setsCount;
 
     /*множества, которые будут затирать соседние*/
     private int dominativeSet, dominativeSet2;
@@ -33,7 +33,7 @@ public class EllersMazeBuilder {
         rows = currRow * 2 + 1;
         cols = currCol * 2 + 1;
 
-        field = new char[rows][cols];
+        field = new String[rows][cols];
         currentRow = new int[currCol * 2 - 1];
         nextRow = new int[currCol * 2 - 1];
 
@@ -55,14 +55,17 @@ public class EllersMazeBuilder {
         setsCount = currentRow[currentRow.length - 1];
     }
 
+    public String[][] getMaze() {
+        return field;
+    }
+
     /**
      * Генерирует лабиринт алгоритмом Эйлера
      */
     public void buildMaze() {
 
-        setRand(new Random());
+        rand = new Random();
         for (int i = 0; i < currRow - 1; i++) {   //для всех строк кроме последней
-
             if (i != 0) {
                 /*получаем текущую строку из последней итерации*/
                 for (int j = 0; j < currentRow.length; j++) {
@@ -234,19 +237,5 @@ public class EllersMazeBuilder {
             }
             System.out.println();
         }
-    }
-
-    public char[][] getMaze() {
-        return field;
-    }
-
-
-    public Random getRand() {
-        return rand;
-    }
-
-
-    public void setRand(Random rand) {
-        this.rand = rand;
     }
 }

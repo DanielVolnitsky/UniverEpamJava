@@ -17,9 +17,9 @@ enum PossibleDirection {
  * @see EllersMazeBuilder
  */
 public class MazePasser {
-    static final char FREE_PATH = ' ';
-    static final char VISITED = '-';
-    static final char FINAL_PATH_PART = '+';
+    static final String FREE_PATH = "  ";
+    static final String VISITED = "- ";
+    static final String FINAL_PATH_PART = "+ ";
 
     /*стек для отслеживания местоположения*/
     private Stack<Integer[]> path;
@@ -27,10 +27,10 @@ public class MazePasser {
     /*Список точек найденного пути*/
     private ArrayList<Integer[]> finalPath;
 
-    private char[][] maze;
+    private String[][] maze;
     private int rows, cols;
 
-    public MazePasser(char[][] incomingMaze) {
+    public MazePasser(String[][] incomingMaze) {
         initializeMaze(incomingMaze);
         path = new Stack<Integer[]>();
         finalPath = new ArrayList<Integer[]>();
@@ -41,8 +41,8 @@ public class MazePasser {
      *
      * @param incomingMaze - входящее значение лабиринта, по которому будет проход
      */
-    private void initializeMaze(char[][] incomingMaze) {
-        this.maze = new char[incomingMaze.length][incomingMaze[1].length];
+    private void initializeMaze(String[][] incomingMaze) {
+        this.maze = new String[incomingMaze.length][incomingMaze[1].length];
 
         /*заполнение содержимое входного массива в массив прохождения лабиринта*/
         for (int i = 0; i < incomingMaze.length; i++)

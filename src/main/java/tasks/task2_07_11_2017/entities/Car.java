@@ -8,7 +8,7 @@ import tasks.task2_07_11_2017.interfaces.MoveAble;
  * @see Vehicle
  * @see Car
  * */
-public abstract class Car extends Vehicle implements MoveAble {
+public class Car extends Vehicle implements MoveAble {
 
     public Car(){
         super();
@@ -21,5 +21,10 @@ public abstract class Car extends Vehicle implements MoveAble {
     @Override
     public String toString() {
         return super.toString();
+    }
+
+    @Override
+    public void Move() {
+        System.out.println("moving");
     }
 }

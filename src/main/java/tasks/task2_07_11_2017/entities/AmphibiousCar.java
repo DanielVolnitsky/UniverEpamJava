@@ -5,7 +5,7 @@ import tasks.task2_07_11_2017.interfaces.SwimAble;
 
 import java.time.Year;
 
-public class AmphibiousCar extends Car implements MoveAble, SwimAble {
+public class AmphibiousCar extends Car implements SwimAble {
 
     public AmphibiousCar() {
 
@@ -17,10 +17,6 @@ public class AmphibiousCar extends Car implements MoveAble, SwimAble {
 
     public String toString() {
         return "AmphibiousCar: " + super.toString();
-    }
-
-    public void Move() {
-        System.out.println("moving");
     }
 
     public void Swim() {

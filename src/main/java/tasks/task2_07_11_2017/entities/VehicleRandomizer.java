@@ -31,7 +31,7 @@ public class VehicleRandomizer {
         VehicleType value = VehicleType.values()[vehicleTypeOrdinal];
         switch (value) {
             case CAR:
-                return new SimpleCar(getRandomizedRoundedDouble(0, 30000, 2),
+                return new Car(getRandomizedRoundedDouble(0, 30000, 2),
                         getRandomizedRoundedDouble(0.0, 455.0, 3),
                         Year.of(getRandomizedInt(2000, 2017)), getRandomizedDouble(-90.0, 90.0),
                         getRandomizedDouble(-180.0, 180.0));

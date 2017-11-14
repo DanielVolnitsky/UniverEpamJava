@@ -6,7 +6,7 @@ import tasks.task2_07_11_2017.interfaces.SwimAble;
 
 import java.time.Year;
 
-public class Batmobile extends Car implements MoveAble, FlyAble, SwimAble {
+public class Batmobile extends Car implements FlyAble, SwimAble {
 
     public Batmobile() {
     }
@@ -20,7 +20,8 @@ public class Batmobile extends Car implements MoveAble, FlyAble, SwimAble {
     }
 
     public void Move() {
-        System.out.println("moving");
+        super.Move();
+        System.out.println(", but faster");
     }
 
     public void Swim() {

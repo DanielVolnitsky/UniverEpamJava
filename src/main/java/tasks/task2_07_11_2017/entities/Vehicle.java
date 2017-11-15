@@ -69,7 +69,7 @@ public abstract class Vehicle {
         if(velocity >= 0.0)
             this.velocity = velocity;
         else
-            throw new IllegalArgumentException("velocity has to be a positive value");
+            throw new IllegalArgumentException("velocity has to be MainCodeExample positive value");
     }
 
     public Year getReleaseYear() {

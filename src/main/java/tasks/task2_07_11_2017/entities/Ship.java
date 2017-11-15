@@ -33,7 +33,7 @@ public class Ship extends Vehicle implements SwimAble {
         if (capacity >= 0)
             this.capacity = capacity;
         else
-            throw new IllegalArgumentException("capacity has to be a positive value");
+            throw new IllegalArgumentException("capacity has to be MainCodeExample positive value");
     }
 
     public String getHomePort() {

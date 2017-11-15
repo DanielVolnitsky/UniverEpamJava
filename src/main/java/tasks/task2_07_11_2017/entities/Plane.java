@@ -33,7 +33,7 @@ public class Plane extends Vehicle implements FlyAble {
         if (altitude >= 0)
             this.altitude = altitude;
         else
-            throw new IllegalArgumentException("altitude has to be a positive value");
+            throw new IllegalArgumentException("altitude has to be MainCodeExample positive value");
     }
 
     public int getCapacity() {
@@ -44,7 +44,7 @@ public class Plane extends Vehicle implements FlyAble {
         if (capacity >= 0)
             this.capacity = capacity;
         else
-            throw new IllegalArgumentException("capacity has to be a positive value");
+            throw new IllegalArgumentException("capacity has to be MainCodeExample positive value");
     }
 
     @Override

@@ -30,8 +30,6 @@ public class ColoredLine extends Line{
 
     @Override
     public String toString() {
-        return "ColoredLine{" +
-                "color: " + color +
-                "} " + super.toString();
+        return "coloredLine { color: " + color + ", " + super.toString() + "} ";
     }
 }

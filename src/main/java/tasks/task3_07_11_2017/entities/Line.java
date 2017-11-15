@@ -48,6 +48,6 @@ public class Line implements GeometricalObject {
 
     @Override
     public String toString() {
-        return "{" + beg + ", " + end + '}';
+        return "line {" + beg + ", " + end + '}';
     }
 }

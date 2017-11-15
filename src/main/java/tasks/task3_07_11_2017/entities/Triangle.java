@@ -109,11 +109,11 @@ public class Triangle implements GeometricalObject {
 
     @Override
     public String toString() {
-        return "Triangle{" +
-                "A: " + apexA +
-                ", B: " + apexB +
-                ", C: " + apexC +
-                ", AB: " + sideAB +
+        return "triangle {" +
+                "A: {" + apexA +
+                "}, B: {" + apexB +
+                "}, C: {" + apexC +
+                "}, AB: " + sideAB +
                 ", BC: " + sideBC +
                 ", AC: " + sideAC +
                 '}';

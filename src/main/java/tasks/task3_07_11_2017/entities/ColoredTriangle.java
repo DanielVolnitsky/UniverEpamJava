@@ -21,7 +21,7 @@ public class ColoredTriangle extends Triangle {
 
     @Override
     public String toString() {
-        return "ColoredTriangle{" +
+        return "coloredTriangle {" +
                 "color: " + color +
                 "} " + super.toString();
     }

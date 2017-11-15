@@ -24,7 +24,7 @@ public class ColoredPoint extends Point {
 
     @Override
     public String toString() {
-        return "ColoredPoint [ " + super.toString() + ", color: " + color + "]";
+        return "coloredPoint [" + super.toString() + ", color: " + color + "]";
     }
 
     public Object clone() throws CloneNotSupportedException {

@@ -34,7 +34,7 @@ public class Point implements Cloneable, GeometricalObject {
 
     @Override
     public String toString() {
-        return "[" + x + ", " + y + "]";
+        return "point: [" + x + ", " + y + "]";
     }
 
     @Override

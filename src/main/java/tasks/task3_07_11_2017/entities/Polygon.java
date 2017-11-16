@@ -18,6 +18,10 @@ public class Polygon implements GeometricalObject {
     //радиус
     private int radius = 50;
 
+    protected Polygon(){
+
+    }
+
     public Polygon(int facetCount, int radius, Point center) {
         this.center = center;
         this.facetCount = facetCount;
@@ -44,10 +48,9 @@ public class Polygon implements GeometricalObject {
 
     @Override
     public String toString() {
-        return "Polygon { " +
+        return "polygon: {" +
                 "radius: " + radius +
                 ", facetCount: " + facetCount +
-                ", points: " + Arrays.toString(points) +
-                '}';
+                ", points: " + Arrays.toString(points) + "}";
     }
 }

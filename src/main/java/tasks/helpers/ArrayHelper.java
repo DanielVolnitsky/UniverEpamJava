@@ -1,5 +1,7 @@
 package tasks.helpers;
 
+import tasks.task3_07_11_2017.interfaces.GeometricalObject;
+
 /**
  * Класс хранит вспомогательные методы для работы с массивами
  *
@@ -22,6 +24,12 @@ public class ArrayHelper {
 
     public static void swapTwoElements(double[] arr, int i, int j) {
         double buffer = arr[i];
+        arr[i] = arr[j];
+        arr[j] = buffer;
+    }
+
+    public static void swapTwoElements(GeometricalObject[] arr, int i, int j) {
+       GeometricalObject buffer = arr[i];
         arr[i] = arr[j];
         arr[j] = buffer;
     }

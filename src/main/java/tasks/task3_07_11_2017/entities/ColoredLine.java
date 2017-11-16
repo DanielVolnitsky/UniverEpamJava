@@ -1,9 +1,10 @@
 package tasks.task3_07_11_2017.entities;
 
 import tasks.task3_07_11_2017.enums.Color;
+import tasks.task3_07_11_2017.interfaces.Colorful;
 import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
-public class ColoredLine extends Line{
+public class ColoredLine extends Line implements Colorful {
     private Color color;
 
    protected ColoredLine() {

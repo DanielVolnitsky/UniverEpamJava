@@ -2,7 +2,7 @@ package tasks.task3_07_11_2017.entities;
 
 import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
-public class Point implements Cloneable, GeometricalObject {
+public class Point implements /*Cloneable,*/ GeometricalObject {
     private int x;
     private int y;
 
@@ -36,26 +36,26 @@ public class Point implements Cloneable, GeometricalObject {
     public String toString() {
         return "point: [" + x + ", " + y + "]";
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Point point = (Point) o;
-
-        if (x != point.x) return false;
-        return y == point.y;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = x;
-        result = 31 * result + y;
-        return result;
-    }
-
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
+//
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        Point point = (Point) o;
+//
+//        if (x != point.x) return false;
+//        return y == point.y;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = x;
+//        result = 31 * result + y;
+//        return result;
+//    }
+//
+//    public Object clone() throws CloneNotSupportedException {
+//        return super.clone();
+//    }
 }

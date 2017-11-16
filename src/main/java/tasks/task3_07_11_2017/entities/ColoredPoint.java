@@ -1,8 +1,9 @@
 package tasks.task3_07_11_2017.entities;
 
 import tasks.task3_07_11_2017.enums.Color;
+import tasks.task3_07_11_2017.interfaces.Colorful;
 
-public class ColoredPoint extends Point {
+public class ColoredPoint extends Point implements Colorful {
     private Color color;
 
     protected ColoredPoint() {
@@ -25,9 +26,5 @@ public class ColoredPoint extends Point {
     @Override
     public String toString() {
         return "coloredPoint [" + super.toString() + ", color: " + color + "]";
-    }
-
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
     }
 }

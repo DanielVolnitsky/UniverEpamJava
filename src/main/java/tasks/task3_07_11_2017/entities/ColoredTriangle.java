@@ -1,8 +1,9 @@
 package tasks.task3_07_11_2017.entities;
 
 import tasks.task3_07_11_2017.enums.Color;
+import tasks.task3_07_11_2017.interfaces.Colorful;
 
-public class ColoredTriangle extends Triangle {
+public class ColoredTriangle extends Triangle implements Colorful {
 
     private Color color;
 

@@ -1,5 +1,7 @@
-package tasks.task3_07_11_2017.entities;
+package tasks.task3_07_11_2017.entities.additional;
 
+import tasks.helpers.ArithmeticHelper;
+import tasks.task3_07_11_2017.entities.*;
 import tasks.task3_07_11_2017.enums.Color;
 import tasks.task3_07_11_2017.enums.GeometricalObjectType;
 import tasks.task3_07_11_2017.interfaces.GeometricalObject;
@@ -41,9 +43,31 @@ class GeometricalObjectRandomizer {
                 return nextTriangle(minX, maxX, minY, maxY);
             case COLORED_TRIANGLE:
                 return nextColoredTriangle(minX, maxX, minY, maxY, colorTypeCount);
+            case POLYGON:
+                return nextPolygon(minX, maxX, minY, maxY);
+            case COLORED_POLYGON:
+                return nextColoredPolygon(minX, maxX, minY, maxY,  colorTypeCount);
             default:
                 return null;
         }
+    }
+
+    private static ColoredPolygon nextColoredPolygon(int minX, int maxX, int minY, int maxY, int colorTypeCount) {
+        int facetCount = ArithmeticHelper.getRandomizedInt(3, 10);
+        int radius = ArithmeticHelper.getRandomizedInt(3, 10);
+        Point center = nextPoint(minX, maxX, minY, maxY);
+
+        int colorOrdinal = r.nextInt(colorTypeCount);
+        Color randColor = Color.values()[colorOrdinal];
+
+        return new ColoredPolygon(facetCount, radius, center, randColor);
+    }
+
+    private static Polygon nextPolygon(int minX, int maxX, int minY, int maxY) {
+        int facetCOunt = ArithmeticHelper.getRandomizedInt(3, 10);
+        int radius = ArithmeticHelper.getRandomizedInt(3, 10);
+        Point center = nextPoint(minX, maxX, minY, maxY);
+        return new Polygon(facetCOunt, radius, center);
     }
 
     private static Triangle nextTriangle(int minX, int maxX, int minY, int maxY) {
@@ -83,9 +107,6 @@ class GeometricalObjectRandomizer {
     }
 
     private static ColoredLine nextColoredLine(int minX, int maxX, int minY, int maxY, int colorTypeCount) {
-        int colorOrdinal = r.nextInt(colorTypeCount);
-        Color randColor = Color.values()[colorOrdinal];
-
         while (true) {
             Point p1 = nextPoint(minX, maxX, minY, maxY);
             Point p2 = nextPoint(minX, maxX, minY, maxY);

@@ -124,7 +124,7 @@ public class Triangle implements GeometricalObject {
      * 1) на равенство любых двух точек между собой
      * 2) на нахождении 3 точек на одной прямой
      */
-    private boolean canMakeTriangle(Point apexA, Point apexB, Point apexC) {
+    public static boolean canMakeTriangle(Point apexA, Point apexB, Point apexC) {
         return !GeometricHelper.equalPoints(apexA, apexB, apexC) &&
                 !GeometricHelper.isPointsOnSameLine(apexA, apexB, apexC);
     }

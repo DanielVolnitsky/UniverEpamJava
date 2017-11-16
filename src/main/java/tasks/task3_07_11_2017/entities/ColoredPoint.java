@@ -1,9 +1,9 @@
 package tasks.task3_07_11_2017.entities;
 
 import tasks.task3_07_11_2017.enums.Color;
-import tasks.task3_07_11_2017.interfaces.Colorful;
+import tasks.task3_07_11_2017.interfaces.Colored;
 
-public class ColoredPoint extends Point implements Colorful {
+public class ColoredPoint extends Point implements Colored {
     private Color color;
 
     protected ColoredPoint() {

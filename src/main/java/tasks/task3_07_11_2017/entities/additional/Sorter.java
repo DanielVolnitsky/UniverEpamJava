@@ -5,16 +5,16 @@ import tasks.task3_07_11_2017.entities.Line;
 import tasks.task3_07_11_2017.entities.Point;
 import tasks.task3_07_11_2017.entities.Polygon;
 import tasks.task3_07_11_2017.entities.Triangle;
-import tasks.task3_07_11_2017.interfaces.Colorful;
+import tasks.task3_07_11_2017.interfaces.Colored;
 import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
 public class Sorter {
 
     public static void sortByColorfulUncolorful(GeometricalObject[] arr){
         for (int i = 0; i < arr.length; i++) {
-            if(arr[i] instanceof Colorful){
+            if(arr[i] instanceof Colored){
                 for (int j = arr.length - 1; j > i; j--) {
-                    if (!(arr[j] instanceof Colorful)) {
+                    if (!(arr[j] instanceof Colored)) {
                         ArrayHelper.swapTwoElements(arr, i, j);
                         break;
                     }
@@ -26,7 +26,7 @@ public class Sorter {
     public static int getColorfulCount(GeometricalObject[] arr){
         int counter = 0;
         for (int i = 0; i < arr.length; i++)
-            if(arr[i] instanceof Colorful)
+            if(arr[i] instanceof Colored)
                 counter++;
 
         return counter;
@@ -35,7 +35,7 @@ public class Sorter {
     public static int getNotColorfulCount(GeometricalObject[] arr){
         int counter = 0;
         for (GeometricalObject gobj : arr)
-            if(!(gobj instanceof Colorful))
+            if(!(gobj instanceof Colored))
                 counter++;
 
         return counter;

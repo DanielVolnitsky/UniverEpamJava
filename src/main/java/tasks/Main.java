@@ -9,7 +9,7 @@ import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {
 
-        GeometricalObject[] arr = new GeometricalObject[10];
+        GeometricalObject[] arr = new GeometricalObject[30];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = GeometricalObjectsFactory.getRandomGeometricalObject();
         }
@@ -28,9 +28,9 @@ public class Main {
         System.out.println("Points count: " + Sorter.getPointsCount(arr));
 
         System.out.println();
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] instanceof Triangle) {
-                Triangle tr = (Triangle) arr[i];
+        for (GeometricalObject obj : arr) {
+            if (obj instanceof Triangle) {
+                Triangle tr = (Triangle) obj;
                 System.out.println(tr + "\nПериметр: " + tr.getPerimeter() + "\nПлощадь: " + tr.getArea());
             }
         }

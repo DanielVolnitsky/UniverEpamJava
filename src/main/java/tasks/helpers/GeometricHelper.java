@@ -1,17 +1,18 @@
 package tasks.helpers;
 
-import tasks.task3_07_11_2017.entities.Line;
 import tasks.task3_07_11_2017.entities.Point;
 import tasks.task3_07_11_2017.entities.Triangle;
 
-import static java.lang.Math.sqrt;
 import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
 import static tasks.helpers.ArithmeticHelper.getRoundedDouble;
 
-public class GeometryHelper {
+public class GeometricHelper {
 
-    /**@return периметр треугольника*/
-    public static double getTrianglePerimeter(Triangle tr){
+    /**
+     * @return периметр треугольника
+     */
+    public static double getTrianglePerimeter(Triangle tr) {
 
         /*Находим координаты векторов*/
         int x1 = tr.getApexB().getX() - tr.getApexA().getX();
@@ -28,11 +29,13 @@ public class GeometryHelper {
         double bcMod = getRoundedDouble(sqrt(pow(x2, 2) + pow(y2, 2)), 3);
         double acMod = getRoundedDouble(sqrt(pow(x3, 2) + pow(y3, 2)), 3);
 
-        return abMod + bcMod + acMod;
+        return getRoundedDouble(abMod + bcMod + acMod, 3);
     }
 
-    /**@return площадь треугольника*/
-    public static double getTriangleArea(Triangle tr){
+    /**
+     * @return площадь треугольника
+     */
+    public static double getTriangleArea(Triangle tr) {
 
         /*Находим координаты векторов*/
         int x1 = tr.getApexB().getX() - tr.getApexA().getX();
@@ -44,7 +47,7 @@ public class GeometryHelper {
         int x3 = tr.getApexC().getX() - tr.getApexA().getX();
         int y3 = tr.getApexC().getY() - tr.getApexA().getY();
 
-        return 0.5 * Math.abs((x1-x3)*(y2-y3)-(x2-x3)*(y1-y3));
+        return 0.5 * Math.abs((x1 - x3) * (y2 - y3) - (x2 - x3) * (y1 - y3));
     }
 
     /**
@@ -78,9 +81,19 @@ public class GeometryHelper {
     }
 
     public static boolean equalPoints(Point p1, Point p2) {
-        if(p1 == null || p2 == null)
+        if (p1 == null || p2 == null)
             return false;
         else
             return p1.equals(p2);
+    }
+
+    /**
+     * определяет, с какой стороны от вектора AB находится точка C
+     * if < 0 - справа
+     * if > 0 - слева
+     * = 0 - лежит на одной линии
+     */
+    public static int rotate(Point A, Point B, Point C) {
+        return (B.getX() - A.getX()) * (C.getY() - B.getY()) - (B.getY() - A.getY()) * (C.getX() - B.getX());
     }
 }

@@ -6,15 +6,13 @@ import tasks.task3_07_11_2017.interfaces.Colorful;
 public class ColoredPolygon extends Polygon implements Colorful {
     private Color color;
 
-    public ColoredPolygon(int facetCount, int radius, Point center, Color color) {
-        super(facetCount, radius, center);
+    public ColoredPolygon(Point[] points, Color color) {
+        super(points);
         this.color = color;
     }
 
     @Override
     public String toString() {
-        return "coloredPolygon: " +
-                "color: " + color +
-                ", " + super.toString();
+        return "ColoredPolygon {" + "color: " + color + ", " + super.toString() + "} ";
     }
 }

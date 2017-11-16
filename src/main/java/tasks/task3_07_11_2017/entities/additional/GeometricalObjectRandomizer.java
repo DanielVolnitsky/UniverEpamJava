@@ -10,7 +10,7 @@ import java.util.Random;
 
 import static tasks.helpers.ArithmeticHelper.getRandomizedInt;
 
-class GeometricalObjectRandomizer {
+public class GeometricalObjectRandomizer {
 
     private static Random r = new Random();
 
@@ -53,21 +53,30 @@ class GeometricalObjectRandomizer {
     }
 
     private static ColoredPolygon nextColoredPolygon(int minX, int maxX, int minY, int maxY, int colorTypeCount) {
-        int facetCount = ArithmeticHelper.getRandomizedInt(3, 10);
-        int radius = ArithmeticHelper.getRandomizedInt(3, 10);
-        Point center = nextPoint(minX, maxX, minY, maxY);
 
         int colorOrdinal = r.nextInt(colorTypeCount);
         Color randColor = Color.values()[colorOrdinal];
 
-        return new ColoredPolygon(facetCount, radius, center, randColor);
+        int sidesCount = getRandomizedInt(4, 10);
+        Point[] randPoints = new Point[sidesCount];
+
+        for (int i = 0; i < randPoints.length; i++) {
+            randPoints[i] = nextPoint(minX, maxX, minY, maxY);
+        }
+
+        return new ColoredPolygon(randPoints, randColor);
     }
 
     private static Polygon nextPolygon(int minX, int maxX, int minY, int maxY) {
-        int facetCOunt = ArithmeticHelper.getRandomizedInt(3, 10);
-        int radius = ArithmeticHelper.getRandomizedInt(3, 10);
-        Point center = nextPoint(minX, maxX, minY, maxY);
-        return new Polygon(facetCOunt, radius, center);
+
+        int sidesCount = getRandomizedInt(4, 10);
+        Point[] randPoints = new Point[sidesCount];
+
+        for (int i = 0; i < randPoints.length; i++) {
+            randPoints[i] = nextPoint(minX, maxX, minY, maxY);
+        }
+
+        return new Polygon(randPoints);
     }
 
     private static Triangle nextTriangle(int minX, int maxX, int minY, int maxY) {

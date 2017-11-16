@@ -1,6 +1,6 @@
 package tasks.task3_07_11_2017.entities;
 
-import tasks.helpers.GeometryHelper;
+import tasks.helpers.GeometricHelper;
 import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
 public class Triangle implements GeometricalObject {
@@ -33,14 +33,14 @@ public class Triangle implements GeometricalObject {
 
     public double getPerimeter() {
         if (perimeter == null) {
-            this.perimeter = GeometryHelper.getTrianglePerimeter(this);
+            this.perimeter = GeometricHelper.getTrianglePerimeter(this);
         }
         return perimeter;
     }
 
     public double getArea() {
         if (area == null) {
-            this.area = GeometryHelper.getTriangleArea(this);
+            this.area = GeometricHelper.getTriangleArea(this);
         }
         return area;
     }
@@ -125,7 +125,7 @@ public class Triangle implements GeometricalObject {
      * 2) на нахождении 3 точек на одной прямой
      */
     private boolean canMakeTriangle(Point apexA, Point apexB, Point apexC) {
-        return !GeometryHelper.equalPoints(apexA, apexB, apexC) &&
-                !GeometryHelper.isPointsOnSameLine(apexA, apexB, apexC);
+        return !GeometricHelper.equalPoints(apexA, apexB, apexC) &&
+                !GeometricHelper.isPointsOnSameLine(apexA, apexB, apexC);
     }
 }

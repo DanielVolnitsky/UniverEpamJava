@@ -60,9 +60,8 @@ public class GeometricalObjectRandomizer {
         int sidesCount = getRandomizedInt(4, 10);
         Point[] randPoints = new Point[sidesCount];
 
-        for (int i = 0; i < randPoints.length; i++) {
+        for (int i = 0; i < randPoints.length; i++)
             randPoints[i] = nextPoint(minX, maxX, minY, maxY);
-        }
 
         return new ColoredPolygon(randPoints, randColor);
     }
@@ -72,9 +71,8 @@ public class GeometricalObjectRandomizer {
         int sidesCount = getRandomizedInt(4, 10);
         Point[] randPoints = new Point[sidesCount];
 
-        for (int i = 0; i < randPoints.length; i++) {
+        for (int i = 0; i < randPoints.length; i++)
             randPoints[i] = nextPoint(minX, maxX, minY, maxY);
-        }
 
         return new Polygon(randPoints);
     }

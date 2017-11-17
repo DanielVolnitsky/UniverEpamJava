@@ -3,7 +3,7 @@ package tasks.task3_07_11_2017.entities.additional;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import tasks.task3_07_11_2017.entities.*;
-import tasks.task3_07_11_2017.enums.Color;
+import tasks.task3_07_11_2017.enums.ColorType;
 import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,10 +11,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class GeometricalObjectSelectorTest {
     @Test
     void sortByColorfulUncolorful() {
-        ColoredPoint cp1 = new ColoredPoint(3, 6, Color.BLACK);
-        ColoredPoint cp2 = new ColoredPoint(3, 6, Color.BLACK);
+        ColoredPoint cp1 = new ColoredPoint(3, 6, ColorType.BLACK);
+        ColoredPoint cp2 = new ColoredPoint(3, 6, ColorType.BLACK);
         Point p1 = new Point(1, 8);
-        ColoredPoint cp3 = new ColoredPoint(3, 6, Color.BLACK);
+        ColoredPoint cp3 = new ColoredPoint(3, 6, ColorType.BLACK);
 
         Point[] points = {cp1, cp2, p1, cp3};
         Point[] expected = {p1, cp2, cp1, cp3};
@@ -25,10 +25,10 @@ class GeometricalObjectSelectorTest {
 
     @Test
     void getColorfulCount() {
-        ColoredPoint cp1 = new ColoredPoint(3, 6, Color.BLACK);
-        ColoredPoint cp2 = new ColoredPoint(3, 6, Color.BLACK);
+        ColoredPoint cp1 = new ColoredPoint(3, 6, ColorType.BLACK);
+        ColoredPoint cp2 = new ColoredPoint(3, 6, ColorType.BLACK);
         Point p1 = new Point(1, 8);
-        ColoredPoint cp3 = new ColoredPoint(3, 6, Color.BLACK);
+        ColoredPoint cp3 = new ColoredPoint(3, 6, ColorType.BLACK);
 
         Point[] points = {cp1, cp2, p1, cp3};
 
@@ -39,10 +39,10 @@ class GeometricalObjectSelectorTest {
 
     @Test
     void getNotColoredCount() {
-        ColoredPoint cp1 = new ColoredPoint(3, 6, Color.BLACK);
-        ColoredPoint cp2 = new ColoredPoint(3, 6, Color.BLACK);
+        ColoredPoint cp1 = new ColoredPoint(3, 6, ColorType.BLACK);
+        ColoredPoint cp2 = new ColoredPoint(3, 6, ColorType.BLACK);
         Point p1 = new Point(1, 8);
-        ColoredPoint cp3 = new ColoredPoint(3, 6, Color.BLACK);
+        ColoredPoint cp3 = new ColoredPoint(3, 6, ColorType.BLACK);
 
         Point[] points = {cp1, cp2, p1, cp3};
 
@@ -60,7 +60,7 @@ class GeometricalObjectSelectorTest {
 
         Point[] pts = new Point[]{p1, p2, p3, p4};
         Polygon pol = new Polygon(pts);
-        ColoredPolygon colpol = new ColoredPolygon(pts, Color.BLUE);
+        ColoredPolygon colpol = new ColoredPolygon(pts, ColorType.BLUE);
 
         GeometricalObject[] gobjs = {p1, p2, pol, colpol, p3, p4};
 
@@ -77,7 +77,7 @@ class GeometricalObjectSelectorTest {
         Point p4 = new Point(3, 7);
 
         Triangle tr = new Triangle(p1, p4, p2);
-        ColoredTriangle ctr = new ColoredTriangle(p2, p3, p4, Color.BLUE);
+        ColoredTriangle ctr = new ColoredTriangle(p2, p3, p4, ColorType.BLUE);
 
         GeometricalObject[] gobjs = {p4, tr, ctr, p1, p2};
 
@@ -95,7 +95,7 @@ class GeometricalObjectSelectorTest {
 
         Line l1 = new Line(p1, p2);
         Line l2 = new Line(p2, p3);
-        ColoredLine l3 = new ColoredLine(p4, p1, Color.BLUE);
+        ColoredLine l3 = new ColoredLine(p4, p1, ColorType.BLUE);
 
         GeometricalObject[] gobjs = {p4, l1, l2, l3, p1, p2, p3};
 

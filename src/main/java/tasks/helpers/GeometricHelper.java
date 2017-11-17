@@ -80,11 +80,12 @@ public class GeometricHelper {
         return p1.equals(p2) || p2.equals(p3) || p1.equals(p3);
     }
 
-    public static boolean equalPoints(Point p1, Point p2) {
-        if (p1 == null || p2 == null)
-            return false;
-        else
-            return p1.equals(p2);
+    public static boolean equalPoints(Point p1, Point p2) throws NullPointerException {
+        try {
+                return p1.equals(p2);
+        } catch (NullPointerException e) {
+            throw new NullPointerException("передаваемые точки не должны быть null.");
+        }
     }
 
     /**

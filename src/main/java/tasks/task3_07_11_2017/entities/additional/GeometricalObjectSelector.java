@@ -8,6 +8,11 @@ import tasks.task3_07_11_2017.entities.Triangle;
 import tasks.task3_07_11_2017.interfaces.Colored;
 import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
+/**
+ * Выполняет селекцию нужных объектов из набора объектов типа GeometricalObject
+ *
+ * @see GeometricalObject
+ */
 public class GeometricalObjectSelector {
 
     public static void sortByColorfulUncolorful(GeometricalObject[] arr) {

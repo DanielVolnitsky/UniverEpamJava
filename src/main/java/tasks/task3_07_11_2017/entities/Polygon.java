@@ -5,6 +5,12 @@ import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
 import java.util.Arrays;
 
+/**
+ * Класс представляет многоугольник на плоскости
+ *
+ * @see Point
+ * @see GeometricHelper#rotate(Point, Point, Point)
+ */
 public class Polygon implements GeometricalObject {
 
     private Point[] points;
@@ -21,8 +27,9 @@ public class Polygon implements GeometricalObject {
         return this.points;
     }
 
-    public void setPoints(Point[] points) {
-        if (points.length > 3) {
+    /**@param points - входящий набор точек*/
+    public void setPoints(Point[] points) throws  IllegalArgumentException{
+        if (points != null && points.length > 3) {
             this.points = points;
             sortPointsByLeftism();
         } else {
@@ -31,7 +38,7 @@ public class Polygon implements GeometricalObject {
     }
 
     /**
-     * Сортируем точки в порядке их “левизны” относительно начальной точки (самой левой),
+     * Сортирует точки в порядке их “левизны” относительно начальной точки (самой левой),
      * с помощью векторного произведения векторов.
      */
     private void sortPointsByLeftism() {

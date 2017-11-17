@@ -3,6 +3,9 @@ package tasks.task3_07_11_2017.entities;
 import tasks.helpers.GeometricHelper;
 import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
+/**Класс представляет треугольник на плоскости
+ * @see Point
+ * @see Line*/
 public class Triangle implements GeometricalObject {
     /*вершины*/
     private Point apexA, apexB, apexC;

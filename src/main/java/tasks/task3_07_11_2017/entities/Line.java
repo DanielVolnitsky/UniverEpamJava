@@ -4,6 +4,11 @@ import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
 import static tasks.helpers.GeometricHelper.equalPoints;
 
+/**
+ * Представляет отрезок на плоскости
+ *
+ * @see Point
+ */
 public class Line implements GeometricalObject {
     private Point beg;
     private Point end;
@@ -26,8 +31,7 @@ public class Line implements GeometricalObject {
     }
 
 
-    public void setBeg(Point newBeg) {
-        /*концы отрезка не должны совпадать по координатам*/
+    public void setBeg(Point newBeg) throws IllegalArgumentException, NullPointerException {
         if (!equalPoints(newBeg, this.end))
             this.beg = newBeg;
         else
@@ -38,7 +42,7 @@ public class Line implements GeometricalObject {
         return end;
     }
 
-    public void setEnd(Point newEnd) {
+    public void setEnd(Point newEnd) throws IllegalArgumentException, NullPointerException {
         /*концы отрезка не должны совпадать по координатам*/
         if (!equalPoints(newEnd, this.beg))
             this.end = newEnd;

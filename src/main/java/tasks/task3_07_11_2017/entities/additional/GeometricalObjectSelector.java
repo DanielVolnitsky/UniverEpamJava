@@ -15,7 +15,7 @@ import tasks.task3_07_11_2017.interfaces.GeometricalObject;
  */
 public class GeometricalObjectSelector {
 
-    public static void sortByColorfulUncolorful(GeometricalObject[] arr) {
+    public static void sortByColoredUncolored(GeometricalObject[] arr) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] instanceof Colored) {
                 for (int j = arr.length - 1; j > i; j--) {

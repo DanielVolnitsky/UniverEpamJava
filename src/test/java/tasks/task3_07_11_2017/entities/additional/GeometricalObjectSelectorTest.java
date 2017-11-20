@@ -18,7 +18,7 @@ class GeometricalObjectSelectorTest {
 
         Point[] points = {cp1, cp2, p1, cp3};
         Point[] expected = {p1, cp2, cp1, cp3};
-        GeometricalObjectSelector.sortByColorfulUncolorful(points);
+        GeometricalObjectSelector.sortByColoredUncolored(points);
 
         Assertions.assertArrayEquals(expected,points);
     }

@@ -1,24 +1,32 @@
 package tasks;
 
+import tasks.helpers.ArithmeticHelper;
 import tasks.helpers.ArrayHelper;
-import tasks.task3_07_11_2017.entities.Polygon;
 import tasks.task3_07_11_2017.entities.Triangle;
+import tasks.task3_07_11_2017.entities.additional.AbstractFactory;
+import tasks.task3_07_11_2017.entities.additional.ColoredGeometricalFactory;
+import tasks.task3_07_11_2017.entities.additional.GeometricalFactory;
 import tasks.task3_07_11_2017.entities.additional.GeometricalObjectSelector;
-import tasks.task3_07_11_2017.entities.additional.GeometricalObjectsFactory;
 import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
 public class Main {
-    public static void main(String[] args) throws CloneNotSupportedException {
+    public static void main(String[] args) {
 
-        GeometricalObject[] arr = new GeometricalObject[15];
+        AbstractFactory[] factories = new AbstractFactory[]{
+                new GeometricalFactory(),
+                new ColoredGeometricalFactory()};
+
+        GeometricalObject[] arr = new GeometricalObject[20];
+
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = GeometricalObjectsFactory.getRandomGeometricalObject();
+            int randIndex = ArithmeticHelper.getRandomizedInt(0, factories.length);
+            arr[i] = factories[randIndex].createGeometricalObject();
         }
         ArrayHelper.printArray(arr);
 
         System.out.println();
 
-        GeometricalObjectSelector.sortByColorfulUncolorful(arr);
+        GeometricalObjectSelector.sortByColoredUncolored(arr);
         ArrayHelper.printArray(arr);
 
         System.out.println("\nColored count: " + GeometricalObjectSelector.getColoredCount(arr));

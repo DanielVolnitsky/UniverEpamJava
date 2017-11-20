@@ -20,6 +20,5 @@ class TriangleTest {
         expected = true;
         result = Triangle.canMakeTriangle(a, b, c);
         assertEquals(expected, result);
-
     }
 }

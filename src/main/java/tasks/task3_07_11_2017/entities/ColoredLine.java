@@ -6,7 +6,7 @@ import tasks.task3_07_11_2017.interfaces.Colored;
 public class ColoredLine extends Line implements Colored {
     private ColorType color;
 
-   protected ColoredLine() {
+    protected ColoredLine() {
 
     }
 

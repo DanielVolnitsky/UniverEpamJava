@@ -32,6 +32,7 @@ public class Line implements GeometricalObject {
 
 
     public void setBeg(Point newBeg) throws IllegalArgumentException, NullPointerException {
+        /*концы отрезка не должны совпадать по координатам*/
         if (!equalPoints(newBeg, this.end))
             this.beg = newBeg;
         else

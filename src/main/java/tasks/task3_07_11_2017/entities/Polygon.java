@@ -27,8 +27,10 @@ public class Polygon implements GeometricalObject {
         return this.points;
     }
 
-    /**@param points - входящий набор точек*/
-    public void setPoints(Point[] points) throws  IllegalArgumentException{
+    /**
+     * @param points - входящий набор точек
+     */
+    public void setPoints(Point[] points) throws IllegalArgumentException {
         if (points != null && points.length > 3) {
             this.points = points;
             sortPointsByLeftism();

@@ -3,9 +3,12 @@ package tasks.task3_07_11_2017.entities;
 import tasks.helpers.GeometricHelper;
 import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
-/**Класс представляет треугольник на плоскости
+/**
+ * Класс представляет треугольник на плоскости
+ *
  * @see Point
- * @see Line*/
+ * @see Line
+ */
 public class Triangle implements GeometricalObject {
     /*вершины*/
     private Point apexA, apexB, apexC;
@@ -32,6 +35,16 @@ public class Triangle implements GeometricalObject {
         } else {
             throw new IllegalArgumentException("Невозможно составить треугольник из входящих точек.");
         }
+    }
+
+    /**
+     * Проверяет, возможно ли составить треугольник из заданных точек на основе проверок:
+     * 1) на равенство любых двух точек между собой
+     * 2) на нахождении 3 точек на одной прямой
+     */
+    public static boolean canMakeTriangle(Point apexA, Point apexB, Point apexC) {
+        return !GeometricHelper.equalPoints(apexA, apexB, apexC) &&
+                !GeometricHelper.isPointsOnSameLine(apexA, apexB, apexC);
     }
 
     public double getPerimeter() {
@@ -120,15 +133,5 @@ public class Triangle implements GeometricalObject {
                 ", BC: " + sideBC +
                 ", AC: " + sideAC +
                 '}';
-    }
-
-    /**
-     * Проверяет, возможно ли составить треугольник из заданных точек на основе проверок:
-     * 1) на равенство любых двух точек между собой
-     * 2) на нахождении 3 точек на одной прямой
-     */
-    public static boolean canMakeTriangle(Point apexA, Point apexB, Point apexC) {
-        return !GeometricHelper.equalPoints(apexA, apexB, apexC) &&
-                !GeometricHelper.isPointsOnSameLine(apexA, apexB, apexC);
     }
 }

@@ -6,6 +6,7 @@ import java.util.Date;
  * Класс, содержащий данные прогноза погоды
  */
 public class Forecast {
+
     Date date;
     double temp;
 

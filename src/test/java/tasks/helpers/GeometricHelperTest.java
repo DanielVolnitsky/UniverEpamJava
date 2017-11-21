@@ -1,5 +1,6 @@
 package tasks.helpers;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import tasks.task3_07_11_2017.entities.Point;
@@ -17,6 +18,13 @@ class GeometricHelperTest {
         a = new Point(1, 2);
         b = new Point(4, 8);
         c = new Point(5, -6);
+    }
+
+    @AfterEach
+    public void nullifyPoints(){
+        a = null;
+        b = null;
+        c = null;
     }
 
     @Test

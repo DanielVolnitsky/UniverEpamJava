@@ -7,13 +7,13 @@ import java.awt.*;
 /**
  * Графический интерфейс пользователя для отображения прогноза погоды
  */
-public class ForecastGUI extends JFrame {
+public class ForecastFrame extends JFrame {
 
     public JTextArea currWeatherArea;
     public JTextArea prevWeatherArea;
     private JLabel topLabel;
 
-    public ForecastGUI(String topLabelText) {
+    public ForecastFrame(String topLabelText) {
         super("Forecast conditions demonstrating");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

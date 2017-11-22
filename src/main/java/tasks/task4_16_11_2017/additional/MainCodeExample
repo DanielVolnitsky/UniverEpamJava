@@ -41,6 +41,9 @@ public class Main {
             t.schedule(new TimerTask() {
                 @Override
                 public void run() {
+
+                    tryUpdatePrevDayHourlyValues();
+
                     JsonReader reader = null;
                     try {
                         reader = JsonReader.getDarkSkyJsonWithUrl(locInfo);
@@ -52,6 +55,10 @@ public class Main {
                     Forecast todayForecast = thisDayDecoder.getCurrentForecast();
 
                     weatherData.setMeasurements(todayForecast);
+                }
+
+                private void tryUpdatePrevDayHourlyValues() {
+
                 }
             }, 0, 3000);
 

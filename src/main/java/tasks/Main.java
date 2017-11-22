@@ -1,69 +1,63 @@
 package tasks;
 
 
-import org.json.JSONException;
-import tasks.task4_16_11_2017.entities.CurrentConditionsDisplay;
-import tasks.task4_16_11_2017.entities.Forecast;
-import tasks.task4_16_11_2017.entities.LocationInfo;
-import tasks.task4_16_11_2017.entities.WeatherData;
-import tasks.task4_16_11_2017.entities.swing.ForecastFrame;
-import tasks.task4_16_11_2017.exceptions.InvalidCoordinatesException;
-import tasks.task4_16_11_2017.helpers.DarkSkyJsonDecoder;
-import tasks.task4_16_11_2017.helpers.DarkSkyUrlMaker;
-import tasks.task4_16_11_2017.helpers.DateHelper;
-import tasks.task4_16_11_2017.helpers.JsonReader;
+import com.sun.org.apache.xpath.internal.SourceTree;
+import tasks.task5_17_11_2017.entities.ElectricalAppliance;
+import tasks.task5_17_11_2017.entities.additional.ElectricalAppliancesHelper;
+import tasks.task5_17_11_2017.entities.additional.House;
+import tasks.task5_17_11_2017.entities.factoryMethod.*;
+import tasks.task5_17_11_2017.exceptions.ElectricalApplianceException;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.List;
+
+import static tasks.helpers.ArithmeticHelper.getRandomizedInt;
 
 public class Main {
-    public static void main(String[] args) throws JSONException {
-        try {
-            final LocationInfo locInfo = new LocationInfo(
-                    "Ukraine", "Kiev", 50.433304, 30.516693);
+    public static void main(String[] args) {
 
-            final ForecastFrame frame = new ForecastFrame(
-                    locInfo.getCountryName() + ", " + locInfo.getCity());
+        ElectricalApplianceFactory[] factories = new ElectricalApplianceFactory[]{
+                new DrillFactory(), new IronFactory(), new TableLampFactory(), new VacuumCleanerFactory()
+        };
 
-            final WeatherData weatherData = new WeatherData();
-
-            CurrentConditionsDisplay cdd = new CurrentConditionsDisplay(weatherData, frame.currWeatherArea);
-
-            JsonReader reader = new JsonReader(DarkSkyUrlMaker.getUrl(locInfo, DateHelper.getYesterdayTime()));
-
-            DarkSkyJsonDecoder prevDayInfo = new DarkSkyJsonDecoder(reader.getJsonText());
-            Forecast prevDayForecast = prevDayInfo.getForecastForExactDay(DateHelper.getCurrentHour());
-
-            frame.prevWeatherArea.setText(prevDayForecast.toString());
-            frame.setVisible(true);
-
-            Timer t = new Timer();
-            t.schedule(new TimerTask() {
-                @Override
-                public void run() {
-
-                    tryUpdatePrevDayHourlyValues();
-
-                    JsonReader reader = null;
-                    try {
-                        reader = JsonReader.getDarkSkyJsonWithUrl(locInfo);
-                    } catch (IllegalAccessException e) {
-                        System.err.println("Problems with identifying.");
-                    }
-
-                    DarkSkyJsonDecoder thisDayDecoder = new DarkSkyJsonDecoder(reader.getJsonText());
-                    Forecast todayForecast = thisDayDecoder.getCurrentForecast();
-
-                    weatherData.setMeasurements(todayForecast);
-                }
-
-                private void tryUpdatePrevDayHourlyValues() {
-
-                }
-            }, 0, 3000);
-
-        } catch (InvalidCoordinatesException | IllegalAccessException ex) {
-            System.err.println(ex.getMessage());
+        ElectricalAppliance[] eAppliances = new ElectricalAppliance[10];
+        for (int i = 0; i < eAppliances.length; ) {
+            int randIndex = getRandomizedInt(0, factories.length);
+            try {
+                eAppliances[i] = factories[randIndex].createElectricalAppliance();
+                i++;
+            } catch (ElectricalApplianceException e) {
+                System.err.println("Problem with creating appliance, we will make another one.");
+            }
         }
+
+        House myHouse = new House();
+        House.ElectricalApplianceCollection eaCollection = myHouse.new ElectricalApplianceCollection();
+
+        for (ElectricalAppliance ea : eAppliances)
+            eaCollection.add(ea);
+
+        System.out.println("All electrical appliances in house:\n" + eaCollection.toString());
+
+        ElectricalAppliancesHelper helper = new ElectricalAppliancesHelper(eaCollection.getElectricalAppliances());
+
+        System.out.println("Now we plug in some of them.");
+
+        /*Случайным образом включаем некоторые устройства а розетку*/
+        for (ElectricalAppliance appliance : eaCollection.getElectricalAppliances()) {
+            int randNum = getRandomizedInt(0, 2);
+            if (randNum == 0)
+                appliance.plugIn();
+        }
+
+        System.out.println("Overall power at this time: " + helper.getOverallPower() + " Vatt");
+
+        System.out.println("\nSorted by power: ");
+        helper.printSortedElectricalAppliances();
+
+        List<ElectricalAppliance> selected = helper.getAppliancesInVoltageAndAmperageRange(
+                0, 555, 0, 1000);
+
+        System.out.println("In range:");
+        System.out.println(ElectricalAppliancesHelper.electricalAppliancesToString(selected));
     }
 }

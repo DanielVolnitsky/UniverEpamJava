@@ -44,4 +44,8 @@ public class ArithmeticHelper {
         bd = bd.setScale(places, RoundingMode.HALF_UP);
         return bd.doubleValue();
     }
+
+    public static boolean isBetweenTwoInt(int value, int min, int max){
+        return value >= min && value <= max;
+    }
 }

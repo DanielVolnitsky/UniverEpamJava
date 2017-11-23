@@ -1,7 +1,8 @@
-package tasks.task5_17_11_2017.entities.factoryMethod;
+package tasks.task5_17_11_2017.entities.factories;
 
 import tasks.task5_17_11_2017.entities.ElectricalAppliance;
-import tasks.task5_17_11_2017.entities.TableLamp;
+import tasks.task5_17_11_2017.entities.concreteAppliances.TableLamp;
+import tasks.task5_17_11_2017.entities.concreteStrategies.PlugInType;
 import tasks.task5_17_11_2017.exceptions.ElectricalApplianceException;
 
 import static tasks.helpers.ArithmeticHelper.getRandomizedInt;
@@ -14,7 +15,10 @@ public class TableLampFactory extends ElectricalApplianceFactory {
         int stylesCount = TableLamp.Style.values().length;
         int randStyleIndex = getRandomizedInt(0, stylesCount);
 
-        return new TableLamp("rand. table lamp", getRandomizedRoundedDouble(2, 5, 1), getRandomizedInt(3, 10),
-                getRandomizedInt(10, 20), TableLamp.Style.values()[randStyleIndex]);
+        return new TableLamp("table lamp",
+                getRandomizedRoundedDouble(2, 5, 1),
+                getRandomizedInt(50, 100),
+                new PlugInType(),
+                TableLamp.Style.values()[randStyleIndex]);
     }
 }

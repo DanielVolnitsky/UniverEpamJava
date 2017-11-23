@@ -23,7 +23,7 @@ public class ElectricalAppliancesHelper {
     public int getOverallPower() {
         int result = 0;
         for (ElectricalAppliance appliance : electricalAppliances) {
-            if (appliance.isPluggedIn())
+            if (appliance.isSwitchedOn())
                 result += appliance.getPower();
         }
         return result;
@@ -43,16 +43,16 @@ public class ElectricalAppliancesHelper {
         return result.toString();
     }
 
-    public List<ElectricalAppliance> getAppliancesInVoltageAndAmperageRange(
-            int minVoltage, int maxVoltage, int minAmperage, int maxAmperage) {
-
-        List<ElectricalAppliance> result = new ArrayList<>();
-        for (ElectricalAppliance a : electricalAppliances) {
-            if (isBetweenTwoInt(a.getVoltage(), minVoltage, maxVoltage)
-                    && isBetweenTwoInt(a.getAmperage(), minAmperage, maxAmperage)) {
-                result.add(a);
-            }
-        }
-        return result;
-    }
+//    public List<ElectricalAppliance> getAppliancesInVoltageAndAmperageRange(
+//            int minVoltage, int maxVoltage, int minAmperage, int maxAmperage) {
+//
+//        List<ElectricalAppliance> result = new ArrayList<>();
+//        for (ElectricalAppliance a : electricalAppliances) {
+//            if (isBetweenTwoInt(a.getVoltage(), minVoltage, maxVoltage)
+//                    && isBetweenTwoInt(a.getAmperage(), minAmperage, maxAmperage)) {
+//                result.add(a);
+//            }
+//        }
+//        return result;
+//    }
 }

@@ -1,89 +1,74 @@
 package tasks.task5_17_11_2017.entities;
 
-import tasks.task5_17_11_2017.exceptions.InvalidAmperageException;
-import tasks.task5_17_11_2017.exceptions.InvalidVoltageException;
+import tasks.task5_17_11_2017.exceptions.InvalidPowerValueException;
 import tasks.task5_17_11_2017.exceptions.InvalidWeightException;
+import tasks.task5_17_11_2017.interfaces.SwitchingType;
 
 public class ElectricalAppliance extends Appliance implements Comparable<ElectricalAppliance> {
 
-    /*Сила тока (амперы)*/
-    private int amperage;
-    /*Напряжение*/
-    private int voltage;
+    /*Тип включения прибора*/
+    private SwitchingType switchingType;
     /*Потребляемая мощность*/
     private int power;
     /*Включен в розетку*/
-    private boolean isPluggedIn;
+    private Boolean isSwitchedOn;
 
     {
         power = 0;
-        isPluggedIn = false;
+        isSwitchedOn = false;
     }
 
     public ElectricalAppliance() {
 
     }
 
-    public ElectricalAppliance(String name, double weight, int amperage, int voltage)
-            throws InvalidWeightException, InvalidVoltageException, InvalidAmperageException {
+    public ElectricalAppliance(String name, double weight, int power, SwitchingType switchingType)
+            throws InvalidWeightException, InvalidPowerValueException {
 
         super(name, weight);
-        setAmperage(amperage);
-        setVoltage(voltage);
-    }
-
-    public int getAmperage() {
-        return amperage;
-    }
-
-    public void setAmperage(int amperage) throws InvalidAmperageException {
-        if (amperage > 0)
-            this.amperage = amperage;
-        else
-            throw new InvalidAmperageException();
-    }
-
-    public int getVoltage() {
-        return voltage;
-    }
-
-    public void setVoltage(int voltage) throws InvalidVoltageException {
-        if (voltage > 0)
-            this.voltage = voltage;
-        else
-            throw new InvalidVoltageException();
+        setPower(power);
+        this.switchingType = switchingType;
     }
 
     public int getPower() {
-        return power;
+        if (this.isSwitchedOn)
+            return power;
+        else
+            return 0;
     }
 
-    public boolean isPluggedIn() {
-        return isPluggedIn;
+    public void setPower(int power) throws InvalidPowerValueException {
+        if (power > 0)
+            this.power = power;
+        else
+            throw new InvalidPowerValueException();
     }
 
-    public void plugIn() {
-        this.isPluggedIn = true;
-        this.power = this.amperage * this.voltage;
+    public boolean isSwitchedOn() {
+        return isSwitchedOn;
     }
 
-    public void unplug() {
-        this.isPluggedIn = false;
-        this.power = 0;
+    public void switchOn() {
+        switchingType.switchOn();
+        this.isSwitchedOn = true;
+    }
+
+    public void switchOff() {
+        switchingType.switchOff();
+        this.isSwitchedOn = false;
     }
 
     @Override
     public int compareTo(ElectricalAppliance electricalAppliance) {
-        return Integer.compare(this.power, electricalAppliance.getPower());
+        return Integer.compare(this.getPower(), electricalAppliance.getPower());
     }
 
     @Override
     public String toString() {
         return super.toString() +
-                "amperage: " + amperage + " A" +
-                ", voltage: " + voltage + " V" +
-                ", power: " + power + " Vatt" +
-                ", isPluggedIn: " + isPluggedIn + ", "
+                ", power: " + getPower() + " Vatt" +
+                ", isSwitchedOn: " + isSwitchedOn +
+                ", switchingType: " + switchingType
                 ;
     }
 }

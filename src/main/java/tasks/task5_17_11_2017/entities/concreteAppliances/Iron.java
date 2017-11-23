@@ -1,8 +1,9 @@
-package tasks.task5_17_11_2017.entities;
+package tasks.task5_17_11_2017.entities.concreteAppliances;
 
-import tasks.task5_17_11_2017.exceptions.InvalidAmperageException;
-import tasks.task5_17_11_2017.exceptions.InvalidVoltageException;
+import tasks.task5_17_11_2017.entities.ElectricalAppliance;
+import tasks.task5_17_11_2017.exceptions.InvalidPowerValueException;
 import tasks.task5_17_11_2017.exceptions.InvalidWeightException;
+import tasks.task5_17_11_2017.interfaces.SwitchingType;
 
 public class Iron extends ElectricalAppliance {
 
@@ -16,9 +17,9 @@ public class Iron extends ElectricalAppliance {
 
     }
 
-    public Iron(String name, double weight, int amperage, int voltage, boolean autoPowerOff)
-            throws InvalidWeightException, InvalidVoltageException, InvalidAmperageException {
-        super(name, weight, amperage, voltage);
+    public Iron(String name, double weight, int power, SwitchingType switchingType, boolean autoPowerOff)
+            throws InvalidWeightException, InvalidPowerValueException {
+        super(name, weight, power, switchingType);
         this.autoPowerOff = autoPowerOff;
     }
 
@@ -33,7 +34,7 @@ public class Iron extends ElectricalAppliance {
     @Override
     public String toString() {
         return "Iron [" + super.toString() +
-                "autoPowerOff: " + autoPowerOff + ", " +
+                ", autoPowerOff: " + autoPowerOff +
                   "]";
     }
 }

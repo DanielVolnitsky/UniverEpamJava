@@ -8,12 +8,12 @@ class LocationInfoTest {
     private LocationInfo locationInfo;
 
     @BeforeEach
-    public void InitializeLocationInfo() {
+     void InitializeLocationInfo() {
         locationInfo = new LocationInfo();
     }
 
     @AfterEach
-    public void NullifyLocationInfo() {
+     void NullifyLocationInfo() {
         locationInfo = null;
     }
 

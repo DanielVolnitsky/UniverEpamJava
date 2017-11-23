@@ -1,6 +1,6 @@
 package tasks.task5_17_11_2017.entities.additional;
 
-import tasks.task5_17_11_2017.entities.ElectricalAppliance;
+import tasks.task5_17_11_2017.entities.basicAppliances.ElectricalAppliance;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package tasks.task5_17_11_2017.entities.additional;
 
-import tasks.task5_17_11_2017.entities.ElectricalAppliance;
+import tasks.task5_17_11_2017.entities.basicAppliances.ElectricalAppliance;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -34,7 +34,7 @@ public class ElectricalAppliancesHandler {
         return result.toString();
     }
 
-    public int getOverallPower() {
+    public int getOverallConsumedPower() {
         int result = 0;
         for (ElectricalAppliance appliance : electricalAppliances)
             result += appliance.getCurrentPower();

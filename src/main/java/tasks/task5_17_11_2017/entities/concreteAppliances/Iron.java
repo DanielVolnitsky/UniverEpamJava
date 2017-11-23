@@ -1,6 +1,6 @@
 package tasks.task5_17_11_2017.entities.concreteAppliances;
 
-import tasks.task5_17_11_2017.entities.ElectricalAppliance;
+import tasks.task5_17_11_2017.entities.basicAppliances.ElectricalAppliance;
 import tasks.task5_17_11_2017.exceptions.InvalidPowerValueException;
 import tasks.task5_17_11_2017.exceptions.InvalidWeightException;
 import tasks.task5_17_11_2017.interfaces.SwitchingType;

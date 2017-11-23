@@ -1,4 +1,4 @@
-package tasks.task5_17_11_2017.entities;
+package tasks.task5_17_11_2017.entities.basicAppliances;
 
 import tasks.task5_17_11_2017.exceptions.InvalidPowerValueException;
 import tasks.task5_17_11_2017.exceptions.InvalidWeightException;

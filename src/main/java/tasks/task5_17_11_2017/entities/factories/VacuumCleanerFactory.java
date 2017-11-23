@@ -1,8 +1,9 @@
 package tasks.task5_17_11_2017.entities.factories;
 
-import tasks.task5_17_11_2017.entities.ElectricalAppliance;
+import tasks.task5_17_11_2017.entities.basicAppliances.ElectricalAppliance;
 import tasks.task5_17_11_2017.entities.concreteAppliances.VacuumCleaner;
-import tasks.task5_17_11_2017.entities.concreteStrategies.PlugInType;
+import tasks.task5_17_11_2017.entities.concreteSwitchingTypes.PlugInType;
+import tasks.task5_17_11_2017.entities.concreteSwitchingTypes.RunningHamsterType;
 import tasks.task5_17_11_2017.exceptions.ElectricalApplianceException;
 
 import static tasks.helpers.ArithmeticHelper.getRandomizedInt;
@@ -19,7 +20,7 @@ public class VacuumCleanerFactory extends ElectricalApplianceFactory {
         return new VacuumCleaner("vacuum cleaner",
                 getRandomizedRoundedDouble(5, 10, 1),
                 getRandomizedInt(500, 1000),
-                new PlugInType(),
+                new RunningHamsterType(),
                 getRandomizedRoundedDouble(0, 2, 1),
                 VacuumCleaner.Type.values()[randTypeIndex]);
     }

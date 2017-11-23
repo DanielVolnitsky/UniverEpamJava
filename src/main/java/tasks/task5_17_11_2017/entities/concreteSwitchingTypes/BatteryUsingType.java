@@ -1,4 +1,4 @@
-package tasks.task5_17_11_2017.entities.concreteStrategies;
+package tasks.task5_17_11_2017.entities.concreteSwitchingTypes;
 
 import tasks.task5_17_11_2017.interfaces.SwitchingType;
 

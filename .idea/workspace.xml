@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd788f61-779d-4d9c-ad66-a2ce34fb8412" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/CodeExecutionResult.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHelper.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/Main.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/helpers/ArithmeticHelper.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/helpers/ArithmeticHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/Appliance.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/Appliance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/ElectricalAppliance.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/ElectricalAppliance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHelper.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/House.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/House.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/Drill.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/Drill.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/Iron.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/Iron.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/TableLamp.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/TableLamp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/VacuumCleaner.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/VacuumCleaner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteStrategies/BatteryUsingType.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteStrategies/BatteryUsingType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteStrategies/PlugInType.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteStrategies/PlugInType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factories/DrillFactory.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factories/DrillFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factories/ElectricalApplianceFactory.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factories/ElectricalApplianceFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factories/IronFactory.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factories/IronFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factories/VacuumCleanerFactory.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factories/VacuumCleanerFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/exceptions/ElectricalApplianceException.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/exceptions/ElectricalApplianceException.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,8 +44,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tasks/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="53" column="45" lean-forward="false" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+            <state relative-caret-position="1183">
+              <caret line="63" column="22" lean-forward="false" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,29 +53,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ElectricalAppliancesHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHelper.java">
+      <file leaf-file-name="ElectricalAppliancesHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-107">
-              <caret line="61" column="75" lean-forward="false" selection-start-line="61" selection-start-column="75" selection-end-line="61" selection-end-column="75" />
+            <state relative-caret-position="443">
+              <caret line="92" column="39" lean-forward="true" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ElectricalAppliance.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/ElectricalAppliance.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="79" column="60" lean-forward="true" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1080#1081#0" expanded="true" />
-                <element signature="e#1115#1116#0" expanded="true" />
-                <element signature="e#1144#1145#0" expanded="true" />
-                <element signature="e#1172#1173#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/helpers/JsonReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/helpers/ValuesUpdater.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/additional/MainCodeExample" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/Текст задания" />
@@ -173,6 +142,7 @@
         <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/House.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/ElectricalAppliance.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
       </list>
     </option>
@@ -185,8 +155,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="560" />
-    <option name="y" value="9" />
+    <option name="x" value="657" />
+    <option name="y" value="27" />
     <option name="width" value="1329" />
     <option name="height" value="1016" />
   </component>
@@ -253,6 +223,26 @@
               <item name="tasks" type="462c0819:PsiDirectoryNode" />
               <item name="task5_17_11_2017" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="task5_17_11_2017" type="462c0819:PsiDirectoryNode" />
+              <item name="additional" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="task5_17_11_2017" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -271,18 +261,18 @@
       <recent name="tasks.task3_07_11_2017.entities" />
       <recent name="tasks.helpers" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="tasks.task2_07_11_2017.entities" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tasks.task2_07_11_2017.entities" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Daniel\Desktop\UniverEpamJava\src\main\java\tasks\task5_17_11_2017\additional" />
       <recent name="C:\Users\Daniel\Desktop\UniverEpamJava2\src\main\java\tasks\task3_07_11_2017\additional" />
       <recent name="C:\Users\Daniel\Desktop\UniverEpamJava2\src\main\java\tasks\task3_07_11_2017\MainCodeExample" />
       <recent name="C:\Users\Daniel\Desktop\UniverEpamJava2\src\main\java\tasks\task1_03_11_2017\maze\additional" />
       <recent name="C:\Users\Daniel\Desktop\UniverEpamJava2\src\main\java\tasks\task1_03_11_2017\arraysAndMatrices\additional" />
-      <recent name="C:\Users\Daniel\Desktop\UniverEpamJava2\src\main\java\tasks\task0_02_11_2017\additional" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -562,6 +552,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -569,15 +560,15 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1590909" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15367965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2765625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2765625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21753247" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31601733" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -617,18 +608,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="72" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHandler.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="74" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task3_07_11_2017/entities/additional/GeometricalObjectRandomizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="126" column="37" lean-forward="true" selection-start-line="126" selection-start-column="37" selection-end-line="126" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task3_07_11_2017/entities/ColoredTriangle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -760,13 +752,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/helpers/CollectionsHelper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/Текст задания">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="72" lean-forward="true" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task3_07_11_2017/additional/MainCodeExample">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
@@ -872,14 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/Appliance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteStrategies/BatteryUsingType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -895,14 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/Drill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -953,34 +922,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/Текст задания">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="72" lean-forward="true" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/Drill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/Appliance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/ElectricalAppliance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="79" column="60" lean-forward="true" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
+        <state relative-caret-position="462">
+          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1080#1081#0" expanded="true" />
-            <element signature="e#1115#1116#0" expanded="true" />
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#1172#1173#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-107">
-          <caret line="61" column="75" lean-forward="false" selection-start-line="61" selection-start-column="75" selection-end-line="61" selection-end-column="75" />
+        <state relative-caret-position="443">
+          <caret line="92" column="39" lean-forward="true" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/CodeExecutionResult.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="53" column="45" lean-forward="false" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+        <state relative-caret-position="1183">
+          <caret line="63" column="22" lean-forward="false" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

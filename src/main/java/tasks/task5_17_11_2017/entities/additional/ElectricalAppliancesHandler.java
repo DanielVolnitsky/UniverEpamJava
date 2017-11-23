@@ -1,6 +1,5 @@
 package tasks.task5_17_11_2017.entities.additional;
 
-import tasks.helpers.ArithmeticHelper;
 import tasks.task5_17_11_2017.entities.ElectricalAppliance;
 
 import java.lang.reflect.Field;
@@ -8,10 +7,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static tasks.helpers.ArithmeticHelper.isBetweenTwoDouble;
+import static tasks.helpers.ArithmeticHelper.isBetweenTwoInt;
+
 /**
  * Класс представляет сущность, занимающуюся сортировкой и выборкой электроприборов
  */
-public class ElectricalAppliancesHelper {
+public class ElectricalAppliancesHandler {
 
     private List<ElectricalAppliance> electricalAppliances;
 
@@ -19,7 +21,7 @@ public class ElectricalAppliancesHelper {
         electricalAppliances = new ArrayList<>();
     }
 
-    public ElectricalAppliancesHelper(List<ElectricalAppliance> electricalAppliances) {
+    public ElectricalAppliancesHandler(List<ElectricalAppliance> electricalAppliances) {
         this.electricalAppliances = electricalAppliances;
     }
 
@@ -45,9 +47,13 @@ public class ElectricalAppliancesHelper {
         System.out.println(electricalAppliancesToString(electricalAppliances));
     }
 
+    /**
+     * Параметризированный класс поиска приборов соответствующих заданому
+     * диапазону параметров некоторого поля
+     */
     public class Ranger<T extends Number> {
 
-        public List<ElectricalAppliance> getAppliancesInParamsRange(String propertyName, T minValue, T maxValue) {
+        public List<ElectricalAppliance> getAppliancesByParamInRange(String propertyName, T minValue, T maxValue) {
             List<ElectricalAppliance> result = new ArrayList<>();
 
             for (ElectricalAppliance eAppliance : electricalAppliances) {
@@ -58,15 +64,12 @@ public class ElectricalAppliancesHelper {
                         String fieldType = field.getType().getName();
                         switch (fieldType) {
                             case "double":
-                                double value = field.getDouble(eAppliance);
-                                if (ArithmeticHelper.isBetweenTwoDouble(value, (Double) minValue, (Double) maxValue)) {
+                                if (isBetweenTwoDouble(field.getDouble(eAppliance), (Double) minValue, (Double) maxValue))
                                     result.add(eAppliance);
-                                }
                                 break;
                             case "int":
-                                if (ArithmeticHelper.isBetweenTwoInt(field.getInt(eAppliance), (Integer) minValue, (Integer) maxValue)) {
+                                if (isBetweenTwoInt(field.getInt(eAppliance), (Integer) minValue, (Integer) maxValue))
                                     result.add(eAppliance);
-                                }
                                 break;
                             default:
                                 continue;
@@ -79,10 +82,15 @@ public class ElectricalAppliancesHelper {
             return result;
         }
 
+        /**
+         * Возвращает поле класса если оно у него есть
+         *
+         * @param propertyName - имя искомого поля
+         */
         private Field getFieldIfPresent(ElectricalAppliance eAppliance, String propertyName) {
             Field field = null;
             Class c = eAppliance.getClass();
-            while (c.getSuperclass() != Object.class) {
+            while (c != Object.class) {
                 try {
                     field = c.getDeclaredField(propertyName);
                     if (!field.isAccessible())

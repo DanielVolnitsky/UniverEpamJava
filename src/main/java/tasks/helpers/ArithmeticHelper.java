@@ -48,4 +48,8 @@ public class ArithmeticHelper {
     public static boolean isBetweenTwoInt(int value, int min, int max){
         return value >= min && value <= max;
     }
+
+    public static boolean isBetweenTwoDouble(double value, double min, double max){
+        return value >= min && value <= max;
+    }
 }

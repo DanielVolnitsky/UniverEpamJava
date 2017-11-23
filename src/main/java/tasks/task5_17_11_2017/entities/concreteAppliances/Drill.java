@@ -1,11 +1,14 @@
 package tasks.task5_17_11_2017.entities.concreteAppliances;
 
 import tasks.task5_17_11_2017.entities.ElectricalAppliance;
-import tasks.task5_17_11_2017.exceptions.InvalidPowerValueException;
 import tasks.task5_17_11_2017.exceptions.InvalidMaxSpeedRotationException;
+import tasks.task5_17_11_2017.exceptions.InvalidPowerValueException;
 import tasks.task5_17_11_2017.exceptions.InvalidWeightException;
 import tasks.task5_17_11_2017.interfaces.SwitchingType;
 
+/**
+ * Класс представляет сущность дрель
+ */
 public class Drill extends ElectricalAppliance {
 
     /*об/мин*/
@@ -31,7 +34,7 @@ public class Drill extends ElectricalAppliance {
     }
 
     public void setMaxRotationSpeed(double maxRotationSpeed) throws InvalidMaxSpeedRotationException {
-        if(maxRotationSpeed > 0)
+        if (maxRotationSpeed > 0)
             this.maxRotationSpeed = maxRotationSpeed;
         else
             throw new InvalidMaxSpeedRotationException();
@@ -39,8 +42,8 @@ public class Drill extends ElectricalAppliance {
 
     @Override
     public String toString() {
-        return "Drill ["  + super.toString() +
-                ", maxRotationSpeed: " + maxRotationSpeed +
+        return "Drill [" + super.toString() +
+                ", maxRotationSpeed: " + maxRotationSpeed + " rot/min" +
                 "]";
     }
 }

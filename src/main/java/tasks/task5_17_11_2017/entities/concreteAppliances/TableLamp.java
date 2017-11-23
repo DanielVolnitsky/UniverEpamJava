@@ -5,6 +5,9 @@ import tasks.task5_17_11_2017.exceptions.InvalidPowerValueException;
 import tasks.task5_17_11_2017.exceptions.InvalidWeightException;
 import tasks.task5_17_11_2017.interfaces.SwitchingType;
 
+/**
+ * Класс представляет сущность настольная лампа
+ */
 public class TableLamp extends ElectricalAppliance {
 
     private Style style;

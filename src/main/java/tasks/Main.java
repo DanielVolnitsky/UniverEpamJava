@@ -28,19 +28,19 @@ public class Main {
         }
 
         House myHouse = new House();
-        House.ElectricalApplianceCollection eaCollection = myHouse.new ElectricalApplianceCollection();
+        House.ElectricalApplianceCollection homeCollection = myHouse.new ElectricalApplianceCollection();
 
-        for (ElectricalAppliance ea : eAppliances)
-            eaCollection.add(ea);
+        for (ElectricalAppliance eAppliance : eAppliances)
+            homeCollection.add(eAppliance);
 
-        System.out.println("All electrical appliances in house:\n\n" + eaCollection.toString());
+        System.out.println("All electrical appliances in house:\n\n" + homeCollection.toString());
 
-        ElectricalAppliancesHelper helper = new ElectricalAppliancesHelper(eaCollection.getElectricalAppliances());
+        ElectricalAppliancesHelper helper = new ElectricalAppliancesHelper(homeCollection.getElectricalAppliances());
 
         System.out.println("Now we plug in some of them.\n");
 
-        /*Случайным образом включаем некоторые устройства а розетку*/
-        for (ElectricalAppliance appliance : eaCollection.getElectricalAppliances()) {
+        /*Случайным образом включаем некоторые устройства*/
+        for (ElectricalAppliance appliance : homeCollection.getElectricalAppliances()) {
             int randNum = getRandomizedInt(0, 2);
             if (randNum == 0)
                 appliance.switchOn();
@@ -51,10 +51,14 @@ public class Main {
         System.out.println("\nSorted by power: ");
         helper.printSortedElectricalAppliances();
 
-//        List<ElectricalAppliance> selected = helper.getAppliancesInVoltageAndAmperageRange(
-//                0, 555, 0, 1000);
-//
-//        System.out.println("In range:");
-//        System.out.println(ElectricalAppliancesHelper.electricalAppliancesToString(selected));
+        ElectricalAppliancesHelper.Ranger<Integer> ranger = helper.new Ranger<>();
+
+        String propertyName = "currentPower";
+        int min = 1;
+        int max = 2000;
+        List<ElectricalAppliance> selected = ranger.getAppliancesInParamsRange(propertyName, min, max);
+
+        System.out.println("Electrical Appliances with " + propertyName + " between " + min + " and " + max + ":");
+        System.out.println(ElectricalAppliancesHelper.electricalAppliancesToString(selected));
     }
 }

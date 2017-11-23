@@ -3,7 +3,6 @@ package tasks.task5_17_11_2017.entities.factories;
 import tasks.task5_17_11_2017.entities.ElectricalAppliance;
 import tasks.task5_17_11_2017.entities.concreteAppliances.Iron;
 import tasks.task5_17_11_2017.entities.concreteStrategies.BatteryUsingType;
-import tasks.task5_17_11_2017.entities.concreteStrategies.PlugInType;
 import tasks.task5_17_11_2017.exceptions.ElectricalApplianceException;
 
 import static tasks.helpers.ArithmeticHelper.getRandomizedInt;

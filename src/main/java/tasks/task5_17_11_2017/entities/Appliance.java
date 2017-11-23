@@ -2,6 +2,7 @@ package tasks.task5_17_11_2017.entities;
 
 import tasks.task5_17_11_2017.exceptions.InvalidWeightException;
 
+/**Класс представляет сущность прибора*/
 public class Appliance {
 
     private String name;

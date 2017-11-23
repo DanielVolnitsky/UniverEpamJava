@@ -5,12 +5,18 @@ import tasks.task5_17_11_2017.entities.ElectricalAppliance;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Класс представляет поверхостную реализацию сущности дом
+ */
 public class House {
 
     public House() {
 
     }
 
+    /**
+     * Класс представляет коллекцию домашних электроприборов
+     */
     public class ElectricalApplianceCollection {
         List<ElectricalAppliance> electricalAppliances;
 

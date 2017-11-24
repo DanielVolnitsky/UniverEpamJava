@@ -37,19 +37,19 @@ public class DarkSkyJsonDecoder {
         JSONObject obj = jsonObject.getJSONObject(TYPE_HOURLY);
         JSONArray jsnForecasts = obj.getJSONArray(DATA);
 
-        return getDailyForecast(jsnForecasts.getJSONObject(exactHour), TYPE_HOURLY);
+        return getExactForecast(jsnForecasts.getJSONObject(exactHour), TYPE_HOURLY);
     }
 
     public Forecast getCurrentForecast() {
         try {
             JSONObject obj = jsonObject.getJSONObject(TYPE_CURRENTLY);
-            return getDailyForecast(obj, TYPE_CURRENTLY);
+            return getExactForecast(obj, TYPE_CURRENTLY);
         } catch (JSONException e) {
             return null;
         }
     }
 
-    private Forecast getDailyForecast(JSONObject obj, String type) throws JSONException {
+    private Forecast getExactForecast(JSONObject obj, String type) throws JSONException {
         Forecast forecast = new Forecast();
         setTemperature(type, obj, forecast);
         forecast.setDate(new Date(obj.getLong(TIME) * 1000));

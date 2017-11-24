@@ -13,57 +13,77 @@ import tasks.task4_16_11_2017.helpers.DarkSkyUrlMaker;
 import tasks.task4_16_11_2017.helpers.DateHelper;
 import tasks.task4_16_11_2017.helpers.JsonReader;
 
+import javax.swing.*;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class Main {
+
+    static byte currHour;
+    static LocationInfo locInfo;
+    static WeatherData weatherData;
+
     public static void main(String[] args) throws JSONException {
         try {
-            final LocationInfo locInfo = new LocationInfo(
+            locInfo = new LocationInfo(
                     "Ukraine", "Kiev", 50.433304, 30.516693);
 
             final ForecastFrame frame = new ForecastFrame(
                     locInfo.getCountryName() + ", " + locInfo.getCity());
 
-            final WeatherData weatherData = new WeatherData();
+            weatherData = new WeatherData();
 
-            CurrentConditionsDisplay cdd = new CurrentConditionsDisplay(weatherData, frame.currWeatherArea);
+            CurrentConditionsDisplay ccDisplay = new CurrentConditionsDisplay(weatherData, frame.currWeatherArea);
 
-            JsonReader reader = new JsonReader(DarkSkyUrlMaker.getUrl(locInfo, DateHelper.getYesterdayTime()));
+            currHour = DateHelper.getCurrentHour();
+            updatePrevDayValues(frame.prevWeatherArea, currHour);
 
-            DarkSkyJsonDecoder prevDayInfo = new DarkSkyJsonDecoder(reader.getJsonText());
-            Forecast prevDayForecast = prevDayInfo.getForecastForExactDay(DateHelper.getCurrentHour());
-
-            frame.prevWeatherArea.setText(prevDayForecast.toString());
             frame.setVisible(true);
 
             Timer t = new Timer();
             t.schedule(new TimerTask() {
                 @Override
                 public void run() {
+                    updateCurrentValues();
 
-                    tryUpdatePrevDayHourlyValues();
-
-                    JsonReader reader = null;
-                    try {
-                        reader = JsonReader.getDarkSkyJsonWithUrl(locInfo);
-                    } catch (IllegalAccessException e) {
-                        System.err.println("Problems with identifying.");
+                    byte newHour = DateHelper.getCurrentHour();
+                    if (newHour != currHour) {
+                        currHour = newHour;
+                        updatePrevDayValues(frame.prevWeatherArea, currHour);
                     }
-
-                    DarkSkyJsonDecoder thisDayDecoder = new DarkSkyJsonDecoder(reader.getJsonText());
-                    Forecast todayForecast = thisDayDecoder.getCurrentForecast();
-
-                    weatherData.setMeasurements(todayForecast);
-                }
-
-                private void tryUpdatePrevDayHourlyValues() {
-
                 }
             }, 0, 3000);
 
-        } catch (InvalidCoordinatesException | IllegalAccessException ex) {
+        } catch (InvalidCoordinatesException ex) {
             System.err.println(ex.getMessage());
+        }
+    }
+
+    private static void updateCurrentValues() {
+        try {
+            JsonReader currReader = JsonReader.getDarkSkyJsonWithUrl(locInfo);
+            DarkSkyJsonDecoder thisDayDecoder = new DarkSkyJsonDecoder(currReader.getJsonText());
+
+            Forecast thisDayForecast = thisDayDecoder.getCurrentForecast();
+            weatherData.setMeasurements(thisDayForecast);
+        } catch (IllegalAccessException e) {
+            System.err.println("Problems with identifying.");
+        }
+    }
+
+    private static void updatePrevDayValues(JTextArea textArea, byte exactHour) {
+        try {
+            JsonReader yestReader = new JsonReader(DarkSkyUrlMaker.getUrl(locInfo, DateHelper.getYesterdayTime()));
+            DarkSkyJsonDecoder prevDayDecoder = new DarkSkyJsonDecoder(yestReader.getJsonText());
+            try {
+                Forecast prevDayForecast = prevDayDecoder.getForecastForExactDay(exactHour);
+                /*frame.prevWeatherArea*/
+                textArea.setText(prevDayForecast.toString());
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        } catch (IllegalAccessException e) {
+            System.err.println("Problems with identifying.");
         }
     }
 }

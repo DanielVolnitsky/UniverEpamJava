@@ -9,13 +9,13 @@ public class Forecast {
 
     Date date;
 
-    double temp;
-    double humidity;
-    double pressure;
+    private double temp;
+    private double humidity;
+    private double pressure;
 
-    double windSpeed;
-    double windGust;
-    double windBearing;
+    private double windSpeed;
+    private double windGust;
+    private double windBearing;
 
     public Forecast() {
 

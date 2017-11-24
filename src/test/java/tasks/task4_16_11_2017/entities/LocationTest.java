@@ -3,31 +3,31 @@ package tasks.task4_16_11_2017.entities;
 import org.junit.jupiter.api.*;
 import tasks.task4_16_11_2017.exceptions.InvalidCoordinatesException;
 
-class LocationInfoTest {
+class LocationTest {
 
-    private LocationInfo locationInfo;
+    private Location location;
 
     @BeforeEach
      void InitializeLocationInfo() {
-        locationInfo = new LocationInfo();
+        location = new Location();
     }
 
     @AfterEach
      void NullifyLocationInfo() {
-        locationInfo = null;
+        location = null;
     }
 
     @Test
     void setLatitude() {
         Assertions.assertThrows(InvalidCoordinatesException.class, () -> {
-            locationInfo.setLatitude(-91);
+            location.setLatitude(-91);
         });
     }
 
     @Test
     void setLongitude() {
         Assertions.assertThrows(InvalidCoordinatesException.class, () -> {
-            locationInfo.setLongitude(181);
+            location.setLongitude(181);
         });
     }
 

@@ -1,4 +1,4 @@
-package tasks.task4_16_11_2017.helpers;
+package tasks.task4_16_11_2017.entities.helpers;
 
 import java.util.Calendar;
 import java.util.Date;

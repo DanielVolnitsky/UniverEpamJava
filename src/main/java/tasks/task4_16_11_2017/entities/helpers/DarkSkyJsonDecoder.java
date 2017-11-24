@@ -1,4 +1,4 @@
-package tasks.task4_16_11_2017.helpers;
+package tasks.task4_16_11_2017.entities.helpers;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -11,7 +11,7 @@ import java.util.Date;
  * Класс, расшифровывающий json DarkSky
  *
  * @See DarkSkyUrlMaker
- * @See JsonReader
+ * @See JsonHelper
  */
 public class DarkSkyJsonDecoder {
     final String TEMPERATURE = "temperature";
@@ -48,14 +48,10 @@ public class DarkSkyJsonDecoder {
         return getExactForecast(jsnForecasts.getJSONObject(exactHour), TYPE_HOURLY);
     }
 
-    public Forecast getCurrentForecast() {
-        try {
+    public Forecast getCurrentForecast() throws JSONException {
             /*Переходим к подмассиву currently*/
             JSONObject obj = jsonObject.getJSONObject(TYPE_CURRENTLY);
             return getExactForecast(obj, TYPE_CURRENTLY);
-        } catch (JSONException e) {
-            return null;
-        }
     }
 
     private Forecast getExactForecast(JSONObject obj, String type) throws JSONException {
@@ -66,7 +62,7 @@ public class DarkSkyJsonDecoder {
         return forecast;
     }
 
-    void fillForecastByMeasurements(String type, JSONObject obj, Forecast forecast) throws JSONException {
+    private void fillForecastByMeasurements(String type, JSONObject obj, Forecast forecast) throws JSONException {
         forecast.setTemp(obj.getDouble(TEMPERATURE));
         forecast.setHumidity(obj.getDouble(HUMIDITY));
         forecast.setPressure(obj.getDouble(PRESSURE));

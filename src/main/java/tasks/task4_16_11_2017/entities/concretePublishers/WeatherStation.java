@@ -1,22 +1,23 @@
-package tasks.task4_16_11_2017.entities;
+package tasks.task4_16_11_2017.entities.concretePublishers;
 
 
+import tasks.task4_16_11_2017.entities.Forecast;
 import tasks.task4_16_11_2017.interfaces.Observer;
-import tasks.task4_16_11_2017.interfaces.Subject;
+import tasks.task4_16_11_2017.interfaces.Publisher;
 
 import java.util.ArrayList;
 
 /**
  * Погодная станция, оповещающая своих "подписчиков" об изменениях в погоде
  *
- * @See Subject
+ * @See Publisher
  */
-public class WeatherData implements Subject {
+public class WeatherStation implements Publisher {
 
     private ArrayList observers;
     private Forecast forecastState;
 
-    public WeatherData() {
+    public WeatherStation() {
         this.observers = new ArrayList();
     }
 

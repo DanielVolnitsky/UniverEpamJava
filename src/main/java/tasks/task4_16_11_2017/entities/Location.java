@@ -5,18 +5,18 @@ import tasks.task4_16_11_2017.exceptions.InvalidCoordinatesException;
 /**
  * Класс определяет атрибуты местонахождения
  */
-public class LocationInfo {
+public class Location {
 
     private String countryName;
     private String city;
     private double latitude;
     private double longitude;
 
-    public LocationInfo() {
+    public Location() {
 
     }
 
-    public LocationInfo(String countryName, String city, double latitude, double longitude) throws InvalidCoordinatesException {
+    public Location(String countryName, String city, double latitude, double longitude) throws InvalidCoordinatesException {
         this.countryName = countryName;
         this.city = city;
         setLatitude(latitude);

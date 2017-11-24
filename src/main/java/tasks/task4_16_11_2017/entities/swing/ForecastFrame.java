@@ -7,13 +7,13 @@ import java.awt.*;
 /**
  * Графический интерфейс пользователя для отображения прогноза погоды
  */
-public class DisplayingFrame extends JFrame {
+public class ForecastFrame extends JFrame {
 
     final private short frameWidth = 220;
-    public JTextArea textArea;
+    public JTextArea textHolder;
 
-    public DisplayingFrame(String topLabelText) {
-        super("Wind state demonstrating");
+    public ForecastFrame(String topLabelText, PositionType positionType) {
+        super("Forecast");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel outerPanel = new JPanel(new BorderLayout());
@@ -28,46 +28,40 @@ public class DisplayingFrame extends JFrame {
 
         outerPanel.add(innerPanel, BorderLayout.CENTER);
 
-        textArea = new JTextArea(3, 5);
+        textHolder = new JTextArea(3, 5);
 
-        innerPanel.add(textArea);
+        innerPanel.add(textHolder);
 
         this.setContentPane(outerPanel);
         this.pack();
-        this.setLocationRelativeTo(null);
+        this.setFrameLocation(positionType);
         this.setSize(frameWidth, 160);
+        //this.setVisible(true);
     }
 
-    public void centerFrame() {
-
+    private void setFrameLocation(PositionType positionType){
         Dimension windowSize = getSize();
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         Point centerPoint = ge.getCenterPoint();
 
         int dx = centerPoint.x - windowSize.width / 2;
         int dy = centerPoint.y - windowSize.height / 2;
+
+        switch (positionType){
+            case LEFTY:
+                dx -= frameWidth;
+                break;
+            case RIGHTY:
+                dx += frameWidth;
+                break;
+            case CENTER:
+            default:
+                break;
+        }
         this.setLocation(dx, dy);
     }
 
-    public void leftyFrame() {
-
-        Dimension windowSize = getSize();
-        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        Point centerPoint = ge.getCenterPoint();
-
-        int dx = centerPoint.x - windowSize.width / 2 - frameWidth;
-        int dy = centerPoint.y - windowSize.height / 2;
-        this.setLocation(dx, dy);
-    }
-
-    public void rightyFrame() {
-
-        Dimension windowSize = getSize();
-        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        Point centerPoint = ge.getCenterPoint();
-
-        int dx = centerPoint.x - windowSize.width / 2 + frameWidth;
-        int dy = centerPoint.y - windowSize.height / 2;
-        this.setLocation(dx, dy);
+    public enum PositionType {
+        LEFTY, CENTER, RIGHTY
     }
 }

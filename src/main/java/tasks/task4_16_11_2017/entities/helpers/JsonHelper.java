@@ -1,8 +1,8 @@
-package tasks.task4_16_11_2017.helpers;
+package tasks.task4_16_11_2017.entities.helpers;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import tasks.task4_16_11_2017.entities.LocationInfo;
+import tasks.task4_16_11_2017.entities.Location;
 
 import java.io.*;
 import java.net.MalformedURLException;
@@ -12,19 +12,15 @@ import java.nio.charset.Charset;
 /**
  * Класс предназначен для чтения файла типа .json
  */
-public class JsonReader {
-    String url;
+public class JsonHelper {
 
-    public JsonReader(String url) {
+    private String url;
+
+    public JsonHelper(String url) {
         this.url = url;
     }
 
-    /*Возвращает объект JsonReader с готовым для чтения URL*/
-    public static JsonReader getDarkSkyJsonWithUrl(LocationInfo locInfo) throws IllegalAccessException {
-        return new JsonReader(DarkSkyUrlMaker.getUrl(locInfo));
-    }
-
-    public JSONObject getJsonText() {
+    public JSONObject getJsonObject() {
         JSONObject json = null;
         BufferedReader bufferReader;
         String jsonText;

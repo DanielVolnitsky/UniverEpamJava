@@ -1,12 +1,15 @@
 package tasks.task4_16_11_2017.entities;
 
 import org.json.JSONException;
-import tasks.task4_16_11_2017.entities.swing.DisplayingFrame;
-import tasks.task4_16_11_2017.exceptions.InvalidCoordinatesException;
-import tasks.task4_16_11_2017.helpers.DarkSkyJsonDecoder;
-import tasks.task4_16_11_2017.helpers.DarkSkyUrlMaker;
-import tasks.task4_16_11_2017.helpers.DateHelper;
-import tasks.task4_16_11_2017.helpers.JsonReader;
+import tasks.task4_16_11_2017.entities.concreteObservers.PrimaryConditionsDisplayer;
+import tasks.task4_16_11_2017.entities.concreteObservers.WindStateDisplayer;
+import tasks.task4_16_11_2017.entities.concretePublishers.WeatherStation;
+import tasks.task4_16_11_2017.entities.helpers.DarkSkyJsonDecoder;
+import tasks.task4_16_11_2017.entities.helpers.DarkSkyUrlMaker;
+import tasks.task4_16_11_2017.entities.helpers.DateHelper;
+import tasks.task4_16_11_2017.entities.helpers.JsonHelper;
+import tasks.task4_16_11_2017.entities.swing.ForecastFrame;
+import tasks.task4_16_11_2017.interfaces.UrlMaker;
 
 import javax.swing.*;
 import java.util.Timer;
@@ -15,81 +18,78 @@ import java.util.TimerTask;
 public class ForecastDemonstrator {
 
     private static byte currHour;
-    private static LocationInfo locInfo;
-    private static WeatherData weatherData;
+    private Location location;
+    private WeatherStation weatherStation;
 
-    private static void updateCurrentValues() {
-        try {
-            JsonReader currReader = JsonReader.getDarkSkyJsonWithUrl(locInfo);
-            DarkSkyJsonDecoder thisDayDecoder = new DarkSkyJsonDecoder(currReader.getJsonText());
-
-            Forecast thisDayForecast = thisDayDecoder.getCurrentForecast();
-            weatherData.setMeasurements(thisDayForecast);
-        } catch (IllegalAccessException e) {
-            System.err.println("Problems with identifying.");
-        }
-    }
-
-    private static void updatePrevDayValues(JTextArea textArea, byte exactHour) {
-        try {
-            JsonReader yestReader = new JsonReader(DarkSkyUrlMaker.getUrl(locInfo, DateHelper.getYesterdayTime()));
-            DarkSkyJsonDecoder prevDayDecoder = new DarkSkyJsonDecoder(yestReader.getJsonText());
-            try {
-                Forecast prevDayForecast = prevDayDecoder.getForecastForExactDay(exactHour);
-                textArea.setText(prevDayForecast.toString());
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        } catch (IllegalAccessException e) {
-            System.err.println("Problems with identifying.");
-        }
+    public ForecastDemonstrator(Location location, WeatherStation weatherStation) {
+        this.location = location;
+        this.weatherStation = weatherStation;
     }
 
     public void demonstrate() {
-        try {
-            locInfo = new LocationInfo(
-                    "Ukraine", "Kiev", 50.433304, 30.516693);
 
-            final DisplayingFrame currPrimaryDataFrame = new DisplayingFrame("This moment weather state:");
-            final DisplayingFrame currWindStateFrame = new DisplayingFrame("Current wind state:");
-            final DisplayingFrame prevPrimaryDataFrame = new DisplayingFrame("Previous day weather state:");
+        final ForecastFrame currPrimaryDataFrame = new ForecastFrame(
+                "This moment weather state:", ForecastFrame.PositionType.CENTER);
+        final ForecastFrame currWindStateFrame = new ForecastFrame(
+                "Current wind state:", ForecastFrame.PositionType.LEFTY);
+        final ForecastFrame prevPrimaryDataFrame = new ForecastFrame(
+                "Previous day weather state:", ForecastFrame.PositionType.RIGHTY);
 
-            weatherData = new WeatherData();
+        PrimaryConditionsDisplayer primaryConditionsDisplayer = new PrimaryConditionsDisplayer(
+                weatherStation, currPrimaryDataFrame.textHolder);
 
-            PrimaryConditionsDisplay primaryConditionsDisplay = new PrimaryConditionsDisplay(
-                    weatherData, currPrimaryDataFrame.textArea);
+        WindStateDisplayer windStateDisplayer = new WindStateDisplayer(
+                weatherStation, currWindStateFrame.textHolder);
 
-            WindStateDisplay windStateDisplay = new WindStateDisplay(
-                    weatherData, currWindStateFrame.textArea);
+        currHour = DateHelper.getCurrentHour();
+        updatePrevDayValues(prevPrimaryDataFrame.textHolder, currHour);
 
-            currHour = DateHelper.getCurrentHour();
-            updatePrevDayValues(prevPrimaryDataFrame.textArea, currHour);
+        currPrimaryDataFrame.setVisible(true);
+        currWindStateFrame.setVisible(true);
+        prevPrimaryDataFrame.setVisible(true);
 
-            currPrimaryDataFrame.setVisible(true);
-            currPrimaryDataFrame.centerFrame();
+        java.util.Timer t = new Timer();
+        t.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                updateCurrentValues();
 
-            currWindStateFrame.setVisible(true);
-            currWindStateFrame.leftyFrame();
-
-            prevPrimaryDataFrame.setVisible(true);
-            prevPrimaryDataFrame.rightyFrame();
-
-            java.util.Timer t = new Timer();
-            t.schedule(new TimerTask() {
-                @Override
-                public void run() {
-                    updateCurrentValues();
-
-                    byte newHour = DateHelper.getCurrentHour();
-                    if (newHour != currHour) {
-                        currHour = newHour;
-                        updatePrevDayValues(prevPrimaryDataFrame.textArea, currHour);
-                    }
+                byte newHour = DateHelper.getCurrentHour();
+                if (newHour != currHour) {
+                    currHour = newHour;
+                    updatePrevDayValues(prevPrimaryDataFrame.textHolder, currHour);
                 }
-            }, 0, 3000);
+            }
+        }, 0, 3000);
+    }
 
-        } catch (InvalidCoordinatesException ex) {
-            System.err.println(ex.getMessage());
+    private void updateCurrentValues() {
+        UrlMaker urlMaker = new DarkSkyUrlMaker(location);
+        JsonHelper jHelper = new JsonHelper(urlMaker.getUrl());
+        DarkSkyJsonDecoder decoder = new DarkSkyJsonDecoder(jHelper.getJsonObject());
+
+        Forecast forecast = null;
+        try {
+            forecast = decoder.getCurrentForecast();
+        } catch (JSONException e) {
+            System.err.println("Problems with json parsing.");
+        }
+        weatherStation.setMeasurements(forecast);
+    }
+
+    private void updatePrevDayValues(JTextArea textArea, byte exactHour) {
+        try {
+            DarkSkyUrlMaker urlMaker = new DarkSkyUrlMaker(location);
+            JsonHelper jHelper = new JsonHelper(urlMaker.getUrl(DateHelper.getYesterdayTime()));
+            DarkSkyJsonDecoder decoder = new DarkSkyJsonDecoder(jHelper.getJsonObject());
+            try {
+                Forecast forecast = decoder.getForecastForExactDay(exactHour);
+                textArea.setText(forecast.toString());
+            } catch (JSONException e) {
+                System.err.println("Problems with json parsing.");
+            }
+        } catch (IllegalAccessException e) {
+            System.err.println("Problems with identifying.");
         }
     }
 }

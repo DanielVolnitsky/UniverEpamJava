@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd788f61-779d-4d9c-ad66-a2ce34fb8412" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/ForecastDemonstrator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/WindStateDisplay.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/swing/DisplayingFrame.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/swing/ForecastFrame.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/CurrentConditionsDisplay.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/PrimaryConditionsDisplay.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/Main.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/additional/MainCodeExample" afterPath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/additional/MainCodeExample" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/Forecast.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/Forecast.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/helpers/DarkSkyJsonDecoder.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/helpers/DarkSkyJsonDecoder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/Текст задания" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/Текст задания" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/basicAppliances/ElectricalAppliance.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/basicAppliances/ElectricalAppliance.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,6 +30,12 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/UniverEpamJava2$GeometricalObjectSelectorTest.coverage" NAME="GeometricalObjectSelectorTest Coverage Results" MODIFIED="1511194208831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>tasks.task3_07_11_2017.entities.additional.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UniverEpamJava$tasks_task5_17_11_2017_entities_in_UniverEpamJava.coverage" NAME="tasks.task5_17_11_2017.entities in UniverEpamJava Coverage Results" MODIFIED="1511538412041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>tasks.task5_17_11_2017.entities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UniverEpamJava$tasks_task4_16_11_2017_entities_in_UniverEpamJava.coverage" NAME="tasks.task4_16_11_2017.entities in UniverEpamJava Coverage Results" MODIFIED="1511537179108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>tasks.task4_16_11_2017.entities.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/UniverEpamJava2$PolygonTest.coverage" NAME="PolygonTest Coverage Results" MODIFIED="1511194218589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>tasks.task3_07_11_2017.entities.*</FILTER>
@@ -43,23 +58,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/Main.java">
+      <file leaf-file-name="ForecastDemonstrator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/ForecastDemonstrator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainCodeExample" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/MainCodeExample">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="732">
-              <caret line="71" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state relative-caret-position="-833">
+              <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -93,17 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/exceptions/InvalidWeightException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factoryMethod/ElectricalApplianceFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factoryMethod/IronFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factoryMethod/TableLampFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factoryMethod/VacuumCleanerFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/Iron.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/VacuumCleaner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/TableLamp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/Drill.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/interfaces/SwitchingOnStrategy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/exceptions/InvalidAmperageException.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/exceptions/InvalidPowerValueException.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteStrategies/PlugInStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/interfaces/SwitchingStrategy.java" />
@@ -136,14 +128,25 @@
         <option value="$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/additional/RangerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/basicAppliances/Appliance.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/basicAppliances/ElectricalAppliance.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteSwitchingTypes/SpinningHamsterType.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteSwitchingTypes/RunningHamsterType.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factories/VacuumCleanerFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/MainCodeExample" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/helpers/DarkSkyJsonDecoder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/Текст задания" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/basicAppliances/ElectricalAppliance.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/additional/MainCodeExample" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/helpers/DarkSkyJsonDecoder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/CurrentConditionsDisplay.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/CurrentWindStateDisplay.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/swing/ForecastFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/swing/WindStateFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/PrimaryConditionsDisplay.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/WindStateDisplay.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/swing/DisplayingFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/Forecast.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/helpers/JsonReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/ForecastDemonstrator.java" />
       </list>
     </option>
   </component>
@@ -154,9 +157,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="657" />
-    <option name="y" value="27" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="343" />
+    <option name="y" value="13" />
     <option name="width" value="1329" />
     <option name="height" value="1016" />
   </component>
@@ -178,8 +181,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -213,11 +217,50 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tasks" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="task4_16_11_2017" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="task4_16_11_2017" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,11 +275,12 @@
       <recent name="tasks.task4_16_11_2017.helpers" />
       <recent name="tasks.task4_16_11_2017.entities" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tasks.task4_16_11_2017.entities.swing" />
+      <recent name="tasks.task2_07_11_2017.entities" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="tasks.task2_07_11_2017.entities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Daniel\Desktop\UniverEpamJava\src\main\java\tasks\task5_17_11_2017\additional" />
@@ -259,56 +303,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="ElectricalAppliancesHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="tasks.task5_17_11_2017.entities.additional.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="UniverEpamJava" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tasks.task5_17_11_2017.entities.additional" />
-      <option name="MAIN_CLASS_NAME" value="tasks.task5_17_11_2017.entities.additional.ElectricalAppliancesHandlerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="ElectricalAppliancesHandlerTest.getOverallPower" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="tasks.task5_17_11_2017.entities.additional.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="UniverEpamJava" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tasks.task5_17_11_2017.entities.additional" />
-      <option name="MAIN_CLASS_NAME" value="tasks.task5_17_11_2017.entities.additional.ElectricalAppliancesHandlerTest" />
-      <option name="METHOD_NAME" value="getOverallPower" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -434,6 +428,31 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration name="tasks.task4_16_11_2017.entities in UniverEpamJava" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tasks.task4_16_11_2017.entities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="UniverEpamJava" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tasks.task4_16_11_2017.entities" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="tasks.task5_17_11_2017 in UniverEpamJava" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -459,20 +478,45 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="tasks.task5_17_11_2017.entities in UniverEpamJava" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tasks.task5_17_11_2017.entities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="UniverEpamJava" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tasks.task5_17_11_2017.entities" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ElectricalAppliancesHandlerTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ElectricalAppliancesHandlerTest.getOverallPower" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RangerTest.getAppliancesByParamInRange" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.tasks.task5_17_11_2017 in UniverEpamJava" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.RangerTest.getAppliancesByParamInRange" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.tasks.task5_17_11_2017 in UniverEpamJava" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.tasks.task4_16_11_2017.entities in UniverEpamJava" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.tasks.task5_17_11_2017.entities in UniverEpamJava" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.tasks.task5_17_11_2017 in UniverEpamJava" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.RangerTest.getAppliancesByParamInRange" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ElectricalAppliancesHandlerTest.getOverallPower" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ElectricalAppliancesHandlerTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.tasks.task5_17_11_2017.entities in UniverEpamJava" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.tasks.task4_16_11_2017.entities in UniverEpamJava" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.tasks.task5_17_11_2017 in UniverEpamJava" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.RangerTest.getAppliancesByParamInRange" />
       </list>
     </recent_temporary>
   </component>
@@ -490,23 +534,23 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ElectricalAppliancesHandlerTest_getOverallPower - 2017.11.23 at 22h 18m 50s.xml">
-      <configuration name="ElectricalAppliancesHandlerTest.getOverallPower" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ElectricalAppliancesHandlerTest_getOverallPower - 2017.11.23 at 22h 19m 52s.xml">
-      <configuration name="ElectricalAppliancesHandlerTest.getOverallPower" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ElectricalAppliancesHandlerTest_getOverallPower - 2017.11.23 at 22h 19m 54s.xml">
-      <configuration name="ElectricalAppliancesHandlerTest.getOverallPower" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ElectricalAppliancesHandlerTest_getOverallPower - 2017.11.23 at 22h 20m 41s.xml">
-      <configuration name="ElectricalAppliancesHandlerTest.getOverallPower" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RangerTest_getAppliancesByParamInRange - 2017.11.23 at 22h 28m 55s.xml">
-      <configuration name="RangerTest.getAppliancesByParamInRange" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RangerTest_getAppliancesByParamInRange - 2017.11.23 at 22h 29m 15s.xml">
       <configuration name="RangerTest.getAppliancesByParamInRange" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="tasks_task4_16_11_2017_entities_in_UniverEpamJava - 2017.11.24 at 17h 26m 21s.xml">
+      <configuration name="tasks.task4_16_11_2017.entities in UniverEpamJava" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="tasks_task5_17_11_2017_entities_in_UniverEpamJava - 2017.11.24 at 17h 26m 28s.xml">
+      <configuration name="tasks.task5_17_11_2017.entities in UniverEpamJava" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="tasks_task5_17_11_2017_entities_in_UniverEpamJava - 2017.11.24 at 17h 28m 44s.xml">
+      <configuration name="tasks.task5_17_11_2017.entities in UniverEpamJava" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="tasks_task5_17_11_2017_entities_in_UniverEpamJava - 2017.11.24 at 17h 46m 53s.xml">
+      <configuration name="tasks.task5_17_11_2017.entities in UniverEpamJava" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="tasks_task5_17_11_2017_entities_in_UniverEpamJava - 2017.11.24 at 21h 20m 57s.xml">
+      <configuration name="tasks.task5_17_11_2017.entities in UniverEpamJava" configurationId="JUnit" />
     </history-entry>
     <history-entry file="tasks_task5_17_11_2017_in_UniverEpamJava - 2017.11.23 at 22h 29m 36s.xml">
       <configuration name="tasks.task5_17_11_2017 in UniverEpamJava" configurationId="JUnit" />
@@ -522,7 +566,8 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -530,8 +575,8 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.056277055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1991342" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.021354167" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -539,8 +584,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07900433" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13744588" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -578,77 +623,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/helpers/JsonReader.java</url>
-          <line>44</line>
-          <properties />
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="81" />
+      <option name="time" value="83" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/helpers/CollectionsHelper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task3_07_11_2017/additional/MainCodeExample">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="22" column="68" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="22" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/exceptions/InvalidVoltageException.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/exceptions/InvalidWeightException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="72" lean-forward="false" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/exceptions/InvalidPowerValueException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/reflect/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="676" column="48" lean-forward="true" selection-start-line="676" selection-start-column="48" selection-end-line="676" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/interfaces/SwitchingType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/exceptions/InvalidMaxSpeedRotationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="82" lean-forward="false" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/exceptions/ElectricalApplianceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="51" lean-forward="false" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteSwitchingTypes/BatteryUsingType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/helpers/ArithmeticHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="564">
@@ -656,23 +635,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/Текст задания">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="72" lean-forward="true" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/CodeExecutionResult.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/ApplianceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="19" column="11" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="19" selection-end-column="11" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task4_16_11_2017/entities/LocationInfoTest.java">
@@ -693,55 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/Drill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/concreteAppliances/DrillTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/Iron.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/TableLamp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/VacuumCleaner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/concreteAppliances/VacuumCleanerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/House.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -773,27 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/ElectricalApplianceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/additional/ElectricalApplianceCollectionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHandlerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="43" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/additional/RangerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="632">
@@ -801,45 +696,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="53" column="22" lean-forward="false" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/exceptions/InvalidVacuumCleanerContainerVolumeException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="85" lean-forward="false" selection-start-line="2" selection-start-column="85" selection-end-line="2" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/basicAppliances/ElectricalAppliance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/basicAppliances/Appliance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteSwitchingTypes/PlugInType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteSwitchingTypes/RunningHamsterType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -864,48 +724,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factories/ElectricalApplianceFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factories/DrillFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/helpers/DarkSkyUrlMaker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
           <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/helpers/JsonReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/Forecast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/helpers/DarkSkyJsonDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -918,29 +740,290 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/additional/MainCodeExample">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/MainCodeExample">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        <state relative-caret-position="41">
+          <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/MainCodeExample">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/additional/Текст задания">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteSwitchingTypes/BatteryUsingType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteSwitchingTypes/PlugInType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteSwitchingTypes/RunningHamsterType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/interfaces/SwitchingType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/basicAppliances/Appliance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/basicAppliances/ElectricalAppliance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/Drill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/Iron.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/TableLamp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/concreteAppliances/VacuumCleaner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factories/ElectricalApplianceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factories/DrillFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/House.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="55" column="41" lean-forward="false" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/additional/ElectricalApplianceCollectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/concreteAppliances/VacuumCleanerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/concreteAppliances/DrillTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/ElectricalApplianceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="37" column="44" lean-forward="true" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/ApplianceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/additional/MainCodeExample">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="168">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/interfaces/DisplayElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/interfaces/Observer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/WeatherData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding>
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/swing/PrimaryWeatherDataFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/WindStateDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/helpers/DarkSkyJsonDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="47" column="28" lean-forward="true" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/swing/DisplayingFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="68" column="66" lean-forward="false" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/PrimaryConditionsDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="50" column="42" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="50" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/Forecast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1147">
+          <caret line="95" column="31" lean-forward="false" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/helpers/JsonReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="763">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/ForecastDemonstrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-833">
+          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

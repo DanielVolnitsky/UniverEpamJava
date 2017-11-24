@@ -15,6 +15,14 @@ import java.util.Date;
  */
 public class DarkSkyJsonDecoder {
     final String TEMPERATURE = "temperature";
+
+    final String HUMIDITY = "humidity";
+    final String PRESSURE = "pressure";
+
+    final String WIND_SPEED = "windSpeed";
+    final String WIND_GUST = "windGust";
+    final String WIND_BEARING = "windBearing";
+
     final String TIME = "time";
     final String TYPE_HOURLY = "hourly";
     final String TYPE_CURRENTLY = "currently";
@@ -42,6 +50,7 @@ public class DarkSkyJsonDecoder {
 
     public Forecast getCurrentForecast() {
         try {
+            /*Переходим к подмассиву currently*/
             JSONObject obj = jsonObject.getJSONObject(TYPE_CURRENTLY);
             return getExactForecast(obj, TYPE_CURRENTLY);
         } catch (JSONException e) {
@@ -51,17 +60,19 @@ public class DarkSkyJsonDecoder {
 
     private Forecast getExactForecast(JSONObject obj, String type) throws JSONException {
         Forecast forecast = new Forecast();
-        setTemperature(type, obj, forecast);
+
+        fillForecastByMeasurements(type, obj, forecast);
         forecast.setDate(new Date(obj.getLong(TIME) * 1000));
         return forecast;
     }
 
-    void setTemperature(String type, JSONObject obj, Forecast forecast) throws JSONException {
-        switch (type) {
-            case "currently":
-            case "hourly":
-                forecast.setTemp(obj.getDouble(TEMPERATURE));
-                break;
-        }
+    void fillForecastByMeasurements(String type, JSONObject obj, Forecast forecast) throws JSONException {
+        forecast.setTemp(obj.getDouble(TEMPERATURE));
+        forecast.setHumidity(obj.getDouble(HUMIDITY));
+        forecast.setPressure(obj.getDouble(PRESSURE));
+
+        forecast.setWindSpeed(obj.getDouble(WIND_SPEED));
+        forecast.setWindGust(obj.getDouble(WIND_GUST));
+        forecast.setWindBearing(obj.getDouble(WIND_BEARING));
     }
 }

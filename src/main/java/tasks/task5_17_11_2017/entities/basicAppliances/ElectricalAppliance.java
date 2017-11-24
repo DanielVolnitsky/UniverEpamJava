@@ -17,7 +17,7 @@ public class ElectricalAppliance extends Appliance implements Comparable<Electri
     private int power;
     /*текущая потребляемая мощность*/
     private int currentPower;
-    /*Включен в розетку*/
+
     private Boolean isSwitchedOn;
 
     {

@@ -8,7 +8,14 @@ import java.util.Date;
 public class Forecast {
 
     Date date;
+
     double temp;
+    double humidity;
+    double pressure;
+
+    double windSpeed;
+    double windGust;
+    double windBearing;
 
     public Forecast() {
 
@@ -17,6 +24,46 @@ public class Forecast {
     public Forecast(Date date, double temp) {
         this.date = date;
         this.temp = temp;
+    }
+
+    public double getHumidity() {
+        return humidity;
+    }
+
+    public void setHumidity(double humidity) {
+        this.humidity = humidity;
+    }
+
+    public double getPressure() {
+        return pressure;
+    }
+
+    public void setPressure(double pressure) {
+        this.pressure = pressure;
+    }
+
+    public double getWindSpeed() {
+        return windSpeed;
+    }
+
+    public void setWindSpeed(double windSpeed) {
+        this.windSpeed = windSpeed;
+    }
+
+    public double getWindGust() {
+        return windGust;
+    }
+
+    public void setWindGust(double windGust) {
+        this.windGust = windGust;
+    }
+
+    public double getWindBearing() {
+        return windBearing;
+    }
+
+    public void setWindBearing(double windBearing) {
+        this.windBearing = windBearing;
     }
 
     public Date getDate() {
@@ -36,7 +83,16 @@ public class Forecast {
     }
 
     @Override
-    public String toString(){
-        return "Date: " + date.toString() + "\nTemperature for this hour: " + temp + " c\n";
+    public String toString() {
+        StringBuilder text = new StringBuilder(30);
+        text.append(date);
+        text.append("\n\nTemperature: ");
+        text.append(this.getTemp());
+        text.append("\nHumidity: ");
+        text.append(this.getHumidity());
+        text.append("\nPressure: ");
+        text.append(this.getPressure());
+
+        return text.toString();
     }
 }

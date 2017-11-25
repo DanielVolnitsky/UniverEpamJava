@@ -2,7 +2,6 @@ package tasks.task4_16_11_2017.entities.helpers;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import tasks.task4_16_11_2017.entities.Location;
 
 import java.io.*;
 import java.net.MalformedURLException;
@@ -20,7 +19,7 @@ public class JsonHelper {
         this.url = url;
     }
 
-    public JSONObject getJsonObject() {
+    public JSONObject getJsonObject() throws MalformedURLException{
         JSONObject json = null;
         BufferedReader bufferReader;
         String jsonText;
@@ -33,10 +32,8 @@ public class JsonHelper {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException e){
+            throw new MalformedURLException();
         }
         return json;
     }

@@ -57,12 +57,12 @@ public class DarkSkyJsonDecoder {
     private Forecast getExactForecast(JSONObject obj, String type) throws JSONException {
         Forecast forecast = new Forecast();
 
-        fillForecastByMeasurements(type, obj, forecast);
+        fillForecastByMeasurements(obj, forecast);
         forecast.setDate(new Date(obj.getLong(TIME) * 1000));
         return forecast;
     }
 
-    private void fillForecastByMeasurements(String type, JSONObject obj, Forecast forecast) throws JSONException {
+    private void fillForecastByMeasurements(JSONObject obj, Forecast forecast) throws JSONException {
         forecast.setTemp(obj.getDouble(TEMPERATURE));
         forecast.setHumidity(obj.getDouble(HUMIDITY));
         forecast.setPressure(obj.getDouble(PRESSURE));

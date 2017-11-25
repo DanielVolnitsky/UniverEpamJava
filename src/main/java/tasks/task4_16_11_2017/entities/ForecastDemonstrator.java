@@ -12,6 +12,7 @@ import tasks.task4_16_11_2017.entities.swing.ForecastFrame;
 import tasks.task4_16_11_2017.interfaces.UrlMaker;
 
 import javax.swing.*;
+import java.net.MalformedURLException;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -21,9 +22,12 @@ public class ForecastDemonstrator {
     private Location location;
     private WeatherStation weatherStation;
 
-    public ForecastDemonstrator(Location location, WeatherStation weatherStation) {
-        this.location = location;
-        this.weatherStation = weatherStation;
+    public ForecastDemonstrator(Location location, WeatherStation weatherStation) throws NullPointerException {
+        if (location != null && weatherStation != null) {
+            this.weatherStation = weatherStation;
+            this.location = location;
+        } else
+            throw new NullPointerException("ForecastDemonstrator params can not be null");
     }
 
     public void demonstrate() {
@@ -66,30 +70,31 @@ public class ForecastDemonstrator {
     private void updateCurrentValues() {
         UrlMaker urlMaker = new DarkSkyUrlMaker(location);
         JsonHelper jHelper = new JsonHelper(urlMaker.getUrl());
-        DarkSkyJsonDecoder decoder = new DarkSkyJsonDecoder(jHelper.getJsonObject());
 
-        Forecast forecast = null;
         try {
-            forecast = decoder.getCurrentForecast();
+            DarkSkyJsonDecoder decoder = new DarkSkyJsonDecoder(jHelper.getJsonObject());
+            Forecast forecast = decoder.getCurrentForecast();
+
+            weatherStation.setMeasurements(forecast);
+        } catch (MalformedURLException e) {
+            System.err.println("Invalid URL formed.");
         } catch (JSONException e) {
             System.err.println("Problems with json parsing.");
         }
-        weatherStation.setMeasurements(forecast);
     }
 
     private void updatePrevDayValues(JTextArea textArea, byte exactHour) {
+        DarkSkyUrlMaker urlMaker = new DarkSkyUrlMaker(location);
+        JsonHelper jHelper = new JsonHelper(urlMaker.getUrl(DateHelper.getYesterdayTime()));
         try {
-            DarkSkyUrlMaker urlMaker = new DarkSkyUrlMaker(location);
-            JsonHelper jHelper = new JsonHelper(urlMaker.getUrl(DateHelper.getYesterdayTime()));
             DarkSkyJsonDecoder decoder = new DarkSkyJsonDecoder(jHelper.getJsonObject());
-            try {
-                Forecast forecast = decoder.getForecastForExactDay(exactHour);
-                textArea.setText(forecast.toString());
-            } catch (JSONException e) {
-                System.err.println("Problems with json parsing.");
-            }
-        } catch (IllegalAccessException e) {
-            System.err.println("Problems with identifying.");
+            Forecast forecast = decoder.getForecastForExactDay(exactHour);
+
+            textArea.setText(forecast.toString());
+        } catch (MalformedURLException e) {
+            System.err.println("Invalid URL formed.");
+        } catch (JSONException e) {
+            System.err.println("Problems with json parsing.");
         }
     }
 }

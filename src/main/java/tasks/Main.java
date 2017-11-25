@@ -1,13 +1,12 @@
 package tasks;
 
-import org.json.JSONException;
 import tasks.task4_16_11_2017.entities.ForecastDemonstrator;
 import tasks.task4_16_11_2017.entities.Location;
 import tasks.task4_16_11_2017.entities.concretePublishers.WeatherStation;
 import tasks.task4_16_11_2017.exceptions.InvalidCoordinatesException;
 
 public class Main {
-    public static void main(String[] args) throws JSONException {
+    public static void main(String[] args) {
 
         try {
             Location location = new Location(
@@ -18,7 +17,7 @@ public class Main {
             ForecastDemonstrator demon = new ForecastDemonstrator(location, weatherStation);
             demon.demonstrate();
 
-        } catch (InvalidCoordinatesException e) {
+        } catch (InvalidCoordinatesException | NullPointerException e) {
             e.printStackTrace();
         }
     }

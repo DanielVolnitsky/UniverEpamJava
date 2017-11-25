@@ -21,6 +21,10 @@ public class PrimaryConditionsDisplayer implements Observer, Displayer {
 
     private Date date;
 
+    public PrimaryConditionsDisplayer() {
+
+    }
+
     public PrimaryConditionsDisplayer(Publisher weatherData, JTextArea textArea) {
         this.textArea = textArea;
         this.weatherData = weatherData;
@@ -28,7 +32,7 @@ public class PrimaryConditionsDisplayer implements Observer, Displayer {
     }
 
     @Override
-    public void update(Forecast forecast) {
+    public void update(Forecast forecast) throws NullPointerException{
         this.date = forecast.getDate();
 
         this.temperature = forecast.getTemp();

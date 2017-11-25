@@ -21,11 +21,6 @@ public class Forecast {
 
     }
 
-    public Forecast(Date date, double temp) {
-        this.date = date;
-        this.temp = temp;
-    }
-
     public double getHumidity() {
         return humidity;
     }

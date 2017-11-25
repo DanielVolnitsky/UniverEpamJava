@@ -26,7 +26,7 @@ public class WindStateDisplayer implements Observer, Displayer {
 
 
     @Override
-    public void update(Forecast forecast) {
+    public void update(Forecast forecast) throws NullPointerException{
         this.date = forecast.getDate();
         this.windSpeed = forecast.getWindSpeed();
         this.windGust = forecast.getWindGust();

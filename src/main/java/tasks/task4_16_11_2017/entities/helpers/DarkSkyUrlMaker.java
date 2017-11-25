@@ -6,7 +6,7 @@ import tasks.task4_16_11_2017.interfaces.UrlMaker;
 /**
  * Класс, формирующий ссылку запроса к серверу DarkSky
  */
-public class DarkSkyUrlMaker implements UrlMaker{
+public class DarkSkyUrlMaker implements UrlMaker {
     private static final String MAIN_URL = "https://api.darksky.net/forecast/";
     private final static String KEY = "77c8ea030878f5222612b72805671cc0";
 
@@ -15,37 +15,30 @@ public class DarkSkyUrlMaker implements UrlMaker{
 
     private Location location;
 
-    public DarkSkyUrlMaker(Location location) {
-        this.location = location;
+    public DarkSkyUrlMaker(Location location) throws NullPointerException {
+        if (location != null)
+            this.location = location;
+        else
+            throw new NullPointerException();
     }
 
-    private String getPartOfUrl(String key, String exactTime) throws IllegalAccessException {
-        return getPartOfUrl(key) + ',' + exactTime;
+    private String getPartOfUrl(String exactTime) {
+        return getPartOfUrl() + ',' + exactTime;
     }
 
-    private String getPartOfUrl(String key) throws IllegalAccessException {
-        if (key == null || key.equals(""))
-            throw new IllegalAccessException("The key is empty");
-        if (location == null)
-            throw new IllegalAccessException("The location is null");
-
-        return MAIN_URL + key + '/' + location.getLatitude() + ',' + location.getLongitude();
+    private String getPartOfUrl() {
+        return MAIN_URL + KEY + '/' + location.getLatitude() + ',' + location.getLongitude();
     }
 
     @Override
-    public  String getUrl()  {
-        String result = "";
-        try {
-            result = getPartOfUrl(KEY);
-            result += '?' + UNITS_SET + "=" + UNITS;
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
+    public String getUrl() {
+        String result = getPartOfUrl();
+        result += '?' + UNITS_SET + "=" + UNITS;
         return result;
     }
 
-    public String getUrl(String exactTime) throws IllegalAccessException {
-        String result = getPartOfUrl(KEY, exactTime);
+    public String getUrl(String exactTime) {
+        String result = getPartOfUrl(exactTime);
         result += '?' + UNITS_SET + "=" + UNITS;
         return result;
     }

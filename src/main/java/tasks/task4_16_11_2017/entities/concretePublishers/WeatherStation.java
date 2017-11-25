@@ -41,6 +41,10 @@ public class WeatherStation implements Publisher {
         }
     }
 
+    public ArrayList getObservers() {
+        return observers;
+    }
+
     public void measurementsChanged() {
         notifyObservers();
     }

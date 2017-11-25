@@ -67,7 +67,7 @@ public class ForecastDemonstrator {
         }, 0, 3000);
     }
 
-    private void updateCurrentValues() {
+     void updateCurrentValues() {
         UrlMaker urlMaker = new DarkSkyUrlMaker(location);
         JsonHelper jHelper = new JsonHelper(urlMaker.getUrl());
 

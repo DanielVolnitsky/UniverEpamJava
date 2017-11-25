@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Класс, содержащий данные прогноза погоды
  */
-public class Forecast {
+public class Forecast{
 
     Date date;
 
@@ -75,6 +75,42 @@ public class Forecast {
 
     public void setTemp(double temp) {
         this.temp = temp;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Forecast forecast = (Forecast) o;
+
+        if (Double.compare(forecast.temp, temp) != 0) return false;
+        if (Double.compare(forecast.humidity, humidity) != 0) return false;
+        if (Double.compare(forecast.pressure, pressure) != 0) return false;
+        if (Double.compare(forecast.windSpeed, windSpeed) != 0) return false;
+        if (Double.compare(forecast.windGust, windGust) != 0) return false;
+        if (Double.compare(forecast.windBearing, windBearing) != 0) return false;
+        return date.equals(forecast.date);
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp1;
+        result = date.hashCode();
+        temp1 = Double.doubleToLongBits(temp);
+        result = 31 * result + (int) (temp1 ^ (temp1 >>> 32));
+        temp1 = Double.doubleToLongBits(humidity);
+        result = 31 * result + (int) (temp1 ^ (temp1 >>> 32));
+        temp1 = Double.doubleToLongBits(pressure);
+        result = 31 * result + (int) (temp1 ^ (temp1 >>> 32));
+        temp1 = Double.doubleToLongBits(windSpeed);
+        result = 31 * result + (int) (temp1 ^ (temp1 >>> 32));
+        temp1 = Double.doubleToLongBits(windGust);
+        result = 31 * result + (int) (temp1 ^ (temp1 >>> 32));
+        temp1 = Double.doubleToLongBits(windBearing);
+        result = 31 * result + (int) (temp1 ^ (temp1 >>> 32));
+        return result;
     }
 
     @Override

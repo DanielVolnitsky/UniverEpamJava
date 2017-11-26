@@ -1,24 +1,10 @@
 package tasks;
 
-import tasks.task4_16_11_2017.entities.ForecastDemonstrator;
-import tasks.task4_16_11_2017.entities.Location;
-import tasks.task4_16_11_2017.entities.concretePublishers.WeatherStation;
-import tasks.task4_16_11_2017.exceptions.InvalidCoordinatesException;
+import tasks.task7_24_11_2017.entities.Calculator;
 
 public class Main {
     public static void main(String[] args) {
-
-        try {
-            Location location = new Location(
-                    "Ukraine", "Kiev", 50.433304, 30.516693);
-
-            WeatherStation weatherStation = new WeatherStation();
-
-            ForecastDemonstrator demon = new ForecastDemonstrator(location, weatherStation);
-            demon.demonstrate();
-
-        } catch (InvalidCoordinatesException | NullPointerException e) {
-            e.printStackTrace();
-        }
+        System.out.println(Calculator.calculate("-1 + (2 + 8) * 9"));
+      //  System.out.println(Calculator.calculate("1 + 2 + 8 * 9"));
     }
 }

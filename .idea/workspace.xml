@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd788f61-779d-4d9c-ad66-a2ce34fb8412" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/task7_24_11_2017/additional/MainCodeExample" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/task7_24_11_2017/additional/Текст задания" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/task7_24_11_2017/entities/Calculator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/tasks/task7_24_11_2017/entities/CalculatorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/Main.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/additional/MainCodeExample" afterPath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/additional/MainCodeExample" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task7_24_11_2017/additional/Текст задания" afterPath="$PROJECT_DIR$/src/main/java/tasks/task7_24_11_2017/additional/Текст задания" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task7_24_11_2017/entities/Calculator.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task7_24_11_2017/entities/Calculator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,28 +18,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/UniverEpamJava2$tasks_task4_16_11_2017_in_UniverEpamJava.coverage" NAME="tasks.task4_16_11_2017 in UniverEpamJava Coverage Results" MODIFIED="1511297123761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>tasks.task4_16_11_2017.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/UniverEpamJava2$GeometricalObjectSelectorTest.coverage" NAME="GeometricalObjectSelectorTest Coverage Results" MODIFIED="1511194208831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>tasks.task3_07_11_2017.entities.additional.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/UniverEpamJava$tasks_task5_17_11_2017_entities_in_UniverEpamJava.coverage" NAME="tasks.task5_17_11_2017.entities in UniverEpamJava Coverage Results" MODIFIED="1511538412041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>tasks.task5_17_11_2017.entities.*</FILTER>
+    <SUITE FILE_PATH="coverage/UniverEpamJava$CalculatorTest_isTokenUnaryPlusOrMinusOperation.coverage" NAME="CalculatorTest.isTokenUnaryPlusOrMinusOperation Coverage Results" MODIFIED="1511708886409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>tasks.task7_24_11_2017.entities.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/UniverEpamJava$tasks_task4_16_11_2017_entities_in_UniverEpamJava.coverage" NAME="tasks.task4_16_11_2017.entities in UniverEpamJava Coverage Results" MODIFIED="1511537179108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>tasks.task4_16_11_2017.entities.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/UniverEpamJava2$PolygonTest.coverage" NAME="PolygonTest Coverage Results" MODIFIED="1511194218589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>tasks.task3_07_11_2017.entities.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/UniverEpamJava2$tasks_task3_07_11_2017_in_UniverEpamJava.coverage" NAME="tasks.task3_07_11_2017 in UniverEpamJava Coverage Results" MODIFIED="1510908187496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>tasks.task3_07_11_2017.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/UniverEpamJava2$TriangleTest.coverage" NAME="TriangleTest Coverage Results" MODIFIED="1511194223844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>tasks.task3_07_11_2017.entities.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/UniverEpamJava2$tasks_task3_07_11_2017_entities_in_UniverEpamJava.coverage" NAME="tasks.task3_07_11_2017.entities in UniverEpamJava Coverage Results" MODIFIED="1510912204806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>tasks.task3_07_11_2017.entities.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/UniverEpamJava$tasks_task5_17_11_2017_in_UniverEpamJava.coverage" NAME="tasks.task5_17_11_2017 in UniverEpamJava Coverage Results" MODIFIED="1511513471208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -52,15 +39,35 @@
     <SUITE FILE_PATH="coverage/UniverEpamJava2$GeometricHelperTest.coverage" NAME="GeometricHelperTest Coverage Results" MODIFIED="1511276975984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>tasks.helpers.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/UniverEpamJava2$tasks_task4_16_11_2017_in_UniverEpamJava.coverage" NAME="tasks.task4_16_11_2017 in UniverEpamJava Coverage Results" MODIFIED="1511297123761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>tasks.task4_16_11_2017.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UniverEpamJava2$GeometricalObjectSelectorTest.coverage" NAME="GeometricalObjectSelectorTest Coverage Results" MODIFIED="1511194208831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>tasks.task3_07_11_2017.entities.additional.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UniverEpamJava$tasks_task5_17_11_2017_entities_in_UniverEpamJava.coverage" NAME="tasks.task5_17_11_2017.entities in UniverEpamJava Coverage Results" MODIFIED="1511538412041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>tasks.task5_17_11_2017.entities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UniverEpamJava2$PolygonTest.coverage" NAME="PolygonTest Coverage Results" MODIFIED="1511194218589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>tasks.task3_07_11_2017.entities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UniverEpamJava2$tasks_task3_07_11_2017_entities_in_UniverEpamJava.coverage" NAME="tasks.task3_07_11_2017.entities in UniverEpamJava Coverage Results" MODIFIED="1510912204806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>tasks.task3_07_11_2017.entities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UniverEpamJava$tasks_task7_24_11_2017_in_UniverEpamJava.coverage" NAME="tasks.task7_24_11_2017 in UniverEpamJava Coverage Results" MODIFIED="1511708945327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>tasks.task7_24_11_2017.*</FILTER>
+    </SUITE>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tasks/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="210">
+              <caret line="10" column="63" lean-forward="false" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,15 +75,18 @@
       <file leaf-file-name="Calculator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task7_24_11_2017/entities/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-693">
-              <caret line="12" column="76" lean-forward="false" selection-start-line="12" selection-start-column="76" selection-end-line="12" selection-end-column="76" />
+            <state relative-caret-position="281">
+              <caret line="30" column="58" lean-forward="true" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
               <folding>
-                <element signature="e#323#331#0" expanded="true" />
-                <element signature="e#381#392#0" expanded="true" />
-                <element signature="e#4108#4109#0" expanded="true" />
-                <element signature="e#4139#4140#0" expanded="true" />
-                <element signature="e#4189#4190#0" expanded="true" />
-                <element signature="e#4212#4213#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#558#566#0" expanded="true" />
+                <element signature="e#617#628#0" expanded="true" />
+                <element signature="e#4169#4170#0" expanded="true" />
+                <element signature="e#4207#4208#0" expanded="true" />
+                <element signature="e#4553#4554#0" expanded="true" />
+                <element signature="e#4584#4585#0" expanded="true" />
+                <element signature="e#4634#4635#0" expanded="true" />
+                <element signature="e#4657#4658#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task7_24_11_2017/additional/Текст задания">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="63">
-              <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+              <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -99,8 +109,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -120,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/ElectricalApplianceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/concreteAppliances/DrillTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/concreteAppliances/VacuumCleanerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/additional/ElectricalApplianceCollectionTest.java" />
@@ -171,6 +180,7 @@
         <option value="$PROJECT_DIR$/src/main/java/tasks/task7_24_11_2017/additional/Текст задания" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task7_24_11_2017/entities/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tasks/task7_24_11_2017/entities/CalculatorTest.java" />
       </list>
     </option>
   </component>
@@ -181,7 +191,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="61" />
     <option name="y" value="85" />
     <option name="width" value="1329" />
@@ -258,7 +268,37 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tasks" type="462c0819:PsiDirectoryNode" />
               <item name="task7_24_11_2017" type="462c0819:PsiDirectoryNode" />
-              <item name="additional" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -273,11 +313,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="tasks.task7_24_11_2017.entities" />
       <recent name="tasks.task4_16_11_2017.entities" />
       <recent name="tasks.task4_16_11_2017.entities.helpers" />
       <recent name="tasks.task4_16_11_2017.entities.concreteObservers" />
       <recent name="tasks.task4_16_11_2017.entities.concretePublishers" />
-      <recent name="tasks.task5_17_11_2017.entities.additional" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="tasks.task4_16_11_2017.entities" />
@@ -309,20 +349,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="DarkSkyJsonDecoderTest.getCurrentForecast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.tasks.task7_24_11_2017 in UniverEpamJava">
+    <configuration name="CalculatorTest.calculate1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="tasks.task4_16_11_2017.entities.helpers.*" />
+          <option name="PATTERN" value="tasks.task7_24_11_2017.entities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="UniverEpamJava" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tasks.task4_16_11_2017.entities.helpers" />
-      <option name="MAIN_CLASS_NAME" value="tasks.task4_16_11_2017.entities.helpers.DarkSkyJsonDecoderTest" />
-      <option name="METHOD_NAME" value="getCurrentForecast" />
+      <option name="PACKAGE_NAME" value="tasks.task7_24_11_2017.entities" />
+      <option name="MAIN_CLASS_NAME" value="tasks.task7_24_11_2017.entities.CalculatorTest" />
+      <option name="METHOD_NAME" value="calculate1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -335,19 +375,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="ForecastDemonstratorTest.updateCurrentValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorTest.calculate2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="tasks.task4_16_11_2017.entities.*" />
+          <option name="PATTERN" value="tasks.task7_24_11_2017.entities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="UniverEpamJava" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tasks.task4_16_11_2017.entities" />
-      <option name="MAIN_CLASS_NAME" value="tasks.task4_16_11_2017.entities.ForecastDemonstratorTest" />
-      <option name="METHOD_NAME" value="updateCurrentValues" />
+      <option name="PACKAGE_NAME" value="tasks.task7_24_11_2017.entities" />
+      <option name="MAIN_CLASS_NAME" value="tasks.task7_24_11_2017.entities.CalculatorTest" />
+      <option name="METHOD_NAME" value="calculate2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -360,19 +400,19 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="JsonHelperTest.getJsonObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorTest.isTokenUnaryPlusOrMinusOperation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="tasks.task4_16_11_2017.entities.helpers.*" />
+          <option name="PATTERN" value="tasks.task7_24_11_2017.entities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="UniverEpamJava" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tasks.task4_16_11_2017.entities.helpers" />
-      <option name="MAIN_CLASS_NAME" value="tasks.task4_16_11_2017.entities.helpers.JsonHelperTest" />
-      <option name="METHOD_NAME" value="getJsonObject" />
+      <option name="PACKAGE_NAME" value="tasks.task7_24_11_2017.entities" />
+      <option name="MAIN_CLASS_NAME" value="tasks.task7_24_11_2017.entities.CalculatorTest" />
+      <option name="METHOD_NAME" value="isTokenUnaryPlusOrMinusOperation" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -485,17 +525,17 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="tasks.task4_16_11_2017 in UniverEpamJava" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="tasks.task7_24_11_2017 in UniverEpamJava" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="tasks.task4_16_11_2017.*" />
+          <option name="PATTERN" value="tasks.task7_24_11_2017.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="UniverEpamJava" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tasks.task4_16_11_2017" />
+      <option name="PACKAGE_NAME" value="tasks.task7_24_11_2017" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
@@ -511,19 +551,19 @@
       <patterns />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.tasks.task4_16_11_2017 in UniverEpamJava" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.JsonHelperTest.getJsonObject" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.DarkSkyJsonDecoderTest.getCurrentForecast" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ForecastDemonstratorTest.updateCurrentValues" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.tasks.task7_24_11_2017 in UniverEpamJava" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CalculatorTest.calculate1" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CalculatorTest.calculate2" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CalculatorTest.isTokenUnaryPlusOrMinusOperation" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.tasks.task4_16_11_2017 in UniverEpamJava" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ForecastDemonstratorTest.updateCurrentValues" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.DarkSkyJsonDecoderTest.getCurrentForecast" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.JsonHelperTest.getJsonObject" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.tasks.task7_24_11_2017 in UniverEpamJava" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CalculatorTest.isTokenUnaryPlusOrMinusOperation" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CalculatorTest.calculate2" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CalculatorTest.calculate1" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -541,62 +581,62 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ForecastDemonstratorTest_updateCurrentValues - 2017.11.25 at 19h 33m 19s.xml">
-      <configuration name="ForecastDemonstratorTest.updateCurrentValues" configurationId="JUnit" />
+    <history-entry file="CalculatorTest - 2017.11.26 at 17h 04m 57s.xml">
+      <configuration name="CalculatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForecastDemonstratorTest_updateCurrentValues - 2017.11.25 at 19h 34m 09s.xml">
-      <configuration name="ForecastDemonstratorTest.updateCurrentValues" configurationId="JUnit" />
+    <history-entry file="CalculatorTest - 2017.11.26 at 17h 05m 22s.xml">
+      <configuration name="CalculatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForecastDemonstratorTest_updateCurrentValues - 2017.11.25 at 19h 40m 08s.xml">
-      <configuration name="ForecastDemonstratorTest.updateCurrentValues" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_calculate1 - 2017.11.26 at 17h 07m 48s.xml">
+      <configuration name="CalculatorTest.calculate1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForecastDemonstratorTest_updateCurrentValues - 2017.11.25 at 19h 42m 26s.xml">
-      <configuration name="ForecastDemonstratorTest.updateCurrentValues" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_calculate2 - 2017.11.26 at 17h 07m 55s.xml">
+      <configuration name="CalculatorTest.calculate2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForecastDemonstratorTest_updateCurrentValues - 2017.11.25 at 19h 46m 58s.xml">
-      <configuration name="ForecastDemonstratorTest.updateCurrentValues" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_isTokenUnaryPlusOrMinusOperation - 2017.11.26 at 17h 08m 00s.xml">
+      <configuration name="CalculatorTest.isTokenUnaryPlusOrMinusOperation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForecastDemonstratorTest_updateCurrentValues - 2017.11.25 at 19h 47m 21s.xml">
-      <configuration name="ForecastDemonstratorTest.updateCurrentValues" configurationId="JUnit" />
+    <history-entry file="CalculatorTest_isTokenUnaryPlusOrMinusOperation - 2017.11.26 at 17h 08m 07s.xml">
+      <configuration name="CalculatorTest.isTokenUnaryPlusOrMinusOperation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForecastDemonstratorTest_updateCurrentValues - 2017.11.25 at 19h 47m 33s.xml">
-      <configuration name="ForecastDemonstratorTest.updateCurrentValues" configurationId="JUnit" />
+    <history-entry file="tasks_task7_24_11_2017_in_UniverEpamJava - 2017.11.26 at 17h 04m 21s.xml">
+      <configuration name="tasks.task7_24_11_2017 in UniverEpamJava" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForecastDemonstratorTest_updateCurrentValues - 2017.11.25 at 19h 48m 57s.xml">
-      <configuration name="ForecastDemonstratorTest.updateCurrentValues" configurationId="JUnit" />
+    <history-entry file="tasks_task7_24_11_2017_in_UniverEpamJava - 2017.11.26 at 17h 07m 28s.xml">
+      <configuration name="tasks.task7_24_11_2017 in UniverEpamJava" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForecastDemonstratorTest_updateCurrentValues - 2017.11.25 at 19h 49m 48s.xml">
-      <configuration name="ForecastDemonstratorTest.updateCurrentValues" configurationId="JUnit" />
+    <history-entry file="tasks_task7_24_11_2017_in_UniverEpamJava - 2017.11.26 at 17h 08m 16s.xml">
+      <configuration name="tasks.task7_24_11_2017 in UniverEpamJava" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="tasks_task4_16_11_2017_in_UniverEpamJava - 2017.11.25 at 19h 56m 44s.xml">
-      <configuration name="tasks.task4_16_11_2017 in UniverEpamJava" configurationId="JUnit" />
+    <history-entry file="tasks_task7_24_11_2017_in_UniverEpamJava - 2017.11.26 at 17h 09m 06s.xml">
+      <configuration name="tasks.task7_24_11_2017 in UniverEpamJava" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1060" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42099568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42065218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25326088" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10326087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.021354167" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1826087" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31413043" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.021354167" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37987012" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -630,25 +670,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="97" />
+      <option name="time" value="112" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/factories/DrillFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/House.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task5_17_11_2017/entities/additional/ElectricalAppliancesHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
@@ -738,13 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/ApplianceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="20" column="11" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="20" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -970,33 +989,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task7_24_11_2017/additional/Текст задания">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Character.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        <state relative-caret-position="21">
+          <caret line="4581" column="0" lean-forward="false" selection-start-line="4581" selection-start-column="0" selection-end-line="4581" selection-end-column="0" />
+          <folding>
+            <element signature="e#152965#152966#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task5_17_11_2017/entities/ApplianceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="20" column="11" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="20" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        <state relative-caret-position="210">
+          <caret line="10" column="63" lean-forward="false" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task7_24_11_2017/entities/CalculatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task7_24_11_2017/additional/Текст задания">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task7_24_11_2017/entities/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-693">
-          <caret line="12" column="76" lean-forward="false" selection-start-line="12" selection-start-column="76" selection-end-line="12" selection-end-column="76" />
+        <state relative-caret-position="281">
+          <caret line="30" column="58" lean-forward="true" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
           <folding>
-            <element signature="e#323#331#0" expanded="true" />
-            <element signature="e#381#392#0" expanded="true" />
-            <element signature="e#4108#4109#0" expanded="true" />
-            <element signature="e#4139#4140#0" expanded="true" />
-            <element signature="e#4189#4190#0" expanded="true" />
-            <element signature="e#4212#4213#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#558#566#0" expanded="true" />
+            <element signature="e#617#628#0" expanded="true" />
+            <element signature="e#4169#4170#0" expanded="true" />
+            <element signature="e#4207#4208#0" expanded="true" />
+            <element signature="e#4553#4554#0" expanded="true" />
+            <element signature="e#4584#4585#0" expanded="true" />
+            <element signature="e#4634#4635#0" expanded="true" />
+            <element signature="e#4657#4658#0" expanded="true" />
           </folding>
         </state>
       </provider>

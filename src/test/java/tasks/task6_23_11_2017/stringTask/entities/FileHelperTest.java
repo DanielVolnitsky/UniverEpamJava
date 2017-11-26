@@ -13,7 +13,7 @@ class FileHelperTest {
 
     @BeforeAll
     static void initializeComponents() {
-        validFilePath = "src\\main\\java\\tasks\\task6_23_11_2017\\stringTask\\additional\\text";
+        validFilePath = "src\\main\\java\\tasks\\task6_23_11_2017\\stringTask\\additional\\TextExample";
         invalidFilePath = "src\\main\\java\\tasks\\task6_23_11_2017\\stringTask\\additional\\text1";
     }
 

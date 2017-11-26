@@ -23,7 +23,7 @@ public class WordComparator implements Comparator<Word> {
         int w1Count = getSymbolEntranceCount(w1, symbol);
         int w2Count = getSymbolEntranceCount(w2, symbol);
 
-        return w1Count != w2Count ? w2Count - w1Count : stringComparator.compare(w1.getValue(), w2.getValue());
+        return w1Count != w2Count ? w1Count - w2Count : stringComparator.compare(w1.getValue(), w2.getValue());
     }
 
     private int getSymbolEntranceCount(Word word, Symbol symbol) {

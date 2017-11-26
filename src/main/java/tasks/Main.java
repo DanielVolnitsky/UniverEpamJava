@@ -16,7 +16,7 @@ public class Main {
         File file = new File(filePath);
         String text = new String(FileHelper.getFileBytes(file.getAbsolutePath()));
 
-        WordSorter ws = new WordSorter(new Symbol('a'), text);
+        WordSorter ws = new WordSorter(text, new Symbol('a'));
         Word[] sorted = ws.getSortedBySymbolFrequency();
 
         System.out.println(Arrays.toString(sorted));

@@ -2,6 +2,7 @@ package tasks.task6_23_11_2017.stringTask.entities.comparators;
 
 import java.util.Comparator;
 
+
 public class AlphabeticalStringComparator implements Comparator<String> {
 
     @Override

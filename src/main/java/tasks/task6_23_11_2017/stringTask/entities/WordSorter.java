@@ -3,8 +3,6 @@ package tasks.task6_23_11_2017.stringTask.entities;
 import tasks.task6_23_11_2017.stringTask.entities.comparators.WordComparator;
 
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 public class WordSorter {
 
@@ -13,9 +11,7 @@ public class WordSorter {
     private Symbol symbol;
     private String text;
 
-    private List<String> words;
-
-    public WordSorter(Symbol symbol, String text) {
+    public WordSorter(String text, Symbol symbol) {
         if (symbol != null && text.length() > 0) {
             this.symbol = symbol;
             this.text = text;

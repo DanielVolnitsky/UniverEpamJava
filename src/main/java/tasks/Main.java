@@ -1,15 +1,24 @@
 package tasks;
 
-import tasks.task7_24_11_2017.entities.Calculator;
+import tasks.task6_23_11_2017.stringTask.entities.FileHelper;
+import tasks.task6_23_11_2017.stringTask.entities.Symbol;
+import tasks.task6_23_11_2017.stringTask.entities.Word;
+import tasks.task6_23_11_2017.stringTask.entities.WordSorter;
 
-import java.util.EmptyStackException;
+import java.io.File;
+import java.util.Arrays;
 
 public class Main {
+
+    final static String filePath = "src\\main\\java\\tasks\\task6_23_11_2017\\stringTask\\additional\\text";
+
     public static void main(String[] args) {
-        try {
-            System.out.println(Calculator.calculate("cos(1) + sin(2 - 1)"));
-        } catch (IllegalArgumentException | EmptyStackException ex) {
-            System.err.println(ex.getMessage());
-        }
+        File file = new File(filePath);
+        String text = new String(FileHelper.getFileBytes(file.getAbsolutePath()));
+
+        WordSorter ws = new WordSorter(new Symbol('a'), text);
+        Word[] sorted = ws.getSortedBySymbolFrequency();
+
+        System.out.println(Arrays.toString(sorted));
     }
 }

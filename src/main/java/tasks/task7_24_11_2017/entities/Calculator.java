@@ -58,10 +58,10 @@ public class Calculator {
         return operands.pop();
     }
 
-    private static void popOperation(Stack<Double> operands, Stack<Character> functions) {
+    private static void popOperation(Stack<Double> operands, Stack<Character> operations) {
         double b = operands.pop();
         double a;
-        switch (functions.pop()) {
+        switch (operations.pop()) {
             case '+':
                 a = operands.pop();
                 operands.push(a + b);
@@ -87,18 +87,18 @@ public class Calculator {
         }
     }
 
-    private static boolean canPop(char op1, Stack<Character> functions) {
-        if (functions.size() == 0)
+    private static boolean canPop(char op1, Stack<Character> operations) {
+        if (operations.size() == 0)
             return false;
 
         int p1 = getPriority(op1);
-        int p2 = getPriority(functions.peek());
+        int p2 = getPriority(operations.peek());
 
         return p1 >= 0 && p2 >= 0 && p1 >= p2;
     }
 
-    private static int getPriority(char op) throws IllegalArgumentException {
-        switch (op) {
+    private static int getPriority(char operation) throws IllegalArgumentException {
+        switch (operation) {
             case '(':
                 return -1; // не выталкивает сам и не дает вытолкнуть себя другим
             case '*':
@@ -135,7 +135,7 @@ public class Calculator {
 
     /*Считывает все пробелы*/
     private static void readWhiteSpace(String s) {
-        while (pos < s.length() && isWhiteSpace(s.charAt(pos)))
+        while (pos < s.length() && s.charAt(pos) == ' ')
             pos++;
     }
 
@@ -148,10 +148,6 @@ public class Calculator {
                 prevToken instanceof Character &&
                 (char) prevToken == '(' &&
                 ((char) token == '+' || (char) token == '-'));
-    }
-
-    private static boolean isWhiteSpace(char c) {
-        return c == ' ';
     }
 
     private static void nullifyInitialValues() {

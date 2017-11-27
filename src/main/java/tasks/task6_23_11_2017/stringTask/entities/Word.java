@@ -1,19 +1,31 @@
 package tasks.task6_23_11_2017.stringTask.entities;
 
+import java.util.List;
+
 public class Word {
 
     private String value;
+    private List<Letter> letters;
 
-    public Word(String value) {
-        this.value = value;
+    public Word(List<Letter> letters) {
+        this.letters = letters;
+        setValue();
+    }
+
+    private void setValue() {
+        StringBuilder result = new StringBuilder();
+        for (Letter letter : letters)
+            result.append(letter.getValue());
+
+        this.value = result.toString();
     }
 
     public String getValue() {
         return value;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public List<Letter> getLetters() {
+        return letters;
     }
 
     @Override

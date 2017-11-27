@@ -1,24 +1,37 @@
 package tasks;
 
-import tasks.task6_23_11_2017.stringTask.entities.FileHelper;
-import tasks.task6_23_11_2017.stringTask.entities.Symbol;
+import tasks.helpers.FileHelper;
+import tasks.task6_23_11_2017.stringTask.entities.Letter;
 import tasks.task6_23_11_2017.stringTask.entities.Word;
-import tasks.task6_23_11_2017.stringTask.entities.WordSorter;
+import tasks.task6_23_11_2017.stringTask.entities.WordsHelper;
 
 import java.io.File;
-import java.util.Arrays;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
     final static String filePath = "src\\main\\java\\tasks\\task6_23_11_2017\\stringTask\\additional\\TextExample";
 
     public static void main(String[] args) {
-        File file = new File(filePath);
-        String text = new String(FileHelper.getFileBytes(file.getAbsolutePath()));
+        try {
+            File file = new File(filePath);
+            byte[] fileBytes = FileHelper.getFileBytes(file.getAbsolutePath());
 
-        WordSorter ws = new WordSorter(text, new Symbol('a'));
-        Word[] sorted = ws.getSortedBySymbolFrequency();
+            List<Word> words = new ArrayList<>();
+            WordsHelper.fillWordsByByteArray(fileBytes, words);
 
-        System.out.println(Arrays.toString(sorted));
+            System.out.println("Initial words sequence:\n" + words);
+
+            Letter coreLetter = new Letter('a');
+            List<Word> sorted = new ArrayList<>(words);
+            WordsHelper.sortWordsByLetterFrequency(sorted, coreLetter);
+
+            System.out.println("\nSorted words sequence:\n" + sorted);
+
+        } catch (IllegalArgumentException | IOException ex) {
+            System.err.println(ex.getMessage());
+        }
     }
 }

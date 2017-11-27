@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd788f61-779d-4d9c-ad66-a2ce34fb8412" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/helpers/FileHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/additional/jsonExample" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/MainCodeExample" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/text" afterPath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/TextExample" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/WordsHelper.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/FileHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/WordSorter.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Symbol.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Letter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/Main.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/helpers/FileHelper.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/helpers/FileHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/MainCodeExample" afterPath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/MainCodeExample" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/TextExample" afterPath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/TextExample" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Word.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Word.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/comparators/AlphabeticalStringComparator.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/comparators/AlphabeticalStringComparator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/comparators/WordComparator.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/comparators/WordComparator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tasks/task4_16_11_2017/entities/ForecastDemonstratorTest.java" afterPath="$PROJECT_DIR$/src/test/java/tasks/task4_16_11_2017/entities/ForecastDemonstratorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/FileHelperTest.java" afterPath="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/FileHelperTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/WordSorterTest.java" afterPath="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/WordSorterTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/comparators/AlphabeticalStringComparatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/comparators/AlphabeticalStringComparatorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/comparators/WordComparatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/comparators/WordComparatorTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,27 +74,13 @@
     </SUITE>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tasks/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WordSorter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/WordSorter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="107">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,9 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/concreteObservers/WindStateDisplay.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/concreteObserverSubjects/WeatherData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/concreteObserverSubjects/WeatherData.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/entities/concreteObserverSubjects/WeatherStation.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/interfaces/Subject.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/interfaces/Publisher.java" />
@@ -153,21 +145,24 @@
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/fileToRead" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/FileHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/text" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Symbol.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/AlphabeticalStringComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/WordComparator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/comparators/WordComparator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/comparators/AlphabeticalStringComparator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/comparators/WordComparatorTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/comparators/AlphabeticalStringComparatorTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/FileHelperTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/WordSorter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Word.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/WordSorterTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/additional/jsonExample" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Symbol.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/comparators/WordComparatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/WordSorter.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/WordSorterTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Letter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Word.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/comparators/AlphabeticalStringComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/comparators/WordComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/helpers/FileHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/tasks/task4_16_11_2017/entities/ForecastDemonstratorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/FileHelperTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/TextExample" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/WordsHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/MainCodeExample" />
       </list>
     </option>
@@ -179,7 +174,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="61" />
     <option name="y" value="85" />
     <option name="width" value="1329" />
@@ -204,7 +199,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,6 +275,29 @@
               <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="task6_23_11_2017" type="462c0819:PsiDirectoryNode" />
+              <item name="stringTask" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="task6_23_11_2017" type="462c0819:PsiDirectoryNode" />
+              <item name="stringTask" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="comparators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -311,6 +328,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -360,32 +378,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.tasks.task4_16_11_2017 in UniverEpamJava">
-    <configuration name="FileHelperTest.getFileBytes1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="tasks.task6_23_11_2017.stringTask.entities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="UniverEpamJava" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tasks.task6_23_11_2017.stringTask.entities" />
-      <option name="MAIN_CLASS_NAME" value="tasks.task6_23_11_2017.stringTask.entities.FileHelperTest" />
-      <option name="METHOD_NAME" value="getFileBytes1" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="ForecastDemonstratorTest.updateCurrentValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -410,6 +403,25 @@
       </option>
       <envs />
       <patterns />
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tasks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="tasks.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="UniverEpamJava" />
+      <envs />
     </configuration>
     <configuration name="WordSorterTest.getSortedBySymbolFrequency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -568,19 +580,19 @@
       <patterns />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.FileHelperTest.getFileBytes1" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.WordSorterTest.getSortedBySymbolFrequency" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.tasks.task6_23_11_2017 in UniverEpamJava" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ForecastDemonstratorTest.updateCurrentValues" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.tasks.task4_16_11_2017 in UniverEpamJava" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.WordSorterTest.getSortedBySymbolFrequency" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.tasks.task6_23_11_2017 in UniverEpamJava" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ForecastDemonstratorTest.updateCurrentValues" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.tasks.task4_16_11_2017 in UniverEpamJava" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.tasks.task4_16_11_2017 in UniverEpamJava" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ForecastDemonstratorTest.updateCurrentValues" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.tasks.task6_23_11_2017 in UniverEpamJava" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.WordSorterTest.getSortedBySymbolFrequency" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.FileHelperTest.getFileBytes1" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.tasks.task4_16_11_2017 in UniverEpamJava" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ForecastDemonstratorTest.updateCurrentValues" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.tasks.task6_23_11_2017 in UniverEpamJava" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.WordSorterTest.getSortedBySymbolFrequency" />
       </list>
     </recent_temporary>
   </component>
@@ -630,31 +642,31 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4199134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17748918" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16341992" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.043290045" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.021354167" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20729166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25989583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37987012" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2857143" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37012988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.021354167" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
@@ -687,7 +699,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="125" />
+      <option name="time" value="128" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -885,13 +897,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/a.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/Текст задания">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/task6_text_file" />
     <entry file="file://D:/Idea_projects/lab_2_2/src/project/FileHelper.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -907,59 +912,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/TextExample">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/comparators/AlphabeticalStringComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/comparators/WordComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/comparators/WordComparatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/comparators/AlphabeticalStringComparatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Symbol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#400#401#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/FileHelperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -970,85 +926,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Word.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/additional/jsonExample">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#131#132#0" expanded="true" />
-            <element signature="e#165#166#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="9334" lean-forward="false" selection-start-line="0" selection-start-column="9334" selection-end-line="0" selection-end-column="9334" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/comparators/WordComparatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="20" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/WordSorterTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
-          <caret line="20" column="50" lean-forward="false" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/FileHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/comparators/AlphabeticalStringComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="126">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/comparators/WordComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/additional/jsonExample">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/Текст задания">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9334" lean-forward="false" selection-start-line="0" selection-start-column="9334" selection-end-line="0" selection-end-column="9334" />
+        <state relative-caret-position="105">
+          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/FileHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/helpers/FileHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        <state relative-caret-position="420">
+          <caret line="22" column="46" lean-forward="false" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Letter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/FileHelperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task4_16_11_2017/entities/ForecastDemonstratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="56" column="60" lean-forward="true" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/TextExample">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/WordsHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task4_16_11_2017/entities/ForecastDemonstratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/additional/MainCodeExample">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="756">
+          <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/WordSorter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="107">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -3,8 +3,12 @@ package tasks.task6_23_11_2017.stringTask.entities;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import tasks.helpers.FileHelper;
+
+import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class FileHelperTest {
 
@@ -25,13 +29,21 @@ class FileHelperTest {
 
     @Test
     void getFileBytes() {
-        byte[] result = FileHelper.getFileBytes(validFilePath);
-        assertTrue(result != null);
+        try {
+            byte[] result = FileHelper.getFileBytes(validFilePath);
+            assertTrue(result != null);
+        } catch (IOException e) {
+            fail("invalid file path");
+        }
     }
 
     @Test
     void getFileBytes1() {
-        byte[] result = FileHelper.getFileBytes(invalidFilePath);
-        assertTrue(result == null);
+        try {
+            byte[] result = FileHelper.getFileBytes(invalidFilePath);
+//            assertTrue(result == null);
+        } catch (IOException e) {
+            fail("invalid file path");
+        }
     }
 }

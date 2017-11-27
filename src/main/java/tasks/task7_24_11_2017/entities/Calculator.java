@@ -20,8 +20,8 @@ public class Calculator {
         s = handleAdditionalOperations(s);
 
         s = '(' + s + ')';
-        Stack<Double> operands = new Stack<Double>();
-        Stack<Character> operations = new Stack<Character>();
+        Stack<Double> operands = new Stack<>();
+        Stack<Character> operations = new Stack<>();
         Object token;
         Object prevToken = 'X';
 
@@ -78,10 +78,10 @@ public class Calculator {
                 a = operands.pop();
                 operands.push(a / b);
                 break;
-            case 's':
+            case 's': /*синус*/
                 operands.push(Math.sin(b));
                 break;
-            case 'c':
+            case 'c': /*косинус*/
                 operands.push(Math.cos(b));
                 break;
         }
@@ -114,6 +114,10 @@ public class Calculator {
         }
     }
 
+    /**
+     * Получает текущий токен, и в зависимости от его типа
+     * исполняет соответствующую операцию
+     */
     private static Object getToken(String s) {
         readWhiteSpace(s);
 
@@ -122,7 +126,7 @@ public class Calculator {
         if (Character.isDigit(s.charAt(pos)))
             return Double.parseDouble(readDouble(s));
         else
-            return readFunction(s);
+            return readOperation(s);
     }
 
     private static String readDouble(String s) {
@@ -133,16 +137,22 @@ public class Calculator {
         return res;
     }
 
-    /*Считывает все пробелы*/
+    /*Считывает все пробелы до первого валидного символа*/
     private static void readWhiteSpace(String s) {
         while (pos < s.length() && s.charAt(pos) == ' ')
             pos++;
     }
 
-    private static char readFunction(String s) {
+    /**
+     * Считывает односимвольную операцию
+     */
+    private static char readOperation(String s) {
         return s.charAt(pos++);
     }
 
+    /**
+     * Проверяет, является ли текущий символ унарной операцией
+     */
     static boolean isTokenUnaryPlusOrMinusOperation(Object token, Object prevToken) {
         return (token instanceof Character &&
                 prevToken instanceof Character &&
@@ -154,12 +164,18 @@ public class Calculator {
         pos = 0;
     }
 
+    /**
+     * Инициализирует коллекцию типа ключ-значение для операций и их маскам
+     */
     private static void initializeOperations() {
         operations = new HashMap<>();
         operations.put("sin", "s");
         operations.put("cos", "c");
     }
 
+    /**
+     * Заменяет каждую дополнительную операцию на соответствующую маску
+     */
     private static String handleAdditionalOperations(String s) {
         for (String key : operations.keySet())
             s = s.replace(key, operations.get(key));

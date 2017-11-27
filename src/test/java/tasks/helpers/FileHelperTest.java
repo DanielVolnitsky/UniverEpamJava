@@ -1,9 +1,9 @@
-package tasks.task6_23_11_2017.stringTask.entities;
+package tasks.helpers;
 
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import tasks.helpers.FileHelper;
 
 import java.io.IOException;
 
@@ -39,11 +39,8 @@ class FileHelperTest {
 
     @Test
     void getFileBytes1() {
-        try {
+        Assertions.assertThrows(IOException.class, () -> {
             byte[] result = FileHelper.getFileBytes(invalidFilePath);
-//            assertTrue(result == null);
-        } catch (IOException e) {
-            fail("invalid file path");
-        }
+        });
     }
 }

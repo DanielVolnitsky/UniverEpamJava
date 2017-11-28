@@ -39,12 +39,12 @@ public class Calculator {
                     while (operations.size() > 0 && operations.peek() != '(')
                         popOperation(operands, operations);
 
-                    operations.pop(); // Удаляем саму скобку "("
+                    operations.pop(); // Удаляем "("
                 } else {
                     while (canPop((char) token, operations))
                         popOperation(operands, operations);
 
-                    operations.push((char) token); // Кидаем новую операцию в стек
+                    operations.push((char) token);
                 }
             }
             prevToken = token;

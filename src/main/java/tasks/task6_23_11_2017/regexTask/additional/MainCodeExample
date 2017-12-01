@@ -1,0 +1,17 @@
+package tasks;
+
+import tasks.task6_23_11_2017.regexTask.entities.WordsFrequencyDemonstrator;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String word = "Batman";
+        String url = "http://articles.chicagotribune.com/keyword/batman";
+
+        WordsFrequencyDemonstrator demon = new WordsFrequencyDemonstrator(url, word);
+        demon.demonstrate();
+
+        demon.setSeekWord("Affleck");
+        demon.demonstrate();
+    }
+}

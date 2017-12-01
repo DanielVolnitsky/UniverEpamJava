@@ -1,37 +1,40 @@
 package tasks;
 
-import tasks.helpers.FileHelper;
-import tasks.task6_23_11_2017.stringTask.entities.Letter;
-import tasks.task6_23_11_2017.stringTask.entities.Word;
-import tasks.task6_23_11_2017.stringTask.entities.WordsHelper;
+import tasks.helpers.Demonstrator;
+import tasks.task6_23_11_2017.regexTask.entities.WordsFrequencyDemonstrator;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
 
-    final static String filePath = "src\\main\\java\\tasks\\task6_23_11_2017\\stringTask\\additional\\TextExample";
-
     public static void main(String[] args) {
-        try {
-            File file = new File(filePath);
-            byte[] fileBytes = FileHelper.getFileBytes(file.getAbsolutePath());
+        String word = "com";
+        String url = "https://pikabu.ru/story/10_luchshikh_saytov_dlya_izucheniya_programmirovaniya_3144165";
 
-            List<Word> words = new ArrayList<>();
-            WordsHelper.fillWordsByByteArray(fileBytes, words);
+        String batWord = "Batman";
+        String[] batArticleUrlArray = {"http://articles.chicagotribune.com/2014-06-21/entertainment/sns-201406211618reedbusivarietyn1201239174-20140621_1_daniel-radcliffe-batman-henry-cavill",
+                "http://articles.chicagotribune.com/2010-10-18/news/ct-talk-hinsdale-batman-pool-1019-20101018_1_batman-hot-topic-pool",
+                "http://articles.chicagotribune.com/2012-07-09/news/sns-rt-life-batmanl6e8i9b9v-20120709_1_batman-dark-knight-rises-cape",
+                "http://articles.chicagotribune.com/2014-05-21/news/sns-rt-film-superman-batman-20140521_1_batman-superman-henry-cavill",
+                "http://articles.chicagotribune.com/2014-04-20/entertainment/sns-201404201534reedbusivarietyn1201159956-20140420_1_batman-turns-gets-big-birthday-bash-wondercon",
+                "http://articles.chicagotribune.com/2014-04-24/entertainment/sns-201404241823reedbusivarietyn1201163390-20140424_1_former-superman-batman-release-date-justice-league-gal-gadot",
+                "http://articles.chicagotribune.com/2014-05-02/entertainment/sns-201405021030reedbusivarietyn1201165991-20140502_1_blu-ray-review-batman-warner-bros-batman-character",
+                "http://articles.chicagotribune.com/2014-05-05/entertainment/sns-201405051729reedbusivarietyn1201172226-20140505_1_series-order-james-gordon-series-commitment",
+                "http://articles.chicagotribune.com/2012-07-22/entertainment/ct-ent-0722-phillips-dark-knight-commentary-20120721_1_dark-knight-rises-smoke-bomb-batman",
+                "http://articles.chicagotribune.com/2012-07-20/entertainment/sns-rt-us-warner-film-batmanbre86j0nr-20120720_1_pair-of-hobbit-movies-legendary-pictures-box-office"
+        };
+        List<String> batArticleList = Arrays.asList(batArticleUrlArray);
+        Demonstrator demon = new WordsFrequencyDemonstrator(batArticleList, batWord);
+        demon.demonstrate();
 
-            System.out.println("Initial words sequence:\n" + words);
-
-            Letter coreLetter = new Letter('a');
-            List<Word> sorted = new ArrayList<>(words);
-            WordsHelper.sortWordsByLetterFrequency(sorted, coreLetter);
-
-            System.out.println("\nSorted words sequence:\n" + sorted);
-
-        } catch (IllegalArgumentException | IOException ex) {
-            System.err.println(ex.getMessage());
-        }
+//        WordsFrequencyDemonstrator demon = null;
+//        try {
+//            demon = new WordsFrequencyDemonstrator(url, word);
+//        } catch (IOException e) {
+//            System.err.println("Problem with urls.");
+//        }
+//        demon.demonstrate();
     }
 }

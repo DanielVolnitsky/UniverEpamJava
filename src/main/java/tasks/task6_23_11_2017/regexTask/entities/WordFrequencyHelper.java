@@ -43,7 +43,7 @@ class WordFrequencyHelper {
         }
     }
 
-    private static void fillWordsFrequencyMap(Map<String, Integer> map, String text) {
+    static void fillWordsFrequencyMap(Map<String, Integer> map, String text) {
         String[] words = text.split("[\\W\\d]");
         int wordsMinLength = 3;
         for (String word : words) {

@@ -3,7 +3,6 @@ package tasks;
 import tasks.helpers.Demonstrator;
 import tasks.task6_23_11_2017.regexTask.entities.WordsFrequencyDemonstrator;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 

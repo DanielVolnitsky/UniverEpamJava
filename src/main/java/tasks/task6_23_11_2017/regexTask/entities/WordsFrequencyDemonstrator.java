@@ -1,13 +1,9 @@
 package tasks.task6_23_11_2017.regexTask.entities;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import tasks.helpers.Demonstrator;
 
 import java.io.IOException;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import static tasks.task6_23_11_2017.regexTask.entities.WordFrequencyHelper.getMapSortedByWordFrequency;
 import static tasks.task6_23_11_2017.regexTask.entities.WordFrequencyHelper.iterateUrlsAndFillWordsFrequencies;
@@ -65,17 +61,9 @@ public class WordsFrequencyDemonstrator implements Demonstrator {
     }
 
     private void initializeUrlList() throws IOException {
-        Document doc = Jsoup.connect(initialUrl).get();
-        String text = doc.body().toString();
+        String text = SiteInfoHelper.getSiteBodyText(initialUrl);
+        String[] urlArr = SiteInfoHelper.getPageBodyUrls(text);
 
-        Pattern urlPattern = Pattern.compile("(https?:\\/\\/)?([\\w\\.]+)\\.([a-z]{2,6}\\.?)(\\/[\\w\\-\\.]*)*\\/?");
-        Matcher matcher = urlPattern.matcher(text);
-
-        StringBuilder buffer = new StringBuilder();
-        while (matcher.find())
-            buffer.append(matcher.group() + " ");
-
-        String[] urlArray = buffer.toString().split("\\s");
-        urls = new ArrayList<String>(Arrays.asList(urlArray));
+        urls = new ArrayList<>(Arrays.asList(urlArr));
     }
 }

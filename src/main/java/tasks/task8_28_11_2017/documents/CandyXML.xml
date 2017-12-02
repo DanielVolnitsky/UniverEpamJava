@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<candies>
+    <candy>
+        <id>1</id>
+        <name>First candy</name>
+        <caloricity>30</caloricity>
+        <type>CHOCOLATE</type>
+        <hasFilling>true</hasFilling>
+
+        <ingredients>
+            <ingredient>
+                <quantity>0.3</quantity>
+                <description>water</description>
+            </ingredient>
+            <ingredient>
+                <quantity>0.2</quantity>
+                <description>sugar</description>
+            </ingredient>
+            <ingredient>
+                <quantity>0.4</quantity>
+                <description>fruktoza</description>
+            </ingredient>
+        </ingredients>
+
+        <nutrionalValues>
+            <nutrionalValue>
+                <type>PROTEIN</type>
+                <quantity>1</quantity>
+            </nutrionalValue>
+            <nutrionalValue>
+                <type>FAT</type>
+                <quantity>1</quantity>
+            </nutrionalValue>
+            <nutrionalValue>
+                <type>CARBOHYDRATE</type>
+                <quantity>1</quantity>
+            </nutrionalValue>
+        </nutrionalValues>
+
+        <manufacturer>
+            <name>name1</name>
+            <description>Very large chocolate company</description>
+        </manufacturer>
+    </candy>
+
+    <candy>
+        <id>2</id>
+        <name>Second candy</name>
+        <caloricity>50</caloricity>
+        <type>CARAMEL</type>
+        <hasFilling>false</hasFilling>
+
+        <ingredients>
+            <ingredient>
+                <quantity>0.7</quantity>
+                <description>cola</description>
+            </ingredient>
+            <ingredient>
+                <quantity>0.6</quantity>
+                <description>wola</description>
+            </ingredient>
+            <ingredient>
+                <quantity>0.5</quantity>
+                <description>soda</description>
+            </ingredient>
+        </ingredients>
+
+        <nutrionalValues>
+            <nutrionalValue>
+                <type>PROTEIN</type>
+                <quantity>2</quantity>
+            </nutrionalValue>
+            <nutrionalValue>
+                <type>FAT</type>
+                <quantity>2</quantity>
+            </nutrionalValue>
+            <nutrionalValue>
+                <type>CARBOHYDRATE</type>
+                <quantity>2</quantity>
+            </nutrionalValue>
+        </nutrionalValues>
+
+        <manufacturer>
+            <name>name2</name>
+            <description>Very large chocolate company 2</description>
+        </manufacturer>
+    </candy>
+</candies>
+

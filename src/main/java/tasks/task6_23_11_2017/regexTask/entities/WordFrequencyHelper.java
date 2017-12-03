@@ -23,7 +23,7 @@ class WordFrequencyHelper {
             try {
                 System.out.println(String.format("Working with (%s) url...", url));
 
-                String text = SiteInfoHelper.getSiteBodyText(url);
+                String text = new SiteInfoHelper(url).getSiteBodyText();
 
                 Map<String, Integer> wordsWithFrequency = new HashMap<>();
                 WordFrequencyHelper.fillWordsFrequencyMap(wordsWithFrequency, text);

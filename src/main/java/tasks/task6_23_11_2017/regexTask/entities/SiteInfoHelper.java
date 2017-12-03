@@ -10,7 +10,13 @@ import java.util.regex.Pattern;
 
 public class SiteInfoHelper {
 
-    public static String getSiteBodyText(String url) throws IOException {
+    private String url;
+
+    public SiteInfoHelper(String url) {
+        this.url = url;
+    }
+
+    public String getSiteBodyText() throws IOException {
         try {
             Connection connection = Jsoup.connect(url);
             Document doc = connection.get();

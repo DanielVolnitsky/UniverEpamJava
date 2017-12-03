@@ -7,28 +7,28 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class SiteInfoHelperTest {
 
     private final String WORKING_URL = "https://www.w3schools.com/";
 
     @BeforeAll
-    static void initializing(){
+    static void initializing() {
 
     }
 
     @Test
     void getSiteBodyText() {
         Assertions.assertThrows(IOException.class, () -> {
-            SiteInfoHelper.getSiteBodyText("not real url");
+            new SiteInfoHelper("not real url").getSiteBodyText();
         });
     }
 
     @Test
     void getSiteBodyText1() {
         try {
-            SiteInfoHelper.getSiteBodyText(WORKING_URL);
+            new SiteInfoHelper(WORKING_URL).getSiteBodyText();
         } catch (IOException e) {
             fail(e.getMessage());
         }
@@ -37,7 +37,7 @@ class SiteInfoHelperTest {
     @Test
     void getSiteBodyText2() {
         Assertions.assertThrows(IOException.class, () -> {
-            SiteInfoHelper.getSiteBodyText(null);
+            new SiteInfoHelper(null).getSiteBodyText();
         });
     }
 
@@ -49,9 +49,9 @@ class SiteInfoHelperTest {
                 "and mark Favourites.\n" +
                 "https://regexr.com/";
 
-        String [] expected = {"https://translate.google.ru/","https://regexr.com/"};
-        String [] result = SiteInfoHelper.getPageBodyUrls(text);
+        String[] expected = {"https://translate.google.ru/", "https://regexr.com/"};
+        String[] result = SiteInfoHelper.getPageBodyUrls(text);
 
-        Assertions.assertTrue(Arrays.equals(expected,result));
+        Assertions.assertTrue(Arrays.equals(expected, result));
     }
 }

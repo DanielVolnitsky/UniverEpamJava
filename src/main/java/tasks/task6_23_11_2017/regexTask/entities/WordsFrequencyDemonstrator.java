@@ -27,6 +27,10 @@ public class WordsFrequencyDemonstrator implements Demonstrator {
         initializeUrlList();
     }
 
+    public List<String> getUrls() {
+        return urls;
+    }
+
     public String getInitialUrl() {
         return initialUrl;
     }
@@ -60,8 +64,8 @@ public class WordsFrequencyDemonstrator implements Demonstrator {
         }
     }
 
-    private void initializeUrlList() throws IOException {
-        String text = SiteInfoHelper.getSiteBodyText(initialUrl);
+     void initializeUrlList() throws IOException {
+        String text = new SiteInfoHelper(initialUrl).getSiteBodyText();
         String[] urlArr = SiteInfoHelper.getPageBodyUrls(text);
 
         urls = new ArrayList<>(Arrays.asList(urlArr));

@@ -10,7 +10,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        String word = "CSS";
+        String word = "JavaScript";
         String url = "https://pikabu.ru/story/10_luchshikh_saytov_dlya_izucheniya_programmirovaniya_3144165";
 
         String batWord = "Batman";
@@ -24,16 +24,16 @@ public class Main {
                 "http://articles.chicagotribune.com/2012-07-22/entertainment/ct-ent-0722-phillips-dark-knight-commentary-20120721_1_dark-knight-rises-smoke-bomb-batman",
                 "http://articles.chicagotribune.com/2012-07-20/entertainment/sns-rt-us-warner-film-batmanbre86j0nr-20120720_1_pair-of-hobbit-movies-legendary-pictures-box-office"
         };
-//        List<String> batArticleList = Arrays.asList(batArticleUrlArray);
-//        Demonstrator demon = new WordsFrequencyDemonstrator(batArticleList, batWord);
-//        demon.demonstrate();
-
-        WordsFrequencyDemonstrator demon = null;
-        try {
-            demon = new WordsFrequencyDemonstrator(url, word);
-        } catch (IOException e) {
-            System.err.println("Problem with urls.");
-        }
+        List<String> batArticleList = Arrays.asList(batArticleUrlArray);
+        Demonstrator demon = new WordsFrequencyDemonstrator(batArticleList, batWord);
         demon.demonstrate();
+
+//        WordsFrequencyDemonstrator demon = null;
+//        try {
+//            demon = new WordsFrequencyDemonstrator(url, word);
+//        } catch (IOException e) {
+//            System.err.println("Problem with urls.");
+//        }
+//        demon.demonstrate();
     }
 }

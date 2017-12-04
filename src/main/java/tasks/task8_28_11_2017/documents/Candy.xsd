@@ -1,59 +1,71 @@
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
            xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <xs:element name="candy">
+    <xs:complexType name="possibleCandyType">
+        <xs:sequence>
+            <xs:element name="CHOCOLATE" type="xs:string"/>
+            <xs:element name="IRIS" type="xs:string"/>
+            <xs:element name="LOLLIPOP" type="xs:string"/>
+            <xs:element name="CARAMEL" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="possibleNutrionalValueType">
+        <xs:sequence>
+            <xs:element name="PROTEIN" type="xs:string"/>
+            <xs:element name="FAT" type="xs:string"/>
+            <xs:element name="CARBOHYDRATE" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="candies">
         <xs:complexType>
             <xs:sequence>
-                <xs:element type="xs:ID" name="id"/>
-                <xs:element type="xs:string" name="name"/>
-                <xs:element type="xs:double" name="caloricity"/>
-
-                <xs:element name="candyType">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:enumeration value="caramel"/>
-                            <xs:enumeration value="chocolate"/>
-                            <xs:enumeration value="iris"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-
-                <xs:element name="ingredients">
+                <xs:element name="candy" maxOccurs="unbounded" minOccurs="0">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="ingredient" maxOccurs="unbounded" minOccurs="1">
+                            <xs:element type="xs:byte" name="candyId"/>
+                            <xs:element type="xs:string" name="candyName"/>
+                            <xs:element type="xs:byte" name="candyCaloricity"/>
+                            <xs:element type="possibleCandyType" name="candyType"/>
+                            <xs:element type="xs:string" name="candyHasFilling"/>
+                            <xs:element name="ingredients">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element type="xs:byte" name="quantity"/>
-                                        <xs:element type="xs:string" name="ingredientDescription"/>
+                                        <xs:element name="ingredient" maxOccurs="unbounded" minOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:float" name="ingredientQuantity"/>
+                                                    <xs:element type="xs:string" name="ingredientDescription"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-
-                <xs:element name="nutrionalValues">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="nutrionalValue" maxOccurs="3" minOccurs="3">
-                                <xs:simpleType>
-                                    <xs:restriction base="xs:string">
-                                        <xs:enumeration value="proteins"/>
-                                        <xs:enumeration value="fats"/>
-                                        <xs:enumeration value="carbohydrates"/>
-                                    </xs:restriction>
-                                </xs:simpleType>
+                            <xs:element name="nutrionalValues">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nutrionalValue" maxOccurs="3" minOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="possibleNutrionalValueType"
+                                                                name="nutrionalValueType"/>
+                                                    <xs:element type="xs:byte" name="nutrionalValueQuantity"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
                             </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-
-                <xs:element name="manufacturer">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element type="xs:string" name="manufacturerName"/>
-                            <xs:element type="xs:string" name="manufacturerDescription"/>
+                            <xs:element name="manufacturer">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="manufacturerName"/>
+                                        <xs:element type="xs:string" name="manufacturerDescription"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>

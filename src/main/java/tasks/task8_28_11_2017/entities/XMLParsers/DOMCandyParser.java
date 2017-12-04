@@ -1,4 +1,4 @@
-package tasks.task8_28_11_2017.entities.XMLDeconstructors;
+package tasks.task8_28_11_2017.entities.XMLParsers;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

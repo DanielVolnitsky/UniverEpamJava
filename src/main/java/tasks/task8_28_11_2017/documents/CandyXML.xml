@@ -86,5 +86,38 @@
             <manufacturerDescription>Very large chocolate company 2</manufacturerDescription>
         </manufacturer>
     </candy>
+
+    <!--<candy>-->
+        <!--<candyId>1</candyId>-->
+        <!--<candyName>str1234</candyName>-->
+        <!--<candyCaloricity>1</candyCaloricity>-->
+        <!--<candyType>-->
+            <!--<CHOCOLATE>str1234</CHOCOLATE>-->
+            <!--<IRIS>str1234</IRIS>-->
+            <!--<LOLLIPOP>str1234</LOLLIPOP>-->
+            <!--<CARAMEL>str1234</CARAMEL>-->
+        <!--</candyType>-->
+        <!--<candyHasFilling>str1234</candyHasFilling>-->
+        <!--<ingredients>-->
+            <!--<ingredient>-->
+                <!--<ingredientQuantity>3.14159</ingredientQuantity>-->
+                <!--<ingredientDescription>str1234</ingredientDescription>-->
+            <!--</ingredient>-->
+        <!--</ingredients>-->
+        <!--<nutrionalValues>-->
+            <!--<nutrionalValue>-->
+                <!--<nutrionalValueType>-->
+                    <!--<PROTEIN>str1234</PROTEIN>-->
+                    <!--<FAT>str1234</FAT>-->
+                    <!--<CARBOHYDRATE>str1234</CARBOHYDRATE>-->
+                <!--</nutrionalValueType>-->
+                <!--<nutrionalValueQuantity>1</nutrionalValueQuantity>-->
+            <!--</nutrionalValue>-->
+        <!--</nutrionalValues>-->
+        <!--<manufacturer>-->
+            <!--<manufacturerName>str1234</manufacturerName>-->
+            <!--<manufacturerDescription>str1234</manufacturerDescription>-->
+        <!--</manufacturer>-->
+    <!--</candy>-->
 </candies>
 

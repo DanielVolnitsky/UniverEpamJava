@@ -15,14 +15,12 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-public class DOMCandyCandyDeconstructor extends CandyDeconstructor {
+public class DOMCandyParser extends CandyParser {
 
     private Document doc;
 
-    public DOMCandyCandyDeconstructor(String xmlPath) throws ParserConfigurationException, IOException, SAXException {
+    public DOMCandyParser(String xmlPath) throws ParserConfigurationException, IOException, SAXException {
         this.xmlPath = xmlPath;
 
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -32,7 +30,8 @@ public class DOMCandyCandyDeconstructor extends CandyDeconstructor {
         doc = db.parse(file);
     }
 
-    public void deconstruct() {
+    @Override
+    public void parse() {
 
         /*Корневой элемент*/
         Element root = doc.getDocumentElement();
@@ -47,20 +46,20 @@ public class DOMCandyCandyDeconstructor extends CandyDeconstructor {
                 // Получаем текущую конфету
                 Element candyElement = (Element) listCandies.item(i);
 
-                String id = candyElement.getElementsByTagName("id").item(0).getFirstChild().getNodeValue();
+                String id = candyElement.getElementsByTagName("candyId").item(0).getFirstChild().getNodeValue();
                 candy.setId(Integer.parseInt(id));
 
-                String name = candyElement.getElementsByTagName("name").item(0).getFirstChild().getNodeValue();
+                String name = candyElement.getElementsByTagName("candyName").item(0).getFirstChild().getNodeValue();
                 candy.setName(name);
 
-                String caloricity = candyElement.getElementsByTagName("caloricity").item(0).getFirstChild().getNodeValue();
+                String caloricity = candyElement.getElementsByTagName("candyCaloricity").item(0).getFirstChild().getNodeValue();
                 candy.setCaloricity(Integer.parseInt(caloricity));
 
-                String filling = candyElement.getElementsByTagName("hasFilling").item(0).getFirstChild().getNodeValue();
-                candy.setHasFilling(Boolean.parseBoolean(filling));
-
-                String type = candyElement.getElementsByTagName("type").item(0).getFirstChild().getNodeValue();
+                String type = candyElement.getElementsByTagName("candyType").item(0).getFirstChild().getNodeValue();
                 candy.setCandyType(Candy.CandyType.valueOf(type));
+
+                String filling = candyElement.getElementsByTagName("candyHasFilling").item(0).getFirstChild().getNodeValue();
+                candy.setHasFilling(Boolean.parseBoolean(filling));
 
                 handleIngredients(candy, candyElement);
                 handleNutrionalValues(candy, candyElement);
@@ -82,11 +81,11 @@ public class DOMCandyCandyDeconstructor extends CandyDeconstructor {
 
             String currManufNodeName = manufacturerNodes.item(j).getNodeName();
             switch (currManufNodeName) {
-                case "name":
+                case "manufacturerName":
                     String manufName = manufacturerNodes.item(j).getFirstChild().getNodeValue();
                     manufacturer.setName(manufName);
                     break;
-                case "description":
+                case "manufacturerDescription":
                     String manufDesc = manufacturerNodes.item(j).getFirstChild().getNodeValue();
                     manufacturer.setDescription(manufDesc);
                     break;
@@ -115,11 +114,11 @@ public class DOMCandyCandyDeconstructor extends CandyDeconstructor {
 
                     String currNutrValuesNodeName = nutrionalValuesNodeValues.item(k).getNodeName();
                     switch (currNutrValuesNodeName) {
-                        case "type":
+                        case "nutrionalValueType":
                             String nutrType = nutrionalValuesNodeValues.item(k).getFirstChild().getNodeValue();
                             nutrionalValue = NutrionalValue.valueOf(nutrType);
                             break;
-                        case "quantity":
+                        case "nutrionalValueQuantity":
                             String nutrQuantity = nutrionalValuesNodeValues.item(k).getFirstChild().getNodeValue();
                             nutriQuantity = Byte.parseByte(nutrQuantity);
                             break;
@@ -151,11 +150,11 @@ public class DOMCandyCandyDeconstructor extends CandyDeconstructor {
 
                     String currIngrValuesNodeName = ingredientValues.item(k).getNodeName();
                     switch (currIngrValuesNodeName) {
-                        case "quantity":
+                        case "ingredientQuantity":
                             String quantity = ingredientValues.item(k).getFirstChild().getNodeValue();
                             ingredient.setQuantity(Double.parseDouble(quantity));
                             break;
-                        case "description":
+                        case "ingredientDescription":
                             String description = ingredientValues.item(k).getFirstChild().getNodeValue();
                             ingredient.setDescription(description);
                             break;

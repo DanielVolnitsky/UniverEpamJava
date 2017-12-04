@@ -5,7 +5,7 @@ import tasks.task8_28_11_2017.entities.Candy;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class CandyDeconstructor {
+public abstract class CandyParser {
     protected String xmlPath;
     protected List<Candy> resultantCandies;
 
@@ -17,5 +17,5 @@ public abstract class CandyDeconstructor {
         return resultantCandies;
     }
 
-    public abstract void deconstruct();
+    public abstract void parse();
 }

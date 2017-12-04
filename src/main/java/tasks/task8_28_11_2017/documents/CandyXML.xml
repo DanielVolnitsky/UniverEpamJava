@@ -1,88 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <candies>
     <candy>
-        <id>1</id>
-        <name>First candy</name>
-        <caloricity>30</caloricity>
-        <type>CHOCOLATE</type>
-        <hasFilling>true</hasFilling>
+        <candyId>1</candyId>
+        <candyName>First candy</candyName>
+        <candyCaloricity>30</candyCaloricity>
+        <candyType>CHOCOLATE</candyType>
+        <candyHasFilling>true</candyHasFilling>
 
         <ingredients>
             <ingredient>
-                <quantity>0.3</quantity>
-                <description>water</description>
+                <ingredientQuantity>0.7</ingredientQuantity>
+                <ingredientDescription>cola</ingredientDescription>
             </ingredient>
             <ingredient>
-                <quantity>0.2</quantity>
-                <description>sugar</description>
+                <ingredientQuantity>0.6</ingredientQuantity>
+                <ingredientDescription>wola</ingredientDescription>
             </ingredient>
             <ingredient>
-                <quantity>0.4</quantity>
-                <description>fruktoza</description>
+                <ingredientQuantity>0.5</ingredientQuantity>
+                <ingredientDescription>soda</ingredientDescription>
             </ingredient>
         </ingredients>
 
+
         <nutrionalValues>
             <nutrionalValue>
-                <type>PROTEIN</type>
-                <quantity>1</quantity>
+                <nutrionalValueType>PROTEIN</nutrionalValueType>
+                <nutrionalValueQuantity>5</nutrionalValueQuantity>
             </nutrionalValue>
             <nutrionalValue>
-                <type>FAT</type>
-                <quantity>1</quantity>
+                <nutrionalValueType>FAT</nutrionalValueType>
+                <nutrionalValueQuantity>5</nutrionalValueQuantity>
             </nutrionalValue>
             <nutrionalValue>
-                <type>CARBOHYDRATE</type>
-                <quantity>1</quantity>
+                <nutrionalValueType>CARBOHYDRATE</nutrionalValueType>
+                <nutrionalValueQuantity>5</nutrionalValueQuantity>
             </nutrionalValue>
         </nutrionalValues>
 
         <manufacturer>
-            <name>name1</name>
-            <description>Very large chocolate company</description>
+            <manufacturerName>name1</manufacturerName>
+            <manufacturerDescription>Very large chocolate company 1</manufacturerDescription>
         </manufacturer>
     </candy>
 
     <candy>
-        <id>2</id>
-        <name>Second candy</name>
-        <caloricity>50</caloricity>
-        <type>CARAMEL</type>
-        <hasFilling>false</hasFilling>
+        <candyId>2</candyId>
+        <candyName>Second candy</candyName>
+        <candyCaloricity>50</candyCaloricity>
+        <candyType>IRIS</candyType>
+        <candyHasFilling>false</candyHasFilling>
 
         <ingredients>
             <ingredient>
-                <quantity>0.7</quantity>
-                <description>cola</description>
+                <ingredientQuantity>0.3</ingredientQuantity>
+                <ingredientDescription>water</ingredientDescription>
             </ingredient>
             <ingredient>
-                <quantity>0.6</quantity>
-                <description>wola</description>
+                <ingredientQuantity>0.2</ingredientQuantity>
+                <ingredientDescription>butter</ingredientDescription>
             </ingredient>
             <ingredient>
-                <quantity>0.5</quantity>
-                <description>soda</description>
+                <ingredientQuantity>0.5</ingredientQuantity>
+                <ingredientDescription>gooooola</ingredientDescription>
             </ingredient>
         </ingredients>
 
         <nutrionalValues>
             <nutrionalValue>
-                <type>PROTEIN</type>
-                <quantity>2</quantity>
+                <nutrionalValueType>PROTEIN</nutrionalValueType>
+                <nutrionalValueQuantity>2</nutrionalValueQuantity>
             </nutrionalValue>
             <nutrionalValue>
-                <type>FAT</type>
-                <quantity>2</quantity>
+                <nutrionalValueType>FAT</nutrionalValueType>
+                <nutrionalValueQuantity>2</nutrionalValueQuantity>
             </nutrionalValue>
             <nutrionalValue>
-                <type>CARBOHYDRATE</type>
-                <quantity>2</quantity>
+                <nutrionalValueType>CARBOHYDRATE</nutrionalValueType>
+                <nutrionalValueQuantity>2</nutrionalValueQuantity>
             </nutrionalValue>
         </nutrionalValues>
 
         <manufacturer>
-            <name>name2</name>
-            <description>Very large chocolate company 2</description>
+            <manufacturerName>name2</manufacturerName>
+            <manufacturerDescription>Very large chocolate company 2</manufacturerDescription>
         </manufacturer>
     </candy>
 </candies>

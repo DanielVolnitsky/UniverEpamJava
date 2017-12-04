@@ -23,6 +23,6 @@ public class Ingredient {
 
     @Override
     public String toString() {
-        return "Ingredient [description = " + description + ", quantity = " + quantity + "]";
+        return "[description: " + description + ", quantity: " + quantity + " mg" + "]";
     }
 }

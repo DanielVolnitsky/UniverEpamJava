@@ -108,15 +108,14 @@ public class Candy {
 
     @Override
     public String toString() {
-        return "Candy{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", caloricity=" + caloricity +
-                ", candyType=" + candyType +
-                ", hasFilling=" + hasFilling +
-                ", manufacturer=" + manufacturer +
-                ", ingredients=" + ingredients +
-                ", nutrionalValues=" + nutrionalValues +
+        return "id: " + id +
+                ", name: '" + name + '\'' +
+                ", caloricity: " + caloricity + " kkal" +
+                ", type: " + candyType +
+                ", filling: " + hasFilling +
+                ", manufacturer: " + manufacturer +
+                ", ingredients: " + ingredients +
+                ", nutrionalValues: " + nutrionalValues +
                 '}';
     }
 

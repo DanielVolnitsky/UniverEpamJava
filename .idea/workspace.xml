@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd788f61-779d-4d9c-ad66-a2ce34fb8412" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/CandyStock.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/CandyDeconstructor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/DOMCandyCandyDeconstructor.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/CandyShop.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/Main.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/additional/MainCodeExample" afterPath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/additional/MainCodeExample" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/WordFrequencyHelper.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/WordFrequencyHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Candy.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Candy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Ingredient.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Ingredient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Manufacturer.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Manufacturer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -68,17 +73,17 @@
     <SUITE FILE_PATH="coverage/UniverEpamJava$tasks_task7_24_11_2017_in_UniverEpamJava.coverage" NAME="tasks.task7_24_11_2017 in UniverEpamJava Coverage Results" MODIFIED="1512212508170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>tasks.task7_24_11_2017.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/UniverEpamJava$tasks_task6_23_11_2017_in_UniverEpamJava.coverage" NAME="tasks.task6_23_11_2017 in UniverEpamJava Coverage Results" MODIFIED="1512297156768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/UniverEpamJava$tasks_task6_23_11_2017_in_UniverEpamJava.coverage" NAME="tasks.task6_23_11_2017 in UniverEpamJava Coverage Results" MODIFIED="1512395914725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>tasks.task6_23_11_2017.*</FILTER>
     </SUITE>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tasks/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="28" selection-end-column="30" />
+            <state relative-caret-position="500">
+              <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,31 +91,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WordsFrequencyDemonstrator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/WordsFrequencyDemonstrator.java">
+      <file leaf-file-name="DOMCandyCandyDeconstructor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/DOMCandyCandyDeconstructor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="84">
+              <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SiteInfoHelper.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/SiteInfoHelper.java">
+      <file leaf-file-name="Ingredient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Ingredient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="29" column="61" lean-forward="true" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-              <folding />
+            <state relative-caret-position="357">
+              <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+              <folding>
+                <element signature="e#520#521#0" expanded="true" />
+                <element signature="e#615#616#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WordFrequencyHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/WordFrequencyHelper.java">
+      <file leaf-file-name="Candy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Candy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+              <folding>
+                <element signature="e#1116#1117#0" expanded="true" />
+                <element signature="e#1150#1151#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CandyStock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/CandyStock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#304#305#0" expanded="true" />
+                <element signature="e#355#356#0" expanded="true" />
+                <element signature="e#393#394#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Текст Задания" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/additional/Текст Задания">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -123,8 +159,8 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -146,12 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/WordComparator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/stringTask/entities/comparators/AlphabeticalStringComparatorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task4_16_11_2017/additional/jsonExample" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Symbol.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/WordSorter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Letter.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Word.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/comparators/AlphabeticalStringComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/comparators/WordComparator.java" />
@@ -179,14 +209,10 @@
         <option value="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/regexTask/entities/WordFrequencyHelperTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/regexTask/entities/WordFrequencyMapComparatorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/enumerations/NutrionalValues.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/enumerations/NutrionalValue.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Manufacturer.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/documents/Candy.xsd" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/additional/Текст Задания" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/documents/Candy.xml" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/CandyShop.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Ingredient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Candy.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/documents/CandyXML.xml" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/WordsFrequencyDemonstrator.java" />
         <option value="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/regexTask/entities/SiteInfoHelperTest.java" />
@@ -195,8 +221,18 @@
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/additional/MainCodeExample" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/additional/MainCodeExample" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/WordFrequencyHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/SiteInfoHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/DOMDeconstructor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/DOMCandyDeconstructor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/Deconstructor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/DOMCandyCandyDeconstructor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Candy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Manufacturer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Ingredient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/enumerations/NutrionalValue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/CandyDeconstructor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/CandyStock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
       </list>
     </option>
   </component>
@@ -273,7 +309,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="task6_23_11_2017" type="462c0819:PsiDirectoryNode" />
+              <item name="task8_28_11_2017" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
@@ -282,19 +318,28 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="task6_23_11_2017" type="462c0819:PsiDirectoryNode" />
-              <item name="regexTask" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="task6_23_11_2017" type="462c0819:PsiDirectoryNode" />
-              <item name="regexTask" type="462c0819:PsiDirectoryNode" />
+              <item name="task8_28_11_2017" type="462c0819:PsiDirectoryNode" />
               <item name="additional" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="task8_28_11_2017" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="task8_28_11_2017" type="462c0819:PsiDirectoryNode" />
+              <item name="enumerations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
@@ -633,12 +678,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WordsFrequencyDemonstratorTest_initializeUrlList - 2017.12.03 at 12h 18m 12s.xml">
-      <configuration name="WordsFrequencyDemonstratorTest.initializeUrlList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WordsFrequencyDemonstratorTest_initializeUrlList - 2017.12.03 at 12h 18m 16s.xml">
-      <configuration name="WordsFrequencyDemonstratorTest.initializeUrlList" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="WordsFrequencyDemonstratorTest_initializeUrlList - 2017.12.03 at 12h 18m 35s.xml">
       <configuration name="WordsFrequencyDemonstratorTest.initializeUrlList" configurationId="JUnit" />
     </history-entry>
@@ -663,6 +702,12 @@
     <history-entry file="tasks_task6_23_11_2017_in_UniverEpamJava - 2017.12.03 at 12h 32m 40s.xml">
       <configuration name="tasks.task6_23_11_2017 in UniverEpamJava" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="tasks_task6_23_11_2017_in_UniverEpamJava - 2017.12.04 at 15h 58m 40s.xml">
+      <configuration name="tasks.task6_23_11_2017 in UniverEpamJava" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="tasks_task6_23_11_2017_in_UniverEpamJava - 2017.12.04 at 16h 30m 15s.xml">
+      <configuration name="tasks.task6_23_11_2017 in UniverEpamJava" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="7" />
@@ -674,8 +719,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33549783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14285715" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.021354167" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25052083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -688,7 +734,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.021354167" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37987012" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -723,36 +768,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/WordsFrequencyDemonstrator.java</url>
-          <line>50</line>
-          <properties />
-          <option name="timeStamp" value="213" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="214" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/tasks/task7_24_11_2017/entities/CalculatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="37" column="38" lean-forward="false" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/ф.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Packages/Microsoft.SkypeApp_kzf8qxf38zg5c/LocalState/Downloads/MainProgram.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/stringTask/entities/Word.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
@@ -902,6 +922,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -925,46 +946,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/enumerations/NutrionalValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Manufacturer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Candy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1150#1151#0" expanded="false" />
-            <element signature="e#2360#2361#0" expanded="false" />
-            <element signature="e#2408#2409#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Ingredient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#264#265#0" expanded="false" />
-            <element signature="e#320#321#0" expanded="false" />
-            <element signature="e#434#435#0" expanded="false" />
-            <element signature="e#474#475#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -972,6 +954,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1029">
           <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -995,13 +978,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/additional/Текст Задания">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1049,14 +1025,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/additional/MainCodeExample">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="169" column="1" lean-forward="false" selection-start-line="169" selection-start-column="1" selection-end-line="169" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/helpers/Demonstrator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -1073,21 +1041,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/WordFrequencyHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/SiteInfoHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="296">
+          <caret line="29" column="61" lean-forward="true" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/WordFrequencyHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="28" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="99">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1099,11 +1065,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/SiteInfoHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/additional/MainCodeExample">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="29" column="61" lean-forward="true" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+        <state relative-caret-position="539">
+          <caret line="169" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="169" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Manufacturer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Ingredient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+          <folding>
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/enumerations/NutrionalValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Candy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding>
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1150#1151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/CandyDeconstructor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/additional/Текст Задания">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="306" column="12" lean-forward="false" selection-start-line="306" selection-start-column="12" selection-end-line="306" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/DOMCandyCandyDeconstructor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/CandyStock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -23,6 +23,6 @@ public class Manufacturer {
 
     @Override
     public String toString() {
-        return "Manufacturer [description = " + description + ", name = " + name + "]";
+        return "[description: " + description + ", name: " + name + "]";
     }
 }

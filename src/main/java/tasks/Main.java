@@ -4,39 +4,43 @@ import org.xml.sax.SAXException;
 import tasks.task8_28_11_2017.entities.CandyStock;
 import tasks.task8_28_11_2017.entities.XMLParsers.CandyParser;
 import tasks.task8_28_11_2017.entities.XMLParsers.DOMCandyParser;
-import tasks.task8_28_11_2017.entities.XMLParsers.SAXCandyParser;
-import tasks.task8_28_11_2017.entities.XMLParsers.StAX.StAXCandyParser;
+import tasks.task8_28_11_2017.entities.XMLValidator.CandiesXSDValidator;
 
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-import java.io.File;
 import java.io.IOException;
 
 public class Main {
 
+    private static final String XML_PATH = "src\\main\\resources\\Candy.xml";
+    private static final String XSD_PATH = "src\\main\\resources\\Candy.xsd";
+
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+        if (CandiesXSDValidator.validate(XML_PATH, XSD_PATH)) {
+            CandyStock domStock = new CandyStock();
+            CandyStock saxStock = new CandyStock();
+            CandyStock staxStock = new CandyStock();
 
-        String path = "src\\main\\java\\tasks\\task8_28_11_2017\\documents\\CandyXML.xml";
-        CandyStock stock = new CandyStock();
+            CandyParser domParser = new DOMCandyParser(XML_PATH);
+            domParser.parse();
+            domStock.addCandyList(domParser.getResultantCandies());
+//
+//            SAXCandyParser saxCandyParser = new SAXCandyParser(XML_PATH);
+//            saxCandyParser.parse();
+//            saxStock.addCandyList(saxCandyParser.getResultantCandies());
+//
+//            StAXCandyParser stAXCandyParser = new StAXCandyParser(XML_PATH);
+//            stAXCandyParser.parse();
+//            staxStock.addCandyList(stAXCandyParser.getResultantCandies());
 
-        CandyParser domParser = new DOMCandyParser(path);
-        domParser.parse();
+            System.out.println("DOM");
+            System.out.println(domStock);
+//            System.out.println("SAX");
+//            System.out.println(saxStock);
+//            System.out.println("StAX");
+//            System.out.println(staxStock);
 
-        stock.addCandyList(domParser.getResultantCandies());
-
-        SAXParserFactory factory = SAXParserFactory.newInstance();
-        SAXParser parser = factory.newSAXParser();
-        SAXCandyParser saxCandyParser = new SAXCandyParser();
-        parser.parse(new File(path), saxCandyParser);
-
-        stock.addCandyList(saxCandyParser.getResultantCandies());
-
-        StAXCandyParser stAXCandyParser = new StAXCandyParser(path);
-        stAXCandyParser.parse();
-
-        stock.addCandyList(saxCandyParser.getResultantCandies());
-
-        System.out.println(stock);
+//            Collections.sort(domStock.getCandies(), new CandyComparator());
+//            System.out.println(domStock);
+        }
     }
 }

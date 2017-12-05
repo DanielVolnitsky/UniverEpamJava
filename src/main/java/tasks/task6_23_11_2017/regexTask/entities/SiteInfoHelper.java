@@ -16,17 +16,9 @@ public class SiteInfoHelper {
         this.url = url;
     }
 
-    public String getSiteBodyText() throws IOException {
-        try {
-            Connection connection = Jsoup.connect(url);
-            Document doc = connection.get();
-            return doc.body().text();
-        } catch (IllegalArgumentException e) {
-            throw new IOException("invalid url");
-        }
-    }
-
-
+    /**
+     * @return Массив ссылок встречающихся в тексте
+     */
     public static String[] getPageBodyUrls(String bodyText) {
         Pattern urlPattern = Pattern.compile("(https?:\\/\\/)?([\\w\\.]+)\\.([a-z]{2,6}\\.?)(\\/[\\w\\-\\.]*)*\\/?");
         Matcher matcher = urlPattern.matcher(bodyText);
@@ -36,5 +28,15 @@ public class SiteInfoHelper {
             builder.append(matcher.group() + " ");
 
         return builder.toString().split("\\s");
+    }
+
+    public String getSiteBodyText() throws IOException {
+        try {
+            Connection connection = Jsoup.connect(url);
+            Document doc = connection.get();
+            return doc.body().text();
+        } catch (IllegalArgumentException e) {
+            throw new IOException("invalid url");
+        }
     }
 }

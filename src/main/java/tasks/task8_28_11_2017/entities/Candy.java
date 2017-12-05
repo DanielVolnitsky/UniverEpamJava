@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class Candy {
 
-    private int id;
+    private String id;
     private String name;
     private int caloricity;
     private CandyType candyType;
@@ -18,18 +18,18 @@ public class Candy {
 
     private List<Ingredient> ingredients;
 
-    private Map<NutrionalValue, Byte> nutrionalValues;
+    private Map<NutrionalValue, Double> nutrionalValues;
 
     {
-       ingredients = new ArrayList<>();
-       nutrionalValues = new HashMap<>();
+        ingredients = new ArrayList<>();
+        nutrionalValues = new HashMap<>();
     }
 
     public Candy() {
 
     }
 
-    public Candy(int id, String name, byte caloricity, CandyType candyType, boolean hasFilling, Manufacturer manufacturer) {
+    public Candy(String id, String name, byte caloricity, CandyType candyType, boolean hasFilling, Manufacturer manufacturer) {
         this.id = id;
         this.name = name;
         this.caloricity = caloricity;
@@ -38,11 +38,11 @@ public class Candy {
         this.manufacturer = manufacturer;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -54,11 +54,11 @@ public class Candy {
         this.ingredients = ingredients;
     }
 
-    public Map<NutrionalValue, Byte> getNutrionalValues() {
+    public Map<NutrionalValue, Double> getNutrionalValues() {
         return nutrionalValues;
     }
 
-    public void setNutrionalValues(Map<NutrionalValue, Byte> nutrionalValues) {
+    public void setNutrionalValues(Map<NutrionalValue, Double> nutrionalValues) {
         this.nutrionalValues = nutrionalValues;
     }
 
@@ -102,7 +102,7 @@ public class Candy {
         this.hasFilling = hasFilling;
     }
 
-    public void addIngredient(Ingredient ingredient){
+    public void addIngredient(Ingredient ingredient) {
         this.ingredients.add(ingredient);
     }
 

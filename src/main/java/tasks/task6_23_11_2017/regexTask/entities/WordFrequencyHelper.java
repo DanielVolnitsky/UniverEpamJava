@@ -8,9 +8,10 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 class WordFrequencyHelper {
-/**@return связный map, сортированный по частоте вхождения слова
- * @param initialMap начальный несортированный map
- * */
+    /**
+     * @param initialMap начальный несортированный map
+     * @return связный map, сортированный по частоте вхождения слова
+     */
     static Map<String, Map<String, Integer>> getMapSortedByWordFrequency(Map<String, Map<String, Integer>> initialMap, String seekWord) {
         WordFrequencyMapComparator comparator = new WordFrequencyMapComparator(seekWord);
         return initialMap.entrySet().stream()
@@ -35,6 +36,10 @@ class WordFrequencyHelper {
 //        return result;
 //    }
 
+    /**
+     * @param urlWordsMap    map слово - кол-во его вхождения
+     * @param neededUrlCount максимальное кол-во нужных url
+     */
     static void iterateUrlsAndFillWordsFrequencies(List<String> urls, Map<String, Map<String, Integer>> urlWordsMap, byte neededUrlCount) {
         for (int i = 0; i < urls.size() && urlWordsMap.size() <= neededUrlCount; i++) {
             String url = urls.get(i);

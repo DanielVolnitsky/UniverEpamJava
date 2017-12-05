@@ -9,6 +9,7 @@ import tasks.task8_28_11_2017.entities.Candy;
 import tasks.task8_28_11_2017.entities.Ingredient;
 import tasks.task8_28_11_2017.entities.Manufacturer;
 import tasks.task8_28_11_2017.enumerations.NutrionalValue;
+import tasks.task8_28_11_2017.exceptions.InvalidQuantityException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -31,7 +32,7 @@ public class DOMCandyParser extends CandyParser {
     }
 
     @Override
-    public void parse() {
+    public void parse(){
 
         /*Корневой элемент*/
         Element root = doc.getDocumentElement();
@@ -46,26 +47,27 @@ public class DOMCandyParser extends CandyParser {
                 // Получаем текущую конфету
                 Element candyElement = (Element) listCandies.item(i);
 
-                String id = candyElement.getElementsByTagName("candyId").item(0).getFirstChild().getNodeValue();
-                candy.setId(Integer.parseInt(id));
+                candy.setId(candyElement.getElementsByTagName("candyId").item(0).getFirstChild().getNodeValue());
+                candy.setName(candyElement.getElementsByTagName("candyName").item(0).getFirstChild().getNodeValue());
+                candy.setCaloricity(Integer.parseInt(
+                        candyElement.getElementsByTagName("candyCaloricity").item(0).getFirstChild().getNodeValue()));
 
-                String name = candyElement.getElementsByTagName("candyName").item(0).getFirstChild().getNodeValue();
-                candy.setName(name);
+                String candyType = candyElement.getElementsByTagName("candyType").item(0).getFirstChild().getNodeValue();
+                candy.setCandyType(Candy.CandyType.valueOf(candyType.toUpperCase()));
 
-                String caloricity = candyElement.getElementsByTagName("candyCaloricity").item(0).getFirstChild().getNodeValue();
-                candy.setCaloricity(Integer.parseInt(caloricity));
+                candy.setHasFilling(Boolean.parseBoolean(
+                        candyElement.getElementsByTagName("candyHasFilling").item(0).getFirstChild().getNodeValue()));
 
-                String type = candyElement.getElementsByTagName("candyType").item(0).getFirstChild().getNodeValue();
-                candy.setCandyType(Candy.CandyType.valueOf(type));
-
-                String filling = candyElement.getElementsByTagName("candyHasFilling").item(0).getFirstChild().getNodeValue();
-                candy.setHasFilling(Boolean.parseBoolean(filling));
-
-                handleIngredients(candy, candyElement);
-                handleNutrionalValues(candy, candyElement);
                 handleManufacturer(candy, candyElement);
 
-                resultantCandies.add(candy);
+                try {
+                    handleNutrionalValues(candy, candyElement);
+                    handleIngredients(candy, candyElement);
+
+                    resultantCandies.add(candy);
+                } catch (InvalidQuantityException e) {
+                   //logging
+                }
             }
         }
     }
@@ -96,7 +98,7 @@ public class DOMCandyParser extends CandyParser {
         candy.setManufacturer(manufacturer);
     }
 
-    private void handleNutrionalValues(Candy candy, Element candyElement) {
+    private void handleNutrionalValues(Candy candy, Element candyElement) throws InvalidQuantityException {
         Node nutrionalValues = candyElement.getElementsByTagName("nutrionalValues").item(0);
         // Получаем коллекцию питательных ценностей
         NodeList nutrionalValuesNodeList = nutrionalValues.getChildNodes();
@@ -107,7 +109,7 @@ public class DOMCandyParser extends CandyParser {
             if (nutrionalValuesNode.getNodeName().equals("nutrionalValue")) {
 
                 NutrionalValue nutrionalValue = null;
-                byte nutriQuantity = 0;
+                double nutriQuantity = 0.0;
 
                 NodeList nutrionalValuesNodeValues = nutrionalValuesNode.getChildNodes();
                 for (int k = 0; k < nutrionalValuesNodeValues.getLength(); k++) {
@@ -116,11 +118,14 @@ public class DOMCandyParser extends CandyParser {
                     switch (currNutrValuesNodeName) {
                         case "nutrionalValueType":
                             String nutrType = nutrionalValuesNodeValues.item(k).getFirstChild().getNodeValue();
-                            nutrionalValue = NutrionalValue.valueOf(nutrType);
+                            nutrionalValue = NutrionalValue.valueOf(nutrType.toUpperCase());
                             break;
                         case "nutrionalValueQuantity":
-                            String nutrQuantity = nutrionalValuesNodeValues.item(k).getFirstChild().getNodeValue();
-                            nutriQuantity = Byte.parseByte(nutrQuantity);
+                            Double nutrQuantity = Double.parseDouble(nutrionalValuesNodeValues.item(k).getFirstChild().getNodeValue());
+                            if(nutrQuantity > 0)
+                                nutriQuantity = nutrQuantity;
+                            else
+                                throw new InvalidQuantityException("was " + nutrQuantity);
                             break;
                         default:
                             break;
@@ -131,7 +136,7 @@ public class DOMCandyParser extends CandyParser {
         }
     }
 
-    private void handleIngredients(Candy candy, Element candyElement) {
+    private void handleIngredients(Candy candy, Element candyElement) throws InvalidQuantityException {
         //Берем узел с коллекцией ингредиентов
         Node ingredientsNode = candyElement.getElementsByTagName("ingredients").item(0);
         // Получаем коллекцию ингредиентов
@@ -151,8 +156,11 @@ public class DOMCandyParser extends CandyParser {
                     String currIngrValuesNodeName = ingredientValues.item(k).getNodeName();
                     switch (currIngrValuesNodeName) {
                         case "ingredientQuantity":
-                            String quantity = ingredientValues.item(k).getFirstChild().getNodeValue();
-                            ingredient.setQuantity(Double.parseDouble(quantity));
+                            Double quantity = Double.parseDouble(ingredientValues.item(k).getFirstChild().getNodeValue());
+                            if(quantity > 0)
+                                ingredient.setQuantity(quantity);
+                            else
+                                throw new InvalidQuantityException("was " + quantity);
                             break;
                         case "ingredientDescription":
                             String description = ingredientValues.item(k).getFirstChild().getNodeValue();

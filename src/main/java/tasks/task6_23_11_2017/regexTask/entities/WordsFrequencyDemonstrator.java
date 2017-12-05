@@ -10,11 +10,12 @@ import static tasks.task6_23_11_2017.regexTask.entities.WordFrequencyHelper.iter
 
 public class WordsFrequencyDemonstrator implements Demonstrator {
 
-    private static final byte URL_NEEDED = 10;
+    private static final byte URL_NEEDED = 20;
 
     private String seekWord;
     private String initialUrl;
     private List<String> urls;
+    Map<String, Map<String, Integer>> sortedByWord;
 
     public WordsFrequencyDemonstrator(List<String> urls, String seekWord) {
         this.urls = urls;
@@ -45,6 +46,11 @@ public class WordsFrequencyDemonstrator implements Demonstrator {
 
     public void setSeekWord(String seekWord) {
         this.seekWord = seekWord;
+        this.sortedByWord = getMapSortedByWordFrequency(sortedByWord, seekWord);
+    }
+
+    public Map<String, Map<String, Integer>> getSortedByWord() {
+        return sortedByWord;
     }
 
     public void demonstrate() {
@@ -55,13 +61,9 @@ public class WordsFrequencyDemonstrator implements Demonstrator {
         System.out.println("\nSorting...\n");
 
         /*Получаем соритрованный по частоте слова map*/
-        Map<String, Map<String, Integer>> result = getMapSortedByWordFrequency(urlWordsFrequencyMap, seekWord);
+        this.sortedByWord = getMapSortedByWordFrequency(urlWordsFrequencyMap, seekWord);
 
-        /*Выводим сртированный map*/
-        for (Map.Entry<String, Map<String, Integer>> entry : result.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
-            System.out.println(seekWord + " count: " + entry.getValue().get(seekWord));
-        }
+        printOuterMap();
     }
 
      void initializeUrlList() throws IOException {
@@ -69,5 +71,14 @@ public class WordsFrequencyDemonstrator implements Demonstrator {
         String[] urlArr = SiteInfoHelper.getPageBodyUrls(text);
 
         urls = new ArrayList<>(Arrays.asList(urlArr));
+    }
+
+    public void printOuterMap(){
+          /*Выводим сртированный map*/
+        for (Map.Entry<String, Map<String, Integer>> entry : this.sortedByWord.entrySet()) {
+            Integer count = entry.getValue().get(seekWord);
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+            System.out.println(seekWord + " count: " + (count == null ? 0 : count));
+        }
     }
 }

@@ -13,11 +13,6 @@ class SiteInfoHelperTest {
 
     private final String WORKING_URL = "https://www.w3schools.com/";
 
-    @BeforeAll
-    static void initializing() {
-
-    }
-
     @Test
     void getSiteBodyText() {
         Assertions.assertThrows(IOException.class, () -> {

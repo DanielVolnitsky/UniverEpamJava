@@ -1,3 +1,6 @@
 ERROR - XML contains errors: cvc-datatype-valid.1.2.1: '5-2' is not a valid value for 'integer'.
 ERROR - XML contains errors: cvc-datatype-valid.1.2.1: '0.5' is not a valid value for 'integer'.
 ERROR - Quantity must be positive number!
+ERROR - failed to parse candy with name candy1: Quantity must be positive number!. End parsing
+ERROR - failed to parse candy with name candy1: quantity must be positive number!End of parsing
+ERROR - failed to parse candy with name candy1: quantity must be positive number! End of parsing

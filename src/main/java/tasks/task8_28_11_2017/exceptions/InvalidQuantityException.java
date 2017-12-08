@@ -8,6 +8,6 @@ public class InvalidQuantityException extends Exception{
 
     @Override
     public String getMessage() {
-        return "Quantity must be positive number!";
+        return "quantity must be positive number!";
     }
 }

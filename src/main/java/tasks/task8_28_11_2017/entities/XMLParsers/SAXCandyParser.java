@@ -93,13 +93,11 @@ public class SAXCandyParser extends DefaultHandler {
                     break;
                 case "ingredientQuantity":
                     double iquantity = Double.parseDouble(new String(ch, start, length));
-                    if (iquantity > 0)
+                    if (iquantity > 0) {
                         ingredient.setQuantity(iquantity);
-                    else
+                        break;
+                    } else
                         throw new InvalidQuantityException("was " + iquantity);
-                    //logging
-                    ingredient.setQuantity(Double.parseDouble(new String(ch, start, length)));
-                    break;
                 case "ingredientDescription":
                     ingredient.setDescription(new String(ch, start, length));
                     break;
@@ -108,11 +106,11 @@ public class SAXCandyParser extends DefaultHandler {
                     break;
                 case "nutrionalValueQuantity":
                     double quantity = Double.parseDouble(new String(ch, start, length));
-                    if (quantity > 0)
+                    if (quantity > 0) {
                         nutrionalValueQuantity = quantity;
-                    else
+                        break;
+                    } else
                         throw new InvalidQuantityException("was " + quantity);
-                    break;
                 case "manufacturer":
                     manufacturer = new Manufacturer();
                     break;
@@ -125,7 +123,6 @@ public class SAXCandyParser extends DefaultHandler {
             }
         } catch (InvalidQuantityException ex) {
             log.error(ex.getMessage());
-            throw new SAXException("Invalid data in xml.");
         }
     }
 
@@ -140,6 +137,7 @@ public class SAXCandyParser extends DefaultHandler {
                 break;
             case "candy":
                 resultantCandies.add(candy);
+                log.info("successful parsing of candy with name " + candy.getName());
                 break;
             case "manufacturer":
                 candy.setManufacturer(manufacturer);

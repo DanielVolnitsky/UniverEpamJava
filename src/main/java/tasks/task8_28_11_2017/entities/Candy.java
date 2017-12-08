@@ -119,17 +119,38 @@ public class Candy {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Candy candy = (Candy) o;
+
+        if (caloricity != candy.caloricity) return false;
+        if (hasFilling != candy.hasFilling) return false;
+        if (id != null ? !id.equals(candy.id) : candy.id != null) return false;
+        if (name != null ? !name.equals(candy.name) : candy.name != null) return false;
+        if (candyType != candy.candyType) return false;
+        if (manufacturer != null ? !manufacturer.equals(candy.manufacturer) : candy.manufacturer != null) return false;
+        if (ingredients != null ? !ingredients.equals(candy.ingredients) : candy.ingredients != null) return false;
+
+        return nutrionalValues != null ? nutrionalValues.equals(candy.nutrionalValues) : candy.nutrionalValues == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + caloricity;
+        result = 31 * result + (candyType != null ? candyType.hashCode() : 0);
+        result = 31 * result + (hasFilling ? 1 : 0);
+        result = 31 * result + (manufacturer != null ? manufacturer.hashCode() : 0);
+        result = 31 * result + (ingredients != null ? ingredients.hashCode() : 0);
+        result = 31 * result + (nutrionalValues != null ? nutrionalValues.hashCode() : 0);
+        return result;
+    }
+
     public enum CandyType {
-        CHOCOLATE, IRIS(false), CARAMEL, LOLLIPOP(false);
-
-        private boolean hasFilling;
-
-        CandyType() {
-
-        }
-
-        CandyType(boolean hasFilling) {
-            this.hasFilling = hasFilling;
-        }
+        CHOCOLATE, IRIS, CARAMEL, LOLLIPOP;
     }
 }

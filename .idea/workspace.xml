@@ -2,20 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd788f61-779d-4d9c-ad66-a2ce34fb8412" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tasks/helpers/CollectionsHelper.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/exceptions/InvalidCandyTypeException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/exceptions/InvalidNutrionalValueType.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UniverEpamJava.iml" afterPath="$PROJECT_DIR$/UniverEpamJava.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/Main.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/DOMCandyParser.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/DOMCandyParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Candy.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Candy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Ingredient.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Ingredient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Manufacturer.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Manufacturer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/SAXCandyParser.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/SAXCandyParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLValidator/CandiesXSDValidator.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLValidator/CandiesXSDValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/StAX/StAXCandyParser.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/StAX/StAXCandyParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/StAX/StaxStreamProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/StAX/StaxStreamProcessor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/exceptions/InvalidQuantityException.java" afterPath="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/exceptions/InvalidQuantityException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/Candy.xml" afterPath="$PROJECT_DIR$/src/main/resources/Candy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Candy.xml" afterPath="$PROJECT_DIR$/target/classes/Candy.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log.txt" afterPath="$PROJECT_DIR$/src/main/resources/log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log.txt" afterPath="$PROJECT_DIR$/target/classes/log.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -84,11 +84,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tasks/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="452">
+              <caret line="53" column="102" lean-forward="false" selection-start-line="53" selection-start-column="102" selection-end-line="53" selection-end-column="102" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,52 +96,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log4j.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
+      <file leaf-file-name="Candy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Candy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+            <state relative-caret-position="164">
+              <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+              <folding>
+                <element signature="e#1339#1340#0" expanded="true" />
+                <element signature="e#1377#1378#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ingredient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Ingredient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SAXCandyParser.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/SAXCandyParser.java">
+      <file leaf-file-name="CollectionsHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/helpers/CollectionsHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="127" column="59" lean-forward="true" selection-start-line="127" selection-start-column="59" selection-end-line="127" selection-end-column="59" />
-              <folding />
+            <state relative-caret-position="231">
+              <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Candy.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Candy.xml">
+      <file leaf-file-name="Manufacturer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Manufacturer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Текст Задания" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/additional/Текст Задания">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="8" selection-end-column="118" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Candy.xsd" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Candy.xsd">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="37" column="60" lean-forward="false" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
-              <folding />
+            <state relative-caret-position="315">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#264#265#0" expanded="true" />
+                <element signature="e#322#323#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,7 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/tasks/task6_23_11_2017/regexTask/entities/WordFrequencyMapComparatorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/enumerations/NutrionalValues.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/documents/Candy.xml" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/CandyShop.java" />
@@ -185,8 +182,6 @@
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/DOMDeconstructor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/DOMCandyDeconstructor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/Deconstructor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Manufacturer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Ingredient.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/enumerations/NutrionalValue.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/CandyDeconstructor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/CandyStock.java" />
@@ -196,7 +191,6 @@
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLDeconstructors/DOMCandyParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/StAXCandyParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/StaxStreamProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/StAX/StaxStreamProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/SiteInfoHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task6_23_11_2017/regexTask/entities/WordFrequencyHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/documents/Candy.xsd" />
@@ -215,18 +209,22 @@
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/exceptions/InvalidCandyTypeException.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/exceptions/InvalidNutrionalValueType.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Candy.xsd" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Candy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/StAX/StAXCandyParser.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/exceptions/InvalidQuantityException.java" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLValidator/CandiesXSDValidator.java" />
         <option value="$PROJECT_DIR$/src/log.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/log.txt" />
         <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/DOMCandyParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/SAXCandyParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/exceptions/InvalidQuantityException.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Candy.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/SAXCandyParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/StAX/StaxStreamProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/StAX/StAXCandyParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Manufacturer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/helpers/CollectionsHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Candy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Ingredient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tasks/Main.java" />
       </list>
     </option>
   </component>
@@ -303,38 +301,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="task8_28_11_2017" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="task8_28_11_2017" type="462c0819:PsiDirectoryNode" />
-              <item name="additional" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="task8_28_11_2017" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UniverEpamJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="task8_28_11_2017" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-              <item name="XMLParsers" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UniverEpamJava" type="b2602c69:ProjectViewProjectNode" />
@@ -674,7 +641,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.241342" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13203463" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -682,7 +649,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68722945" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7878788" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -723,7 +690,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="285" />
+      <option name="time" value="292" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -732,13 +699,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/org/xml/sax/InputSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/org/w3c/dom/Element.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -779,27 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/helpers/Demonstrator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Manufacturer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Ingredient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -897,24 +836,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/StAX/StaxStreamProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/CandyParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/CandyStock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -953,43 +881,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/exceptions/InvalidNutrionalValueType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Candy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-513">
-          <caret line="56" column="37" lean-forward="false" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/StAX/StAXCandyParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="758">
           <caret line="47" column="19" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/exceptions/InvalidQuantityException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="42" lean-forward="true" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
-          <folding>
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#184#185#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1009,14 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Candy.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="37" column="60" lean-forward="false" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLValidator/CandiesXSDValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
@@ -1024,22 +912,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/additional/Текст Задания">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="8" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1059,13 +931,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/DOMCandyParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="40" column="59" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="40" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/additional/Текст Задания">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/exceptions/InvalidNutrionalValueType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Candy.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="28" column="88" lean-forward="true" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1077,19 +971,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/DOMCandyParser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="40" column="59" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="40" selection-end-column="59" />
+        <state relative-caret-position="252">
+          <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/exceptions/InvalidQuantityException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/StAX/StaxStreamProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/SAXCandyParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="127" column="59" lean-forward="true" selection-start-line="127" selection-start-column="59" selection-end-line="127" selection-end-column="59" />
+        <state relative-caret-position="363">
+          <caret line="139" column="85" lean-forward="true" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="85" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/StAX/StAXCandyParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-96">
+          <caret line="89" column="58" lean-forward="true" selection-start-line="89" selection-start-column="58" selection-end-line="89" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/XMLParsers/CandyParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Manufacturer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/helpers/Demonstrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/helpers/CollectionsHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Ingredient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/task8_28_11_2017/entities/Candy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding>
+            <element signature="e#1339#1340#0" expanded="true" />
+            <element signature="e#1377#1378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tasks/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="53" column="102" lean-forward="false" selection-start-line="53" selection-start-column="102" selection-end-line="53" selection-end-column="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

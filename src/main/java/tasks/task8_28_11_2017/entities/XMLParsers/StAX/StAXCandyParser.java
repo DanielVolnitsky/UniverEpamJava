@@ -1,10 +1,14 @@
 package tasks.task8_28_11_2017.entities.XMLParsers.StAX;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
 import tasks.task8_28_11_2017.entities.Candy;
 import tasks.task8_28_11_2017.entities.Ingredient;
 import tasks.task8_28_11_2017.entities.Manufacturer;
 import tasks.task8_28_11_2017.entities.XMLParsers.CandyParser;
 import tasks.task8_28_11_2017.enumerations.NutrionalValue;
+import tasks.task8_28_11_2017.exceptions.InvalidQuantityException;
 
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
@@ -15,6 +19,12 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class StAXCandyParser extends CandyParser {
+
+    static Logger log = Logger.getLogger("StAXCandyParser");
+
+    static {
+        new DOMConfigurator().doConfigure("src\\main\\resources\\log4j.xml", LogManager.getLoggerRepository());
+    }
 
     private Candy candy;
     private Ingredient ingredient;
@@ -60,7 +70,11 @@ public class StAXCandyParser extends CandyParser {
                             ingredient = new Ingredient();
                             break;
                         case "ingredientQuantity":
-                            ingredient.setQuantity(Double.parseDouble(reader.getElementText()));
+                            double iquantity = Double.parseDouble(reader.getElementText());
+                            if (iquantity > 0)
+                                ingredient.setQuantity(iquantity);
+                            else
+                                throw new InvalidQuantityException("was " + iquantity);
                             break;
                         case "ingredientDescription":
                             ingredient.setDescription(reader.getElementText());
@@ -69,7 +83,11 @@ public class StAXCandyParser extends CandyParser {
                             nutrionalValueType = NutrionalValue.valueOf(reader.getElementText().toUpperCase());
                             break;
                         case "nutrionalValueQuantity":
-                            nutrionalValueQuantity = Double.parseDouble(reader.getElementText());
+                            double quantity = Double.parseDouble(reader.getElementText());
+                            if (quantity > 0)
+                                nutrionalValueQuantity = quantity;
+                            else
+                                throw new InvalidQuantityException("was " + quantity);
                             break;
                         case "manufacturer":
                             manufacturer = new Manufacturer();
@@ -91,6 +109,7 @@ public class StAXCandyParser extends CandyParser {
                             break;
                         case "candy":
                             resultantCandies.add(candy);
+                            log.info("successful parsing of candy with name " + candy.getName());
                             break;
                         case "manufacturer":
                             candy.setManufacturer(manufacturer);
@@ -99,7 +118,9 @@ public class StAXCandyParser extends CandyParser {
                 }
             }
         } catch (XMLStreamException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
+        } catch (InvalidQuantityException e) {
+            log.error("failed to parse candy with name " + candy.getName() + ": " + e.getMessage() + " End of parsing");
         }
     }
 }

@@ -1,5 +1,8 @@
 package tasks.task8_28_11_2017.entities.XMLParsers;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -19,10 +22,15 @@ import java.util.List;
 
 public class SAXCandyParser extends DefaultHandler {
 
+    static Logger log = Logger.getLogger("SAXCandyParser");
+
+    static {
+        new DOMConfigurator().doConfigure("src\\main\\resources\\log4j.xml", LogManager.getLoggerRepository());
+    }
+
     private SAXParserFactory factory;
     private SAXParser parser;
     private String xmlPath;
-
     private List<Candy> resultantCandies;
     private String elementName;
     private Candy candy;
@@ -57,63 +65,67 @@ public class SAXCandyParser extends DefaultHandler {
 
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
-        switch (elementName) {
-            case "candies":
-                resultantCandies = new ArrayList<>();
-                break;
-            case "candy":
-                candy = new Candy();
-                break;
-            case "candyId":
-                candy.setId(new String(ch, start, length));
-                break;
-            case "candyName":
-                candy.setName(new String(ch, start, length));
-                break;
-            case "candyCaloricity":
-                candy.setCaloricity(new Integer(new String(ch, start, length)));
-                break;
-            case "candyType":
-                candy.setCandyType(Candy.CandyType.valueOf(new String(ch, start, length).toUpperCase()));
-                break;
-            case "candyHasFilling":
-                candy.setHasFilling(Boolean.parseBoolean(new String(ch, start, length)));
-                break;
-            case "ingredient":
-                ingredient = new Ingredient();
-                break;
-            case "ingredientQuantity":
-                double iquantity = Double.parseDouble(new String(ch, start, length));
-                if(iquantity > 0)
-                    ingredient.setQuantity(iquantity);
-                else
-                    System.out.println("quant problems");
-                //logging
-                ingredient.setQuantity(Double.parseDouble(new String(ch, start, length)));
-                break;
-            case "ingredientDescription":
-                ingredient.setDescription(new String(ch, start, length));
-                break;
-            case "nutrionalValueType":
-                nutrionalValueType = NutrionalValue.valueOf(new String(ch, start, length).toUpperCase());
-                break;
-            case "nutrionalValueQuantity":
-                double quantity = Double.parseDouble(new String(ch, start, length));
-                if(quantity > 0)
-                    nutrionalValueQuantity = quantity;
-                else
-                    System.out.println("quant problems");
+        try {
+            switch (elementName) {
+                case "candies":
+                    resultantCandies = new ArrayList<>();
+                    break;
+                case "candy":
+                    candy = new Candy();
+                    break;
+                case "candyId":
+                    candy.setId(new String(ch, start, length));
+                    break;
+                case "candyName":
+                    candy.setName(new String(ch, start, length));
+                    break;
+                case "candyCaloricity":
+                    candy.setCaloricity(new Integer(new String(ch, start, length)));
+                    break;
+                case "candyType":
+                    candy.setCandyType(Candy.CandyType.valueOf(new String(ch, start, length).toUpperCase()));
+                    break;
+                case "candyHasFilling":
+                    candy.setHasFilling(Boolean.parseBoolean(new String(ch, start, length)));
+                    break;
+                case "ingredient":
+                    ingredient = new Ingredient();
+                    break;
+                case "ingredientQuantity":
+                    double iquantity = Double.parseDouble(new String(ch, start, length));
+                    if (iquantity > 0)
+                        ingredient.setQuantity(iquantity);
+                    else
+                        throw new InvalidQuantityException("was " + iquantity);
                     //logging
-                break;
-            case "manufacturer":
-                manufacturer = new Manufacturer();
-                break;
-            case "manufacturerName":
-                manufacturer.setName(new String(ch, start, length));
-                break;
-            case "manufacturerDescription":
-                manufacturer.setDescription(new String(ch, start, length));
-                break;
+                    ingredient.setQuantity(Double.parseDouble(new String(ch, start, length)));
+                    break;
+                case "ingredientDescription":
+                    ingredient.setDescription(new String(ch, start, length));
+                    break;
+                case "nutrionalValueType":
+                    nutrionalValueType = NutrionalValue.valueOf(new String(ch, start, length).toUpperCase());
+                    break;
+                case "nutrionalValueQuantity":
+                    double quantity = Double.parseDouble(new String(ch, start, length));
+                    if (quantity > 0)
+                        nutrionalValueQuantity = quantity;
+                    else
+                        throw new InvalidQuantityException("was " + quantity);
+                    break;
+                case "manufacturer":
+                    manufacturer = new Manufacturer();
+                    break;
+                case "manufacturerName":
+                    manufacturer.setName(new String(ch, start, length));
+                    break;
+                case "manufacturerDescription":
+                    manufacturer.setDescription(new String(ch, start, length));
+                    break;
+            }
+        } catch (InvalidQuantityException ex) {
+            log.error(ex.getMessage());
+            throw new SAXException("Invalid data in xml.");
         }
     }
 

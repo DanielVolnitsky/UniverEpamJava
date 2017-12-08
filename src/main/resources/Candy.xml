@@ -3,7 +3,7 @@
     <candy>
         <candyId>p_1</candyId>
         <candyName>candy1</candyName>
-        <candyCaloricity>-52</candyCaloricity>
+        <candyCaloricity>5</candyCaloricity>
         <candyType>chocolate</candyType>
         <candyHasFilling>true</candyHasFilling>
         <ingredients>
@@ -15,7 +15,7 @@
         <nutrionalValues>
             <nutrionalValue>
                 <nutrionalValueType>protein</nutrionalValueType>
-                <nutrionalValueQuantity>-0.5</nutrionalValueQuantity>
+                <nutrionalValueQuantity>0.5</nutrionalValueQuantity>
             </nutrionalValue>
         </nutrionalValues>
         <manufacturer>

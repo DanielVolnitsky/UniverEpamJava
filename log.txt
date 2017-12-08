@@ -1,0 +1,26 @@
+ERROR - failed to parse candy with name: candy1 Quantity must be positive number!
+ERROR - failed to parse candy with name candy1,reason: Quantity must be positive number!
+ERROR - failed to parse candy with name candy1,reason: Quantity must be positive number!
+ERROR - failed to parse candy with name candy1: Quantity must be positive number!
+ERROR - failed to parse candy with name candy1: Quantity must be positive number!
+ERROR - XML contains errors: cvc-datatype-valid.1.2.1: '1' is not a valid value for 'NCName'.
+ERROR - XML contains errors: cvc-minInclusive-valid: Value '-52' is not facet-valid with respect to minInclusive '0' for type 'unsignedShort'.
+ERROR - XML contains errors: cvc-enumeration-valid: Value 'chocolates' is not facet-valid with respect to enumeration '[chocolate, iris, lollipop, caramel]'. It must be a value from the enumeration.
+ERROR - XML contains errors: cvc-datatype-valid.1.2.1: 'truse' is not a valid value for 'boolean'.
+ERROR - failed to parse candy with name candy1: Quantity must be positive number!
+ERROR - XML contains errors: cvc-enumeration-valid: Value 'proteins' is not facet-valid with respect to enumeration '[protein, fat, carbohydrate]'. It must be a value from the enumeration.
+ERROR - failed to parse candy with name candy2: Quantity must be positive number!
+INFO - XML is valid!
+
+INFO - successful parsing of candy with name candy1
+INFO - successful parsing of candy with name candy2
+INFO - successful parsing of candy with name candy3
+INFO - successful parsing of candy with name candy4
+INFO - successful parsing of candy with name candy5
+INFO - successful parsing of candy with name candy6
+INFO - successful parsing of candy with name candy7
+INFO - successful parsing of candy with name candy8
+INFO - successful parsing of candy with name candy9
+INFO - successful parsing of candy with name candy10
+ERROR - XML contains errors: cvc-datatype-valid.1.2.1: '5-2' is not a valid value for 'integer'.
+ERROR - XML contains errors: cvc-datatype-valid.1.2.1: '5-2' is not a valid value for 'integer'.

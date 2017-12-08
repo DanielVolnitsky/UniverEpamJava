@@ -1,5 +1,8 @@
 package tasks.task8_28_11_2017.entities.XMLParsers;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -30,6 +33,12 @@ public class DOMCandyParser extends CandyParser {
         File file = new File(this.xmlPath);
         doc = db.parse(file);
     }
+
+    static {
+        new DOMConfigurator().doConfigure("src\\main\\resources\\log4j.xml", LogManager.getLoggerRepository());
+    }
+
+    static Logger log = Logger.getLogger("DOMCandyParser");
 
     @Override
     public void parse(){
@@ -65,8 +74,9 @@ public class DOMCandyParser extends CandyParser {
                     handleIngredients(candy, candyElement);
 
                     resultantCandies.add(candy);
+                    log.info("successful parsing of candy with name " + candy.getName());
                 } catch (InvalidQuantityException e) {
-                   //logging
+                   log.error("failed to parse candy with name " + candy.getName() + ": " + e.getMessage());
                 }
             }
         }

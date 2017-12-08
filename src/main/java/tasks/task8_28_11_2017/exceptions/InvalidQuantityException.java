@@ -10,9 +10,4 @@ public class InvalidQuantityException extends Exception{
     public String getMessage() {
         return "Quantity must be positive number!";
     }
-
-    @Override
-    public String toString() {
-        return "InvalidQuantityException: " + "Quantity must be positive number!" + this.getMessage();
-    }
 }

@@ -4,3 +4,49 @@ ERROR - Quantity must be positive number!
 ERROR - failed to parse candy with name candy1: Quantity must be positive number!. End parsing
 ERROR - failed to parse candy with name candy1: quantity must be positive number!End of parsing
 ERROR - failed to parse candy with name candy1: quantity must be positive number! End of parsing
+ERROR - failed to parse candy with name candy2: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy2: quantity must be positive number! End of parsing
+ERROR - failed to parse candy with name candy2: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy2: quantity must be positive number! End of parsing
+ERROR - failed to parse candy with name candy2: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy2: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy2: quantity must be positive number! End of parsing
+ERROR - failed to parse candy with name candy2: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy2: quantity must be positive number! End of parsing
+ERROR - failed to parse candy with name candy2: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy2: quantity must be positive number! End of parsing
+ERROR - failed to parse candy with name candy2: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy2: quantity must be positive number! End of parsing
+ERROR - failed to parse candy with name candy2: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy2: quantity must be positive number! End of parsing
+ERROR - failed to parse candy with name candy2: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy2: quantity must be positive number! End of parsing
+ERROR - failed to parse candy with name candy2: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy2: quantity must be positive number! End of parsing
+ERROR - failed to parse candy with name candy2: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy2: quantity must be positive number! End of parsing
+ERROR - failed to parse candy with name candy4: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy4: quantity must be positive number! End of parsing
+ERROR - XML contains errors: cvc-enumeration-valid: Value 'colas' is not facet-valid with respect to enumeration '[chocolate, iris, lollipop, caramel]'. It must be a value from the enumeration.
+ERROR - src\main\java\tasks\task8_28_11_2017\additional\invalidTestXML contains errors: cvc-enumeration-valid: Value 'colas' is not facet-valid with respect to enumeration '[chocolate, iris, lollipop, caramel]'. It must be a value from the enumeration.
+ERROR - src\main\java\tasks\task8_28_11_2017\additional\invalidTestXML contains errors: cvc-enumeration-valid: Value 'colas' is not facet-valid with respect to enumeration '[chocolate, iris, lollipop, caramel]'. It must be a value from the enumeration.
+ERROR - failed to parse candy with name candy1: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy1: quantity must be positive number! End of parsing
+ERROR - failed to parse candy with name candy1: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy1: quantity must be positive number! End of parsing
+ERROR - src\main\java\tasks\task8_28_11_2017\additional\validTestXML contains errors: C:\Users\Daniel\Desktop\UniverEpamJava\src\main\java\tasks\task8_28_11_2017\additional\validTestXML (Не удается найти указанный файл)
+ERROR - src\main\java\tasks\task8_28_11_2017\additional\invalidTestXML contains errors: C:\Users\Daniel\Desktop\UniverEpamJava\src\main\java\tasks\task8_28_11_2017\additional\invalidTestXML (Не удается найти указанный файл)

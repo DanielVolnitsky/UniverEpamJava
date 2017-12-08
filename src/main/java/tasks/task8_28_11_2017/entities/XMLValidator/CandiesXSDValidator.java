@@ -30,7 +30,7 @@ public class CandiesXSDValidator {
             log.info("XML is valid!\n");
             return true;
         } catch (SAXException | IOException e) {
-            log.error("XML contains errors: " + e.getMessage());
+            log.error(xmlFilePath + " contains errors: " + e.getMessage());
             return false;
         }
     }

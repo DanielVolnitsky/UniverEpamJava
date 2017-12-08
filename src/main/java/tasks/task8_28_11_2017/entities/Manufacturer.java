@@ -5,6 +5,15 @@ public class Manufacturer {
     private String name;
     private String description;
 
+    public Manufacturer() {
+
+    }
+
+    public Manufacturer(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
     public String getDescription() {
         return description;
     }

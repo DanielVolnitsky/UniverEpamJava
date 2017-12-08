@@ -1,6 +1,8 @@
 package tasks.task8_28_11_2017.exceptions;
 
-public class InvalidQuantityException extends Exception{
+public class InvalidQuantityException extends CandyParseException{
+    public InvalidQuantityException() {
+    }
 
     public InvalidQuantityException(String message) {
         super(message);

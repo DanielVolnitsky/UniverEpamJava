@@ -8,6 +8,7 @@ import tasks.task8_28_11_2017.entities.Ingredient;
 import tasks.task8_28_11_2017.entities.Manufacturer;
 import tasks.task8_28_11_2017.entities.XMLParsers.CandyParser;
 import tasks.task8_28_11_2017.enumerations.NutrionalValue;
+import tasks.task8_28_11_2017.exceptions.CandyParseException;
 import tasks.task8_28_11_2017.exceptions.InvalidQuantityException;
 
 import javax.xml.stream.XMLStreamException;
@@ -37,7 +38,7 @@ public class StAXCandyParser extends CandyParser {
     }
 
     @Override
-    public void parse() throws IOException {
+    public void parse() throws CandyParseException {
         try (StaxStreamProcessor processor = new StaxStreamProcessor(Files.newInputStream(Paths.get(xmlPath)))) {
             XMLStreamReader reader = processor.getReader();
 
@@ -117,10 +118,15 @@ public class StAXCandyParser extends CandyParser {
                     }
                 }
             }
+        } catch (IOException e) {
+            log.error("failed to connect to xml by path: " + xmlPath);
+            throw new CandyParseException();
         } catch (XMLStreamException e) {
             log.error(e.getMessage());
+            throw new CandyParseException();
         } catch (InvalidQuantityException e) {
             log.error("failed to parse candy with name " + candy.getName() + ": " + e.getMessage() + " End of parsing");
+            throw new CandyParseException();
         }
     }
 }

@@ -1,6 +1,7 @@
 package tasks.task8_28_11_2017.entities.XMLParsers;
 
 import tasks.task8_28_11_2017.entities.Candy;
+import tasks.task8_28_11_2017.exceptions.CandyParseException;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,5 +19,5 @@ public abstract class CandyParser {
         return resultantCandies;
     }
 
-    public abstract void parse() throws IOException;
+    public abstract void parse() throws CandyParseException;
 }

@@ -1,0 +1,25 @@
+<candies>
+    <candy>
+        <candyId>p_1</candyId>
+        <candyName>candy1</candyName>
+        <candyCaloricity>5</candyCaloricity>
+        <candyType>colas</candyType>
+        <candyHasFilling>true</candyHasFilling>
+        <ingredients>
+            <ingredient>
+                <ingredientQuantity>0.2</ingredientQuantity>
+                <ingredientDescription>varenije</ingredientDescription>
+            </ingredient>
+        </ingredients>
+        <nutrionalValues>
+            <nutrionalValue>
+                <nutrionalValueType>protein</nutrionalValueType>
+                <nutrionalValueQuantity>0.5</nutrionalValueQuantity>
+            </nutrionalValue>
+        </nutrionalValues>
+        <manufacturer>
+            <manufacturerName>manuf1</manufacturerName>
+            <manufacturerDescription>first manuf</manufacturerDescription>
+        </manufacturer>
+    </candy>
+</candies>

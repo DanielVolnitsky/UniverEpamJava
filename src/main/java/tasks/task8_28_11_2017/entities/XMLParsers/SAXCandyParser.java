@@ -123,6 +123,7 @@ public class SAXCandyParser extends DefaultHandler {
             }
         } catch (InvalidQuantityException ex) {
             log.error(ex.getMessage());
+            throw new SAXException();
         }
     }
 

@@ -12,6 +12,7 @@ import tasks.task8_28_11_2017.entities.Candy;
 import tasks.task8_28_11_2017.entities.Ingredient;
 import tasks.task8_28_11_2017.entities.Manufacturer;
 import tasks.task8_28_11_2017.enumerations.NutrionalValue;
+import tasks.task8_28_11_2017.exceptions.CandyParseException;
 import tasks.task8_28_11_2017.exceptions.InvalidQuantityException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -21,6 +22,12 @@ import java.io.File;
 import java.io.IOException;
 
 public class DOMCandyParser extends CandyParser {
+
+    static Logger log = Logger.getLogger("DOMCandyParser");
+
+    static {
+        new DOMConfigurator().doConfigure("src\\main\\resources\\log4j.xml", LogManager.getLoggerRepository());
+    }
 
     private Document doc;
 
@@ -34,15 +41,8 @@ public class DOMCandyParser extends CandyParser {
         doc = db.parse(file);
     }
 
-    static {
-        new DOMConfigurator().doConfigure("src\\main\\resources\\log4j.xml", LogManager.getLoggerRepository());
-    }
-
-    static Logger log = Logger.getLogger("DOMCandyParser");
-
     @Override
-    public void parse(){
-
+    public void parse() throws CandyParseException {
         /*Корневой элемент*/
         Element root = doc.getDocumentElement();
         if (root.getTagName().equals("candies")) {
@@ -76,7 +76,8 @@ public class DOMCandyParser extends CandyParser {
                     resultantCandies.add(candy);
                     log.info("successful parsing of candy with name " + candy.getName());
                 } catch (InvalidQuantityException e) {
-                   log.error("failed to parse candy with name " + candy.getName() + ": " + e.getMessage());
+                    log.error("failed to parse candy with name " + candy.getName() + ": " + e.getMessage());
+                    throw new CandyParseException();
                 }
             }
         }
@@ -132,7 +133,7 @@ public class DOMCandyParser extends CandyParser {
                             break;
                         case "nutrionalValueQuantity":
                             Double nutrQuantity = Double.parseDouble(nutrionalValuesNodeValues.item(k).getFirstChild().getNodeValue());
-                            if(nutrQuantity > 0)
+                            if (nutrQuantity > 0)
                                 nutriQuantity = nutrQuantity;
                             else
                                 throw new InvalidQuantityException("was " + nutrQuantity);
@@ -167,7 +168,7 @@ public class DOMCandyParser extends CandyParser {
                     switch (currIngrValuesNodeName) {
                         case "ingredientQuantity":
                             Double quantity = Double.parseDouble(ingredientValues.item(k).getFirstChild().getNodeValue());
-                            if(quantity > 0)
+                            if (quantity > 0)
                                 ingredient.setQuantity(quantity);
                             else
                                 throw new InvalidQuantityException("was " + quantity);

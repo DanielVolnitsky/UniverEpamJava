@@ -23,8 +23,12 @@ public class CandyStock {
     }
 
     public void addCandyList(List<Candy> newCandies) {
-        if (newCandies != null && newCandies.size() > 0)
-            this.candies.addAll(newCandies);
+        if (newCandies != null && newCandies.size() > 0) {
+            for (Candy candy : newCandies) {
+                addCandy(candy);
+            }
+        }
+
     }
 
     public void addCandy(Candy candy) {

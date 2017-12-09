@@ -1,79 +1,54 @@
 package tasks;
 
-import org.xml.sax.SAXException;
-import tasks.task8_28_11_2017.comparators.CandyComparator;
-import tasks.task8_28_11_2017.entities.Candy;
-import tasks.task8_28_11_2017.entities.CandyStock;
-import tasks.task8_28_11_2017.entities.XMLParsers.CandyParser;
-import tasks.task8_28_11_2017.entities.XMLParsers.DOMCandyParser;
-import tasks.task8_28_11_2017.entities.XMLParsers.SAXCandyParser;
-import tasks.task8_28_11_2017.entities.XMLParsers.StAX.StAXCandyParser;
-import tasks.task8_28_11_2017.entities.XMLValidator.CandiesXSDValidator;
-import tasks.task8_28_11_2017.exceptions.CandyParseException;
-
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
-import java.util.Collections;
+import tasks.helpers.ArithmeticHelper;
+import tasks.helpers.ArrayHelper;
+import tasks.task3_07_11_2017.entities.Triangle;
+import tasks.task3_07_11_2017.entities.additional.AbstractFactory;
+import tasks.task3_07_11_2017.entities.additional.ColoredGeometricalFactory;
+import tasks.task3_07_11_2017.entities.additional.GeometricalFactory;
+import tasks.task3_07_11_2017.entities.additional.GeometricalObjectSelector;
+import tasks.task3_07_11_2017.entities.demonstrators.SerializingDemonstrator;
+import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
 public class Main {
+    public static void main(String[] args) {
 
-    private static final String XML_PATH = "src\\main\\resources\\Candy.xml";
-    private static final String XSD_PATH = "src\\main\\resources\\Candy.xsd";
-    private static final int xmlCandiesCount = 10;
+        AbstractFactory[] factories = new AbstractFactory[]{
+                new GeometricalFactory(),
+                new ColoredGeometricalFactory()};
 
-    public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+        GeometricalObject[] arr = new GeometricalObject[20];
 
-        if (CandiesXSDValidator.validate(XML_PATH, XSD_PATH)) {
-            CandyStock domStock = new CandyStock();
-            CandyStock saxStock = new CandyStock();
-            CandyStock staxStock = new CandyStock();
+        for (int i = 0; i < arr.length; i++) {
+            int randIndex = ArithmeticHelper.getRandomizedInt(0, factories.length);
+            arr[i] = factories[randIndex].createGeometricalObject();
+        }
+        ArrayHelper.printArray(arr);
 
-            CandyParser domParser = new DOMCandyParser(XML_PATH);
-            try {
-                domParser.parse();
-                domStock.addCandyList(domParser.getResultantCandies());
-            } catch (CandyParseException e) {
-                System.out.println("Failed to parse by DOM: no candies written\n");
-            }
+        System.out.println();
 
+        GeometricalObjectSelector.sortByColoredUncolored(arr);
+        ArrayHelper.printArray(arr);
 
-            try {
-                SAXCandyParser saxCandyParser = new SAXCandyParser(XML_PATH);
-                saxCandyParser.parse();
-                saxStock.addCandyList(saxCandyParser.getResultantCandies());
-            } catch (SAXException e) {
-                System.out.println("Failed to parse by SAX: no candies written.\n");
-            }
+        System.out.println("\nColored count: " + GeometricalObjectSelector.getColoredCount(arr));
+        System.out.println("Uncolored count: " + GeometricalObjectSelector.getNotColoredCount(arr));
+        System.out.println("Polygons count: " + GeometricalObjectSelector.getPolygonsCount(arr));
+        System.out.println("Triangles count: " + GeometricalObjectSelector.getTrianglesCount(arr));
+        System.out.println("Lines count: " + GeometricalObjectSelector.getLinesCount(arr));
+        System.out.println("Points count: " + GeometricalObjectSelector.getPointsCount(arr));
 
-            StAXCandyParser stAXCandyParser = new StAXCandyParser(XML_PATH);
-            try {
-                stAXCandyParser.parse();
-                staxStock.addCandyList(stAXCandyParser.getResultantCandies());
-            } catch (CandyParseException e) {
-                System.out.println("Failed to parse by StAX: no candies written.\n");
-            }
+        System.out.println();
 
-            if (domStock.getCandies().size() > 0 &&
-                    saxStock.getCandies().size() > 0 &&
-                    staxStock.getCandies().size() > 0) {
-
-                System.out.println("\nDOM\n" + domStock);
-                System.out.println("SAX\n" + saxStock);
-                System.out.println("StAX\n" + staxStock);
-
-                System.out.println("Comparing candies in different stock:");
-                for (int i = 0; i < domStock.getCandies().size(); i++) {
-                    Candy domCandy = domStock.getCandies().get(i);
-                    boolean domSaxEquals = domCandy.equals(saxStock.getCandies().get(i));
-                    boolean domStaxEquals = domCandy.equals(staxStock.getCandies().get(i));
-                    System.out.println((i + 1) + " DOM candy equals same candy in SAX? - " + domSaxEquals);
-                    System.out.println((i + 1) + " DOM candy equals same candy in StAX? - " + domStaxEquals);
-                }
-
-                System.out.println("\nSorted DOM candies:");
-                Collections.sort(domStock.getCandies(), new CandyComparator());
-                System.out.println(domStock);
+        for (GeometricalObject obj : arr) {
+            if (obj instanceof Triangle) {
+                Triangle tr = (Triangle) obj;
+                System.out.println(tr + "\nПериметр: " + tr.getPerimeter() + "\nПлощадь: " + tr.getArea());
             }
         }
+
+        System.out.println();
+        
+        SerializingDemonstrator demon = new SerializingDemonstrator();
+        demon.demonstrate();
     }
 }

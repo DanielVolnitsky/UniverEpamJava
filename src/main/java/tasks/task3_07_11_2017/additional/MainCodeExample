@@ -7,6 +7,7 @@ import tasks.task3_07_11_2017.entities.additional.AbstractFactory;
 import tasks.task3_07_11_2017.entities.additional.ColoredGeometricalFactory;
 import tasks.task3_07_11_2017.entities.additional.GeometricalFactory;
 import tasks.task3_07_11_2017.entities.additional.GeometricalObjectSelector;
+import tasks.task3_07_11_2017.entities.demonstrators.SerializingDemonstrator;
 import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
 public class Main {
@@ -44,5 +45,10 @@ public class Main {
                 System.out.println(tr + "\nПериметр: " + tr.getPerimeter() + "\nПлощадь: " + tr.getArea());
             }
         }
+
+        System.out.println();
+
+        SerializingDemonstrator demon = new SerializingDemonstrator();
+        demon.demonstrate();
     }
 }

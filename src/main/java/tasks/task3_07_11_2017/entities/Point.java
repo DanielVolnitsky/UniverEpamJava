@@ -2,10 +2,12 @@ package tasks.task3_07_11_2017.entities;
 
 import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
+import java.io.Serializable;
+
 /**
  * Класс представляет точку на плоскости
  */
-public class Point implements GeometricalObject {
+public class Point implements GeometricalObject, Serializable {
     private int x;
     private int y;
 

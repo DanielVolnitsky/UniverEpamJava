@@ -3,13 +3,16 @@ package tasks.task3_07_11_2017.entities;
 import tasks.helpers.GeometricHelper;
 import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
+import java.io.Serializable;
+import java.util.List;
+
 /**
  * Класс представляет треугольник на плоскости
  *
  * @see Point
  * @see Line
  */
-public class Triangle implements GeometricalObject {
+public class Triangle implements GeometricalObject, Serializable {
     /*вершины*/
     private Point apexA, apexB, apexC;
     /*линии*/
@@ -21,6 +24,20 @@ public class Triangle implements GeometricalObject {
 
     protected Triangle() {
 
+    }
+
+    public Triangle(Line lineAB, Line lineBC, Line lineAC) throws IllegalArgumentException {
+        if (canMakeTriangle(lineAB.getBeg(), lineAB.getEnd(), lineAC.getEnd())) {
+            this.apexA = lineAB.getBeg();
+            this.apexB = lineAB.getEnd();
+            this.apexC = lineAC.getEnd();
+
+            sideAB = lineAB;
+            sideBC = lineBC;
+            sideAC = lineAC;
+        } else {
+            throw new IllegalArgumentException("Невозможно составить треугольник из входящих линий.");
+        }
     }
 
     public Triangle(Point apexA, Point apexB, Point apexC) throws IllegalArgumentException {

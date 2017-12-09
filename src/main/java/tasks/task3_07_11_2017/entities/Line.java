@@ -2,6 +2,8 @@ package tasks.task3_07_11_2017.entities;
 
 import tasks.task3_07_11_2017.interfaces.GeometricalObject;
 
+import java.io.Serializable;
+
 import static tasks.helpers.GeometricHelper.equalPoints;
 
 /**
@@ -9,7 +11,7 @@ import static tasks.helpers.GeometricHelper.equalPoints;
  *
  * @see Point
  */
-public class Line implements GeometricalObject {
+public class Line implements GeometricalObject, Serializable {
     private Point beg;
     private Point end;
 

@@ -34,6 +34,9 @@ public class SerializingDemonstrator implements Demonstrator {
                 for (int i = 0; i < arr.length; i++)
                     ostream.writeObject(arr[i]);
 
+//                p1.setX(99);
+//                ostream.writeObject(p1);
+
                 for (int i = 0; i < arr.length; i++) {
                     Object desObj = istream.readObject();
                     if (desObj instanceof Point) {

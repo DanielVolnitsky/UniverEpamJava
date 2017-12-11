@@ -3,8 +3,8 @@ package tasks.helpers;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import tasks.task3_07_11_2017.entities.Point;
-import tasks.task3_07_11_2017.entities.Triangle;
+import tasks.task03_07_11_2017.entities.Point;
+import tasks.task03_07_11_2017.entities.Triangle;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

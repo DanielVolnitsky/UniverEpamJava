@@ -1,6 +1,6 @@
 package tasks.helpers;
 
-import tasks.task1_03_11_2017.arraysAndMatrices.entities.Sorter;
+import tasks.task01_03_11_2017.arraysAndMatrices.entities.Sorter;
 
 /**
  * Класс хранит вспомогательные методы для работы с матрицами

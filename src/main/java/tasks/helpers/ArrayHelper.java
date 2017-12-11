@@ -1,6 +1,6 @@
 package tasks.helpers;
 
-import tasks.task3_07_11_2017.interfaces.GeometricalObject;
+import tasks.task03_07_11_2017.interfaces.GeometricalObject;
 
 /**
  * Класс хранит вспомогательные методы для работы с массивами

@@ -1,7 +1,7 @@
 package tasks.helpers;
 
-import tasks.task3_07_11_2017.entities.Point;
-import tasks.task3_07_11_2017.entities.Triangle;
+import tasks.task03_07_11_2017.entities.Point;
+import tasks.task03_07_11_2017.entities.Triangle;
 
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;

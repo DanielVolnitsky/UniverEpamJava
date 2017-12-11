@@ -1,7 +1,5 @@
 package tasks.task9_05_12_2017.buddistCompetition.entities;
 
-import tasks.helpers.ArithmeticHelper;
-
 import static tasks.helpers.ArithmeticHelper.getRandomizedInt;
 
 public class Battle extends Thread {
@@ -15,11 +13,17 @@ public class Battle extends Thread {
         this.battlefield = battlefield;
     }
 
+    public Monk getMonk1() {
+        return monk1;
+    }
+
+    public Monk getMonk2() {
+        return monk2;
+    }
+
     @Override
     public void run() {
-        battlefield.getCurrBattleCount().getAndIncrement();
         System.out.println("Пошла драка между " + monk1 + " и " + monk2);
-        //Thread.sleep(ArithmeticHelper.getRandomizedInt(0, 1000));
         Monk winner = null;
         switch (monk1.getChiEnergy().compareTo(monk2.getChiEnergy())) {
             case 1:
@@ -32,10 +36,11 @@ public class Battle extends Thread {
                 winner = getRandomizedInt(0, 2) == 0 ? monk1 : monk2;
                 break;
         }
-        System.out.println("В драке между " + monk1 + " и " + monk2 + " победил " + winner);
+        System.out.println("***В драке между " + monk1 + " и " + monk2 + " победил " + winner);
         battlefield.getMonksQueue().add(winner);
-        battlefield.getCurrBattleCount().getAndDecrement();
-        System.out.println("Очередь: " + battlefield.getMonksQueue());
-        interrupt();
+        battlefield.getCurrBattleCount().decrementAndGet();
+        battlefield.getBattlesCount().incrementAndGet();
+        // System.out.println("Очередь: " + battlefield.getMonksQueue());
+        System.out.println("Боев в данный момент: " + battlefield.getCurrBattleCount());
     }
 }

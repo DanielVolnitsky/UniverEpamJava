@@ -4,8 +4,8 @@ public class Monk {
     private Integer chiEnergy;
     private Monastery monastery;
 
-    public Monk() {
-
+    public Monk(int chiEnergy) {
+        this.chiEnergy = chiEnergy;
     }
 
     public Monk(int chiEnergy, Monastery monastery) {

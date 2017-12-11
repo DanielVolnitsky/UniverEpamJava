@@ -29,7 +29,9 @@ public class Monastery {
     }
 
     public void addMonk(Monk monk){
-        if(monk != null)
+        if(monk != null){
+            monk.setMonastery(this);
             monks.add(monk);
+        }
     }
 }

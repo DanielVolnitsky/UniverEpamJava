@@ -35,8 +35,7 @@ public class Battle extends Thread {
         System.out.println("В драке между " + monk1 + " и " + monk2 + " победил " + winner);
         battlefield.getMonksQueue().add(winner);
         battlefield.getCurrBattleCount().getAndDecrement();
-        System.out.println(winner + " вернулся в очередь");
-        System.out.println(battlefield.getMonksQueue());
+        System.out.println("Очередь: " + battlefield.getMonksQueue());
         interrupt();
     }
 }

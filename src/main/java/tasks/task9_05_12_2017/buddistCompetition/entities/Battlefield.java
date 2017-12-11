@@ -12,7 +12,6 @@ public class Battlefield {
     private Monastery secMonastery;
     private BlockingQueue<Monk> monksQueue;
     private AtomicInteger currBattleCount;
-    private List<Battle> roundBattles;
 
     {
         currBattleCount = new AtomicInteger(0);
@@ -35,27 +34,32 @@ public class Battlefield {
     }
 
     public void startBattle() throws InterruptedException {
-        List<Monk> contestants = new ArrayList<>();
-        contestants.addAll(firstMonastery.monks);
-        contestants.addAll(secMonastery.monks);
-        System.out.println(contestants);
-        Collections.shuffle(contestants);
-        System.out.println(contestants + "\n");
-        monksQueue.addAll(contestants);
+       // Thread.currentThread().setPriority(6);
 
+        organizeParticipants();
+        System.out.println("Учасники в случайном порядке: " + monksQueue);
+
+        int round = 0;
         do {
-           while(getMonksQueue().size() > 1){
-               System.out.println("---Есть возможность начать новую битву---");
-               if (monksQueue.size() % 2 == 0 || monksQueue.size() > 1) {
-                   System.out.println("В очереди есть 2 человека");
-                   Battle battle = new Battle(monksQueue.take(), monksQueue.take(), this);
-                   battle.start();
-               }
-           }
-           Thread.sleep(1000);
+            System.out.println("\nРАУНД " + ++round);
+            while (getMonksQueue().size() > 1) {
+               // System.out.println("Берутся 2 участника в очереди");
+                Battle battle = new Battle(monksQueue.take(), monksQueue.take(), this);
+                //battle.setPriority(5);
+                battle.start();
+            }
+            Thread.sleep(500);
         } while (getMonksQueue().size() != 1 || currBattleCount.get() != 0);
 
-        System.out.println("\nПобедитель: монах с чи " + monksQueue.peek().getChiEnergy() +
+        System.out.println("\nПобедил монах с чи " + monksQueue.peek().getChiEnergy() +
                 " из монастыря " + monksQueue.peek().getMonastery().getName());
+    }
+
+    private void organizeParticipants() {
+        List<Monk> contestants = new ArrayList<>(firstMonastery.monks);
+        contestants.addAll(secMonastery.monks);
+        System.out.println("Учасники в начальном порядке: " + contestants);
+        Collections.shuffle(contestants);
+        monksQueue.addAll(contestants);
     }
 }

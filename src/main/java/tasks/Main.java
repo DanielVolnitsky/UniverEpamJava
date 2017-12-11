@@ -10,7 +10,7 @@ public class Main {
         Monastery monastery1 = new Monastery("Гуань-Инь");
         Monastery monastery2 = new Monastery("Гуань-Янь");
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 10; i++) {
             monastery1.addMonk(new Monk(ArithmeticHelper.getRandomizedInt(0, 100), monastery1));
         }
         for (int i = 0; i < 4; i++) {

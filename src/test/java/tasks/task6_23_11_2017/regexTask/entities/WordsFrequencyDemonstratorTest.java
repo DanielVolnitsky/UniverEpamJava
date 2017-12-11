@@ -18,7 +18,7 @@ class WordsFrequencyDemonstratorTest {
     @Test
     void initializeUrlList() {
         try {
-            String filePath = "src\\main\\java\\tasks\\task6_23_11_2017\\regexTask\\additional\\SiteBodyExample";
+            String filePath = "src\\main\\java\\tasks\\task6_23_11_2017\\regexTask\\beesAndPuch\\SiteBodyExample";
             String mockBodyText = new String(FileHelper.getFileBytes(filePath));
 
             SiteInfoHelper mockito = mock(SiteInfoHelper.class);

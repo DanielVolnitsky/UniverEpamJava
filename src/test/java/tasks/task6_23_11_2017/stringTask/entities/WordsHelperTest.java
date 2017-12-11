@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 class WordsHelperTest {
 
-    final static String filePath = "src\\main\\java\\tasks\\task6_23_11_2017\\stringTask\\additional\\TestExample";
+    final static String filePath = "src\\main\\java\\tasks\\task6_23_11_2017\\stringTask\\beesAndPuch\\TestExample";
 
     static List<Letter> l1, l2, l3;
     static Word w1, w2, w3;

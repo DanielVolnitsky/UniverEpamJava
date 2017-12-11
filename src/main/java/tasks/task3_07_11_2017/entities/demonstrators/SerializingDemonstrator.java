@@ -27,7 +27,7 @@ public class SerializingDemonstrator implements Demonstrator {
         GeometricalObject[] desArr = new GeometricalObject[arr.length];
 
         try {
-            File file = new File("src\\main\\java\\tasks\\task3_07_11_2017\\additional\\SerializedGeomObjects");
+            File file = new File("src\\main\\java\\tasks\\task3_07_11_2017\\beesAndPuch\\SerializedGeomObjects");
             try (ObjectOutputStream ostream = new ObjectOutputStream(new FileOutputStream(file));
                  ObjectInputStream istream = new ObjectInputStream(new FileInputStream(file))) {
 

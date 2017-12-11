@@ -47,7 +47,7 @@ class ForecastWordsFrequencyDemonstratorTest {
     @Test
     void updateCurrentValues() {
         try {
-            String filePath = "src\\main\\java\\tasks\\task4_16_11_2017\\additional\\jsonExample";
+            String filePath = "src\\main\\java\\tasks\\task4_16_11_2017\\beesAndPuch\\jsonExample";
             String mockJsonText = new String(FileHelper.getFileBytes(filePath));
 
             JsonHelper mockito = mock(JsonHelper.class);

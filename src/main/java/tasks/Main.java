@@ -1,23 +1,22 @@
 package tasks;
 
-import tasks.task9_05_12_2017.producerConsumer.entities.*;
+import tasks.helpers.ArithmeticHelper;
+import tasks.task9_05_12_2017.buddistCompetition.entities.Battlefield;
+import tasks.task9_05_12_2017.buddistCompetition.entities.Monastery;
+import tasks.task9_05_12_2017.buddistCompetition.entities.Monk;
 
 public class Main {
-    public static void main(String[] args) {
-        Stock stock = new Stock(2);
-        Street street = new Street();
-        Truck truck = new Truck();
+    public static void main(String[] args) throws InterruptedException {
+        Monastery monastery1 = new Monastery("Гуань-Инь");
+        Monastery monastery2 = new Monastery("Гуань-Янь");
 
-        ProductCounter productCounter = new ProductCounter(truck);
-        TruckLoader truckLoader = new TruckLoader(street, truck, productCounter);
-        StockStealer stockStealer = new StockStealer(stock, street, truckLoader);
-
-        new Thread(productCounter).start();
-        new Thread(truckLoader).start();
-        new Thread(stockStealer).start();
-
-//        System.out.println("\n" + stock.getProduct());
-//        System.out.println(street.getProduct());
-//        System.out.println(truck.getProduct());
+        for (int i = 0; i < 3; i++) {
+            monastery1.addMonk(new Monk(ArithmeticHelper.getRandomizedInt(0, 100), monastery1));
+        }
+        for (int i = 0; i < 4; i++) {
+            monastery2.addMonk(new Monk(ArithmeticHelper.getRandomizedInt(0, 100), monastery2));
+        }
+        Battlefield battlefield = new Battlefield(monastery1, monastery2);
+        battlefield.startBattle();
     }
 }

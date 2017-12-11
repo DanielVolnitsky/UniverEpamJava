@@ -1,22 +1,13 @@
 package tasks.task10_07_12_2017.entities;
 
-import tasks.task10_07_12_2017.interfaces.RunnableTransport;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.Semaphore;
 
 public class Parking {
     private String name;
-    private List<RunnableTransport> currentClientRunnableTransports;
     private Semaphore parkingSlots;
 
-    {
-        currentClientRunnableTransports = new ArrayList<>();
-    }
-
-    public Parking(int parkingSlotsCount, String name) {
-        this.parkingSlots = new Semaphore(parkingSlotsCount, true);
+    public Parking(int parkingSlotsCount, String name) throws IllegalArgumentException {
+        setParkingSlots(parkingSlotsCount);
         this.name = name;
 
         System.out.println("Начальное кол-во мест на " + this.name + ": " + this.parkingSlots.availablePermits());
@@ -26,19 +17,18 @@ public class Parking {
         return parkingSlots;
     }
 
+    public void setParkingSlots(int parkingSlotsCount) throws IllegalArgumentException {
+        if (parkingSlotsCount > -1)
+            this.parkingSlots = new Semaphore(parkingSlotsCount, true);
+        else
+            throw new IllegalArgumentException("Кол-во мест на заправке не может быть отрицательным числом.");
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public List<RunnableTransport> getCurrentClientRunnableTransports() {
-        return currentClientRunnableTransports;
-    }
-
-    public void setCurrentClientRunnableTransports(List<RunnableTransport> currentClientRunnableTransports) {
-        this.currentClientRunnableTransports = currentClientRunnableTransports;
     }
 }

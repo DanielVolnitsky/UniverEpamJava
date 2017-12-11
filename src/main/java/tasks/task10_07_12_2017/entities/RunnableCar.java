@@ -28,15 +28,11 @@ public class RunnableCar implements RunnableTransport {
         setTimeAtParking(timeAtParking);
     }
 
-    public void setNearbyParkings(LinkedList<Parking> nearbyParkings) {
-        this.nearbyParkings = nearbyParkings;
-    }
-
     public int getCarId() {
         return carID;
     }
 
-    private void setCarID(int carID) throws InvalidIdException {
+    public void setCarID(int carID) throws InvalidIdException {
         if (carID > 0)
             this.carID = carID;
         else
@@ -65,14 +61,20 @@ public class RunnableCar implements RunnableTransport {
             throw new InvalidTimeValueException();
     }
 
+    public void setNearbyParkings(LinkedList<Parking> nearbyParkings) {
+        this.nearbyParkings = nearbyParkings;
+    }
+
     @Override
     public void run() {
+        /*Итератор по ближайшим стоянкам*/
         Iterator<Parking> parkingIterator = nearbyParkings.iterator();
+        /*Пока стоянки не закончились или мы не встали на одной из них*/
         while (needParking && parkingIterator.hasNext()) {
             Parking parking = parkingIterator.next();
             System.out.println(carID + " подъехала к станции " + parking.getName() + "и ждет " + maxWaitTime + " мс");
             try {
-                /*Пытаемся получить место, ожидая столько, сколько указано в машине*/
+                /*Пытаемся получить место, ожидая столько, сколько дозволено машиной*/
                 if (parking.getParkingSlots().tryAcquire(maxWaitTime, TimeUnit.MILLISECONDS)) {
                     System.out.println(carID + " заняла место на стоянке " + parking.getName());
                     this.holdParkingPlace();

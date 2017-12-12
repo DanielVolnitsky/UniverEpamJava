@@ -9,7 +9,7 @@ public class Main {
         Monastery monastery1 = new Monastery("Гуань-Инь");
         Monastery monastery2 = new Monastery("Гуань-Янь");
 
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 6; i++) {
             monastery1.addMonk(MonkFactory.getNextMonk());
             monastery2.addMonk(MonkFactory.getNextMonk());
         }

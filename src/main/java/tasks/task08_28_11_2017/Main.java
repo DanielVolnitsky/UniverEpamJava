@@ -1,4 +1,4 @@
-package tasks;
+package tasks.task08_28_11_2017;
 
 import org.xml.sax.SAXException;
 import tasks.task08_28_11_2017.comparators.CandyComparator;
@@ -19,7 +19,6 @@ public class Main {
 
     private static final String XML_PATH = "src\\main\\resources\\Candy.xml";
     private static final String XSD_PATH = "src\\main\\resources\\Candy.xsd";
-    private static final int xmlCandiesCount = 10;
 
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 
@@ -35,7 +34,6 @@ public class Main {
             } catch (CandyParseException e) {
                 System.out.println("Failed to parse by DOM: no candies written\n");
             }
-
 
             try {
                 SAXCandyParser saxCandyParser = new SAXCandyParser(XML_PATH);

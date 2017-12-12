@@ -9,6 +9,9 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CandyComparatorTest {
+    @Test
+    void compare2() {
+    }
 
     static Manufacturer manufacturer;
     static Candy c1, c2, c3;

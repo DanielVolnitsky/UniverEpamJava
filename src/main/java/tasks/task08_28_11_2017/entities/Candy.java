@@ -15,9 +15,7 @@ public class Candy {
     private CandyType candyType;
     private boolean hasFilling;
     private Manufacturer manufacturer;
-
     private List<Ingredient> ingredients;
-
     private Map<NutrionalValue, Double> nutrionalValues;
 
     {
@@ -29,7 +27,7 @@ public class Candy {
 
     }
 
-    public Candy(String id, String name, byte caloricity, CandyType candyType, boolean hasFilling, Manufacturer manufacturer) {
+    public Candy(String id, String name, int caloricity, CandyType candyType, boolean hasFilling, Manufacturer manufacturer) {
         this.id = id;
         this.name = name;
         this.caloricity = caloricity;

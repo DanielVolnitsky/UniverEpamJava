@@ -2,16 +2,16 @@ package tasks.task03_07_11_2017.entities;
 
 import tasks.task03_07_11_2017.interfaces.GeometricalObject;
 
-import java.io.Serializable;
+import java.io.*;
 
 /**
  * Класс представляет точку на плоскости
  */
-public class Point implements GeometricalObject, Serializable {
+public class Point implements GeometricalObject, Externalizable {
     private int x;
     private int y;
 
-    protected Point() {
+    public Point() {
 
     }
 
@@ -57,5 +57,17 @@ public class Point implements GeometricalObject, Serializable {
     @Override
     public String toString() {
         return "point: [" + x + ", " + y + "]";
+    }
+
+    @Override
+    public void writeExternal(ObjectOutput out) throws IOException {
+        out.writeInt(x);
+        out.writeInt(y);
+    }
+
+    @Override
+    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+        x = in.readInt();
+        y = in.readInt();
     }
 }

@@ -1,19 +1,29 @@
 package tasks.task09_05_12_2017.beesAndPuch.entities;
 
+import tasks.exceptions.InvalidIdException;
+
 public class BeeFlock extends Thread {
 
-    private static int POOH_LOCATION = 1;
+    private static final int POOH_LOCATION_MARK = 1;
+
     int flockID;
     Beehive beehive;
     private ForestSegment segmentToGo;
 
-    public BeeFlock(int flockID, Beehive beehive) {
-        this.flockID = flockID;
+    public BeeFlock(int flockID) throws InvalidIdException {
+        setFlockID(flockID);
+    }
+
+    public BeeFlock(int flockID, Beehive beehive) throws InvalidIdException {
+        this(flockID);
         this.beehive = beehive;
     }
 
-    public BeeFlock(int flockID) {
-        this.flockID = flockID;
+    public void setFlockID(int flockID) throws InvalidIdException {
+        if (flockID > -1)
+            this.flockID = flockID;
+        else
+            throw new InvalidIdException();
     }
 
     public ForestSegment getSegmentToGo() {
@@ -28,9 +38,9 @@ public class BeeFlock extends Thread {
     public void run() {
         System.out.println(flockID + " cтая полетела по сегменту: " + segmentToGo.segmentIndex);
         try {
-            int lengtsh = beehive.getForest().field[0].length - 1;
-            for (int j = 0; j < lengtsh; j++) {
-                if (beehive.getForest().field[segmentToGo.segmentIndex][j] == POOH_LOCATION) {
+            int forestLength = beehive.getForest().field[0].length - 1;
+            for (int j = 0; j < forestLength; j++) {
+                if (beehive.getForest().field[segmentToGo.segmentIndex][j] == POOH_LOCATION_MARK) {
                     System.out.println("\n***** " + flockID + " стая нашла цель и наказала Пуха *****\n");
                     beehive.setPoohHasBeenFounded(true);
                 }

@@ -1,5 +1,7 @@
 package tasks.task09_05_12_2017.beesAndPuch.entities;
 
+import tasks.exceptions.InvalidIdException;
+
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -15,13 +17,21 @@ public class Beehive {
     private boolean poohHasBeenFounded;
 
     public Beehive(int beeFlockCount, Forest forest) {
-        this.beeFlockCount = beeFlockCount;
-        this.forest = forest;
+        setBeeFlockCount(beeFlockCount);
+        setForest(forest);
+
         beeFlocks = new ArrayBlockingQueue<>(beeFlockCount);
         forestSegments = new ArrayDeque<>(forest.length);
 
         initializeBeeFlockQueue();
         initializeForestSegments();
+    }
+
+    public void setBeeFlockCount(int beeFlockCount) throws IllegalArgumentException {
+        if (beeFlockCount > -1)
+            this.beeFlockCount = beeFlockCount;
+        else
+            throw new IllegalArgumentException("Количество стай не может быть отрицательным.");
     }
 
     public Queue<BeeFlock> getBeeFlocks() {
@@ -41,6 +51,13 @@ public class Beehive {
         return forest;
     }
 
+    public void setForest(Forest forest) throws IllegalArgumentException {
+        if (forest != null)
+            this.forest = forest;
+        else
+            throw new IllegalArgumentException("Лес не должен быть null.");
+    }
+
     public Queue<ForestSegment> getForestSegments() {
         return forestSegments;
     }
@@ -52,9 +69,14 @@ public class Beehive {
         }
     }
 
+    /*Симуляция создания роев пчел*/
     private void initializeBeeFlockQueue() {
         for (int i = 1; i <= beeFlockCount; i++) {
-            beeFlocks.add(new BeeFlock(i, this));
+            try {
+                beeFlocks.add(new BeeFlock(i, this));
+            } catch (InvalidIdException e) {
+                //logging
+            }
         }
     }
 
@@ -63,12 +85,9 @@ public class Beehive {
             try {
                 BeeFlock beeFlock = beeFlocks.take();
                 beeFlock.setSegmentToGo(forestSegments.poll());
-                System.out.println(beeFlock.flockID + " стая вылетела по сегменту " + beeFlock.getSegmentToGo().segmentIndex);
                 new Thread(beeFlock).start();
             } catch (InterruptedException e) {
                 System.out.println("Поток прерван");
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
             }
         }
     }

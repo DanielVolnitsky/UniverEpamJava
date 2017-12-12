@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Monastery {
-    private String name;
     List<Monk> monks;
+    private String name;
 
     {
         monks = new ArrayList<>();
@@ -16,8 +16,8 @@ public class Monastery {
     }
 
     public Monastery(String name, List<Monk> monks) {
-        this.name = name;
-        this.monks = monks;
+        this(name);
+        this.monks.addAll(monks);
     }
 
     public String getName() {
@@ -28,8 +28,8 @@ public class Monastery {
         return monks;
     }
 
-    public void addMonk(Monk monk){
-        if(monk != null){
+    public void addMonk(Monk monk) {
+        if (monk != null) {
             monk.setMonastery(this);
             monks.add(monk);
         }

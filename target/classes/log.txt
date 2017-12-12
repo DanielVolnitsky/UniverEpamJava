@@ -54,3 +54,11 @@ ERROR - failed to parse candy with name candy1: quantity must be positive number
 ERROR - quantity must be positive number!
 ERROR - failed to parse candy with name candy1: quantity must be positive number! End of parsing
 ERROR - src\test\java\tasks\task8_28_11_2017\entities\resources\invalidTestXML contains errors: cvc-enumeration-valid: Value 'colas' is not facet-valid with respect to enumeration '[chocolate, iris, lollipop, caramel]'. It must be a value from the enumeration.
+ERROR - failed to parse candy with name candy1: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy1: quantity must be positive number! End of parsing
+ERROR - src\test\java\tasks\task08_28_11_2017\entities\resources\invalidTestXML contains errors: cvc-enumeration-valid: Value 'colas' is not facet-valid with respect to enumeration '[chocolate, iris, lollipop, caramel]'. It must be a value from the enumeration.
+ERROR - failed to parse candy with name candy1: quantity must be positive number!
+ERROR - quantity must be positive number!
+ERROR - failed to parse candy with name candy1: quantity must be positive number! End of parsing
+ERROR - src\test\java\tasks\task08_28_11_2017\entities\resources\invalidTestXML contains errors: cvc-enumeration-valid: Value 'colas' is not facet-valid with respect to enumeration '[chocolate, iris, lollipop, caramel]'. It must be a value from the enumeration.

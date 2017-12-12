@@ -23,23 +23,26 @@ public class Battlefield {
         battlesCount = new AtomicInteger(0);
     }
 
-    public Battlefield(Monastery firstMonastery, Monastery secMonastery) {
-        this.firstMonastery = firstMonastery;
-        this.secMonastery = secMonastery;
+    public Battlefield(Monastery firstMonastery, Monastery secMonastery) throws IllegalArgumentException{
+        if (firstMonastery != null && secMonastery != null) {
+            this.firstMonastery = firstMonastery;
+            this.secMonastery = secMonastery;
 
-        monksQueue = new ArrayBlockingQueue<>(
-                firstMonastery.monks.size() + secMonastery.monks.size());
+            monksQueue = new ArrayBlockingQueue<>(
+                    firstMonastery.monks.size() + secMonastery.monks.size());
+        } else
+            throw new IllegalArgumentException("Какой-то монастырь null, некому соревноваться");
     }
 
-    public AtomicInteger getCurrBattleCount() {
+    AtomicInteger getCurrBattleCount() {
         return currBattleCount;
     }
 
-    public BlockingQueue<Monk> getMonksQueue() {
+    BlockingQueue<Monk> getMonksQueue() {
         return monksQueue;
     }
 
-    public AtomicInteger getBattlesCount() {
+    AtomicInteger getBattlesCount() {
         return battlesCount;
     }
 
@@ -58,10 +61,11 @@ public class Battlefield {
         } while (getMonksQueue().size() > 1 || currBattleCount.get() > 0);
 
         System.out.println("\nПобедил монах с чи " + winner.getChiEnergy() +
-                " из монастыря " + winner.getMonastery().getName());
+                " из монастыря " + (winner.getMonastery() != null ? winner.getMonastery().getName() : "незивестный"));
         System.out.println("Всего боев проведено: " + battlesCount.get());
     }
 
+    /*Создаем список претендентов на победу и соритруем их*/
     private void organizeParticipants() {
         List<Monk> contestants = new ArrayList<>(firstMonastery.monks);
         contestants.addAll(secMonastery.monks);

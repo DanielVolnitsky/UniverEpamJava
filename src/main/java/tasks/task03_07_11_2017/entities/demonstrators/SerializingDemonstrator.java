@@ -27,14 +27,15 @@ public class SerializingDemonstrator implements Demonstrator {
         GeometricalObject[] desArr = new GeometricalObject[arr.length];
 
         try {
-            File file = new File("src\\main\\java\\tasks\\task03_07_11_2017\\beesAndPuch\\SerializedGeomObjects");
+            File file = new File("src\\main\\java\\tasks\\task03_07_11_2017\\additional\\SerializedGeomObjects");
             try (ObjectOutputStream ostream = new ObjectOutputStream(new FileOutputStream(file));
                  ObjectInputStream istream = new ObjectInputStream(new FileInputStream(file))) {
 
-                for (int i = 0; i < arr.length; i++)
+                for (int i = 0; i < arr.length; i++){
                     ostream.writeObject(arr[i]);
+                }
 
-//                p1.setX(99);
+//                p1 = new Point(9,9);
 //                ostream.writeObject(p1);
 
                 for (int i = 0; i < arr.length; i++) {

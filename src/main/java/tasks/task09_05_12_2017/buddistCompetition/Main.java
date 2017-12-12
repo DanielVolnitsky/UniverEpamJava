@@ -1,9 +1,7 @@
-package tasks;
+package tasks.task09_05_12_2017.buddistCompetition;
 
-import tasks.helpers.ArithmeticHelper;
 import tasks.task09_05_12_2017.buddistCompetition.entities.Battlefield;
 import tasks.task09_05_12_2017.buddistCompetition.entities.Monastery;
-import tasks.task09_05_12_2017.buddistCompetition.entities.Monk;
 import tasks.task09_05_12_2017.buddistCompetition.entities.MonkFactory;
 
 public class Main {
@@ -15,6 +13,7 @@ public class Main {
             monastery1.addMonk(MonkFactory.getNextMonk());
             monastery2.addMonk(MonkFactory.getNextMonk());
         }
+        monastery2.addMonk(MonkFactory.getNextMonk());
 
         Battlefield battlefield = new Battlefield(monastery1, monastery2);
         battlefield.startBattle();

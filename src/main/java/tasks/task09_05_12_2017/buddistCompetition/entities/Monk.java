@@ -4,12 +4,12 @@ public class Monk {
     private Integer chiEnergy;
     private Monastery monastery;
 
-    public Monk(int chiEnergy) {
-        this.chiEnergy = chiEnergy;
+    public Monk(int chiEnergy) throws IllegalArgumentException {
+        setChiEnergy(chiEnergy);
     }
 
-    public Monk(int chiEnergy, Monastery monastery) {
-        this.chiEnergy = chiEnergy;
+    public Monk(int chiEnergy, Monastery monastery) throws IllegalArgumentException {
+        this(chiEnergy);
         this.monastery = monastery;
     }
 
@@ -17,8 +17,11 @@ public class Monk {
         return chiEnergy;
     }
 
-    public void setChiEnergy(int chiEnergy) {
-        this.chiEnergy = chiEnergy;
+    public void setChiEnergy(int chiEnergy) throws IllegalArgumentException {
+        if (chiEnergy > -1)
+            this.chiEnergy = chiEnergy;
+        else
+            throw new IllegalArgumentException("Энергия чи не должна быть отрицательной");
     }
 
     public Monastery getMonastery() {

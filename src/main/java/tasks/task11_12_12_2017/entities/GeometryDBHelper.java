@@ -8,7 +8,7 @@ import tasks.task11_12_12_2017.exceptions.NoPointWithGivenIdException;
 import java.sql.*;
 import java.util.*;
 
-public class GeometryDBHelper {
+public class GeometryDBHelper implements AutoCloseable{
     static Logger log = Logger.getLogger("GeometryDBHelper");
 
     static {
@@ -256,8 +256,8 @@ public class GeometryDBHelper {
         properties.setProperty("serverTimezone", "UTC");
     }
 
-    /*Завершение работы*/
-    public void stop() throws SQLException {
+    @Override
+    public void close() throws Exception {
         conn.close();
     }
 }

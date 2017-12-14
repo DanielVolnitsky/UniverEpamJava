@@ -25,8 +25,8 @@ class GeometryDBHelperTest {
     }
 
     @AfterAll
-    static void nullify() throws SQLException {
-        geometryDBHelper.stop();
+    static void nullify() throws Exception {
+        geometryDBHelper.close();
     }
 
     @Test

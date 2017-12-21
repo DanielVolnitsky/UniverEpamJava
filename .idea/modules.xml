@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/UniverEpamJava.iml" filepath="$PROJECT_DIR$/UniverEpamJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UniverExternalJava.iml" filepath="$PROJECT_DIR$/UniverExternalJava.iml" />
     </modules>
   </component>
 </project>

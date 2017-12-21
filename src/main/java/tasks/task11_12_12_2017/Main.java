@@ -2,14 +2,11 @@ package tasks.task11_12_12_2017;
 
 import tasks.task11_12_12_2017.entities.GeometryDBHelper;
 import tasks.task11_12_12_2017.entities.Point;
-import tasks.task11_12_12_2017.exceptions.NoPointWithGivenIdException;
 
-import java.sql.SQLException;
-
+abstract
 public class Main {
 
-    public static void main(String args[]) throws ClassNotFoundException, SQLException,
-            InstantiationException, IllegalAccessException, NoPointWithGivenIdException {
+    public static void main(String args[]) {
 
         try (GeometryDBHelper geometryDBHelper = new GeometryDBHelper(
                 "geometry", "localhost", 3306)) {
@@ -37,7 +34,7 @@ public class Main {
             geometryDBHelper.selectAllPoints();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }
     }
 }
